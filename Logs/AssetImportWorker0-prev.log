@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-S:/GitProjects/Co-Pirate
+S:/GitProjects/Co-Piratez
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63271
-Successfully changed project path to: S:/GitProjects/Co-Pirate
-S:/GitProjects/Co-Pirate
+62937
+Successfully changed project path to: S:/GitProjects/Co-Piratez
+S:/GitProjects/Co-Piratez
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 40.53 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 71.07 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.6f1 (338bb68529b2)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path S:/GitProjects/Co-Pirate/Assets
+[Subsystems] Discovering subsystems at path S:/GitProjects/Co-Piratez/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -35,69 +35,62 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002560 seconds.
+Registered in 0.002471 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 36.61 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 35.75 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.131 seconds
+- Completed reload, in  2.374 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001104 seconds.
+Registered in 0.001041 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 35.48 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 39.72 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.876 seconds
+- Completed reload, in  0.925 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
 Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2421 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 114.1 MB.
-System memory in use after: 111.3 MB.
+System memory in use before: 113.3 MB.
+System memory in use after: 110.6 MB.
 
-Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 2831.
-Total: 8.400600 ms (FindLiveObjects: 1.032300 ms CreateObjectMapping: 0.669900 ms MarkObjects: 4.096200 ms  DeleteObjects: 2.599100 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/uploads_files_2901006_ship.obj
-  artifactKey: Guid(3c0e634e41bcac345a33c7bc93d3bb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/uploads_files_2901006_ship.obj using Guid(3c0e634e41bcac345a33c7bc93d3bb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3090717b33efbfaa79768fc89166f48') in 0.717492 seconds
-  Import took 0.733051 seconds .
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 2827.
+Total: 2.832000 ms (FindLiveObjects: 0.232500 ms CreateObjectMapping: 0.127400 ms MarkObjects: 1.384100 ms  DeleteObjects: 1.087100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 73.556377 seconds.
-  path: Assets/uploads_files_2901006_ship.obj
-  artifactKey: Guid(3c0e634e41bcac345a33c7bc93d3bb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/uploads_files_2901006_ship.obj using Guid(3c0e634e41bcac345a33c7bc93d3bb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef901239ba98974e7e4facf2a01f9688') in 0.018051 seconds
-  Import took 0.022611 seconds .
+  path: Assets/Readme.asset
+  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd583f2096f29bf976b5c4e4af107c22c') in 0.029853 seconds
+  Import took 0.058001 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.006383 seconds.
-  path: Assets/defaultMat.mat
-  artifactKey: Guid(ceeb5cf76e6730b498c763facbddb309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/defaultMat.mat using Guid(ceeb5cf76e6730b498c763facbddb309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fdf66b0d065983291ceb5bed0007bd7') in 0.014862 seconds
-  Import took 0.018682 seconds .
+  Time since last request: 0.230808 seconds.
+  path: Assets/Readme.asset
+  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd583f2096f29bf976b5c4e4af107c22c') in 0.003260 seconds
+  Import took 0.066311 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
