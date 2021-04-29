@@ -1519,3 +1519,283 @@ Received Import Request.
 Start importing Assets/Pirate/ColonialShip/04_Materials/Boxes+TreasureChests 1.mat using Guid(943b0c8450fad434e9ff03f713999f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ade5ada1487c9bfa1b067c6590cdd59') in 0.012736 seconds
   Import took 0.016298 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 608.254214 seconds.
+  path: Assets/Pirate/ColonialShip/04_Materials/Cannons+CannonBalls+Windows 1.mat
+  artifactKey: Guid(df05d28c5c946db4885bbb1a2de3deb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pirate/ColonialShip/04_Materials/Cannons+CannonBalls+Windows 1.mat using Guid(df05d28c5c946db4885bbb1a2de3deb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e67a8019e9144381b85342c3dc10eb8f') in 0.017513 seconds
+  Import took 0.023531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Pirate/ColonialShip/04_Materials/Cannons+CannonBalls+Windows.mat
+  artifactKey: Guid(11ca4bc407f018f48993c28818e2822d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pirate/ColonialShip/04_Materials/Cannons+CannonBalls+Windows.mat using Guid(11ca4bc407f018f48993c28818e2822d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '665683e78ce87b1169d99374e64cc42a') in 0.027601 seconds
+  Import took 0.036864 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003325 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.922 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2544 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 129.8 MB.
+System memory in use after: 128.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3238.
+Total: 3.593100 ms (FindLiveObjects: 0.733800 ms CreateObjectMapping: 0.138100 ms MarkObjects: 1.644200 ms  DeleteObjects: 1.076300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 300.384165 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(d0234ba368eeec9418390da711bfdad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(d0234ba368eeec9418390da711bfdad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9e86b00031a48530f0f1fda4c0868a2') in 0.005772 seconds
+  Import took 0.010401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003302 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(d0234ba368eeec9418390da711bfdad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(d0234ba368eeec9418390da711bfdad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9e86b00031a48530f0f1fda4c0868a2') in 0.001881 seconds
+  Import took 0.013961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071069 seconds.
+  path: Assets/Materials/Skybox_Mat.mat
+  artifactKey: Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Skybox_Mat.mat using Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49cb8a9770ea5661530fd5a299e8358e') in 0.166639 seconds
+  Import took 0.171903 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.411507 seconds.
+  path: Assets/Materials 1
+  artifactKey: Guid(69caa722eee08684ca0c9c00bd4f6c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1 using Guid(69caa722eee08684ca0c9c00bd4f6c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64f5da9730a08c69f53437fb00270eaf') in 0.007732 seconds
+  Import took 0.012129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047439 seconds.
+  path: Assets/Materials 1/computer_light.mat
+  artifactKey: Guid(50bd158c0c456994b80f3026effc9e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/computer_light.mat using Guid(50bd158c0c456994b80f3026effc9e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd708610f63736169e9d4b8694aa8fd17') in 0.016219 seconds
+  Import took 0.019868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Materials 1/Terrain.mat
+  artifactKey: Guid(54309456b6e9a454c90ae445be5eedb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/Terrain.mat using Guid(54309456b6e9a454c90ae445be5eedb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf2c9e9dfdc7132bc091cc86aa30a6d4') in 0.009378 seconds
+  Import took 0.012751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Materials 1/Toon_Water.mat
+  artifactKey: Guid(69f3caec98f648c4fb73bf075ad81ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/Toon_Water.mat using Guid(69f3caec98f648c4fb73bf075ad81ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e7e62f25ba2e30eb8f93077f54e66d') in 0.012392 seconds
+  Import took 0.016167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Materials 1/computer_screen.mat
+  artifactKey: Guid(83c06ae1ea2d2db4994ee9ee9a940821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/computer_screen.mat using Guid(83c06ae1ea2d2db4994ee9ee9a940821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68534a160b7c514f6087b7426b5ea6eb') in 0.342867 seconds
+  Import took 0.346927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Materials 1/secret_on_table.mat
+  artifactKey: Guid(1bd8ec09a9e001b4cb73a0a1cb4b760f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/secret_on_table.mat using Guid(1bd8ec09a9e001b4cb73a0a1cb4b760f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67836fcfe3a7c29a2a24f79146af58ee') in 0.011137 seconds
+  Import took 0.014562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Materials 1/Toon_Player.mat
+  artifactKey: Guid(ff9ef4c0d1ec4654a930c55824138a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/Toon_Player.mat using Guid(ff9ef4c0d1ec4654a930c55824138a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc541efa2083c77e8a57adcf12351af1') in 0.010443 seconds
+  Import took 0.014130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Materials 1/Toon_Cloud.mat
+  artifactKey: Guid(23df13a760956ed42b3304ce65a9a8a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/Toon_Cloud.mat using Guid(23df13a760956ed42b3304ce65a9a8a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3175b86a9d2e6495db440b4af03dad') in 0.012008 seconds
+  Import took 0.016210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Materials 1/Toon_Wood.mat
+  artifactKey: Guid(96259393df57b554fb40808f7ef5430c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/Toon_Wood.mat using Guid(96259393df57b554fb40808f7ef5430c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c17b8d3d2a5536c069e6927573ceeba1') in 0.010909 seconds
+  Import took 0.014949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Materials 1/Toon_Book.mat
+  artifactKey: Guid(917049e2491b593448c5239dc436af69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials 1/Toon_Book.mat using Guid(917049e2491b593448c5239dc436af69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52c8b680336a6783abb1b1903b756e54') in 0.012574 seconds
+  Import took 0.017472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 116.304078 seconds.
+  path: Assets/IgniteCoders
+  artifactKey: Guid(752939c36083cdc4ca8c2d09ed2b310b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IgniteCoders using Guid(752939c36083cdc4ca8c2d09ed2b310b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bc6ec28798707bc2a296bfbf84b8136') in 0.006943 seconds
+  Import took 0.011640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.342693 seconds.
+  path: Assets/ExampleAssets
+  artifactKey: Guid(990f5c2df70993f4987a388ca178996a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets using Guid(990f5c2df70993f4987a388ca178996a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c99717b9963cd5c33e50d4976e0f47f3') in 0.007415 seconds
+  Import took 0.012109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.230503 seconds.
+  path: Assets/Simple Toon Shader
+  artifactKey: Guid(b7b5066b30c9dd04ab2874090c740a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader using Guid(b7b5066b30c9dd04ab2874090c740a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b0fe6f55dd22259bb327653810c2d0') in 0.006237 seconds
+  Import took 0.010770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000488 seconds.
+  path: Assets/Simple Toon Shader
+  artifactKey: Guid(b7b5066b30c9dd04ab2874090c740a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader using Guid(b7b5066b30c9dd04ab2874090c740a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b0fe6f55dd22259bb327653810c2d0') in 0.002214 seconds
+  Import took 0.006183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.204145 seconds.
+  path: Assets/Simple Toon Shader/Main Light.shadersubgraph
+  artifactKey: Guid(ab9b6feadc505a54a9d799b7581b16e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader/Main Light.shadersubgraph using Guid(ab9b6feadc505a54a9d799b7581b16e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2ca9ec55e842f07881964d736818a55') in 0.008574 seconds
+  Import took 0.012636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Simple Toon Shader/Toon_Water.mat
+  artifactKey: Guid(4ebc074883f38044082a881abc2f9386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader/Toon_Water.mat using Guid(4ebc074883f38044082a881abc2f9386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0f725d2c1eb15ba5450e6dad26d0b3') in 0.585938 seconds
+  Import took 0.589843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.039795 seconds.
+  path: Assets/Simple Toon Shader/New Material.mat
+  artifactKey: Guid(c1dce43fd99e8d243b202a14d98c5692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader/New Material.mat using Guid(c1dce43fd99e8d243b202a14d98c5692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8eac31bfd8fcc5f3bc52dc843f56b0e') in 0.012070 seconds
+  Import took 0.016265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.112849 seconds.
+  path: Assets/Simple Toon Shader/Toon.shadergraph
+  artifactKey: Guid(4aa46d33b0afb5e49bb0703218e42e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader/Toon.shadergraph using Guid(4aa46d33b0afb5e49bb0703218e42e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c8596e7bfde5ed72c87f180f2630940') in 0.007054 seconds
+  Import took 0.011799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 172.336759 seconds.
+  path: Assets/Simple Toon Shader 1
+  artifactKey: Guid(9e1e83c65bed31748ad617c318a78f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1 using Guid(9e1e83c65bed31748ad617c318a78f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '428ef22063224a39032fe6e4176a1933') in 0.006691 seconds
+  Import took 0.011345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.478389 seconds.
+  path: Assets/Simple Toon Shader 1/Main Light.shadersubgraph
+  artifactKey: Guid(a6043ebe3aaa04f46aca070102eb725a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Main Light.shadersubgraph using Guid(a6043ebe3aaa04f46aca070102eb725a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27504cf12e1e9f6587dd76b7b2b8b9b9') in 0.002474 seconds
+  Import took 0.006261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.547280 seconds.
+  path: Assets/Simple Toon Shader 1/Toon.shadergraph
+  artifactKey: Guid(201f1479d751756438a157e64e3a00f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Toon.shadergraph using Guid(201f1479d751756438a157e64e3a00f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76072d1a64c4da79eb184bfec246e6e4') in 0.002933 seconds
+  Import took 0.007021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.866719 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit.shadergraph
+  artifactKey: Guid(5a5bbeeacb9a74b4eb0d564d8d48cf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit.shadergraph using Guid(5a5bbeeacb9a74b4eb0d564d8d48cf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e2de6053df4ad88e22e3efd84111a27') in 0.007873 seconds
+  Import took 0.012101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.483344 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit.shadergraph
+  artifactKey: Guid(5a5bbeeacb9a74b4eb0d564d8d48cf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit.shadergraph using Guid(5a5bbeeacb9a74b4eb0d564d8d48cf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e2de6053df4ad88e22e3efd84111a27') in 0.003669 seconds
+  Import took 0.008145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.141293 seconds.
+  path: Assets/Simple Toon Shader 1/New Material.mat
+  artifactKey: Guid(c5746d09379219f4c83913eed882b199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/New Material.mat using Guid(c5746d09379219f4c83913eed882b199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18fd9ab9da5d17a6c40117b10a552466') in 0.008131 seconds
+  Import took 0.012910 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005659 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.014 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.3 MB.
+System memory in use after: 129.0 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3279.
+Total: 3.547300 ms (FindLiveObjects: 0.307500 ms CreateObjectMapping: 0.141700 ms MarkObjects: 1.885900 ms  DeleteObjects: 1.210900 ms)
+
