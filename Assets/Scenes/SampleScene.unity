@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.53634745, g: 0.60143423, b: 0.764151, a: 1}
+  m_FogColor: {r: 0.41267353, g: 0.53825986, b: 0.8679245, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.003
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -171,6 +171,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1059875573
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1687258585}
+    m_Modifications:
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261515, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261519, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_Name
+      value: WaterReflectionCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535954103604261519, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
 --- !u!1001 &1187147951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: e286625af9da2b94a8090be8dea80dea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.02
+      value: 20.3
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: e286625af9da2b94a8090be8dea80dea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -373,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 2300072, guid: e286625af9da2b94a8090be8dea80dea, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5746d09379219f4c83913eed882b199, type: 2}
+      objectReference: {fileID: 2100000, guid: e7e74339712f435408d7fee166027980, type: 2}
     - target: {fileID: 2300074, guid: e286625af9da2b94a8090be8dea80dea, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -457,7 +522,7 @@ PrefabInstance:
     - target: {fileID: 2300112, guid: e286625af9da2b94a8090be8dea80dea, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5746d09379219f4c83913eed882b199, type: 2}
+      objectReference: {fileID: 2100000, guid: f146ac5fef829a546a763c1706c1d0dd, type: 2}
     - target: {fileID: 2300114, guid: e286625af9da2b94a8090be8dea80dea, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -528,7 +593,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4ebc074883f38044082a881abc2f9386, type: 2}
+  - {fileID: 2100000, guid: 19ac4fcfcf42b4344a6c7d97a5cd61fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -572,6 +637,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1402268380 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2535954103604261512, guid: 838c0bef810bfe94d8e33947c3cba7c6, type: 3}
+  m_PrefabInstance: {fileID: 1059875573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +733,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 2.73
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -693,7 +763,8 @@ Transform:
   m_LocalRotation: {x: -0.038072173, y: 0.9565065, z: -0.14579311, w: -0.2497805}
   m_LocalPosition: {x: 11.02, y: 50.8, z: 19.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1402268380}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 17.333, y: 209.271, z: 0}
@@ -833,7 +904,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.82452834, b: 0.82452834, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -843,7 +914,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.5
     m_Bias: 0.02
     m_NormalBias: 0.1
     m_NearPlane: 0.1
