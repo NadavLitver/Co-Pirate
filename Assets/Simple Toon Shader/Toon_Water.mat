@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Toon_Water
-  m_Shader: {fileID: -6465566751694194690, guid: cd83e899599df8242b73ae7a18b6a5d6,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cd83e899599df8242b73ae7a18b6a5d6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,13 +18,26 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1B634382: 37.4
     - Vector1_24955066: 210.2
     - Vector1_4BE966B7: 0.9
-    - Vector1_6EB0D68F: 1
+    - Vector1_6EB0D68F: 0.942
     - Vector1_DD085538: 0.1
     m_Colors:
     - Color_84D9290C: {r: 0.1960784, g: 0.9019608, b: 1.741176, a: 1}
     - Color_A6624FB7: {r: 0.4481132, g: 0.6663968, b: 1, a: 0}
+  m_BuildTextureStacks: []
