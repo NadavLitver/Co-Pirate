@@ -15,11 +15,11 @@ D:/Git Projects/Co-Pirate
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55030
+65177
 Successfully changed project path to: D:/Git Projects/Co-Pirate
 D:/Git Projects/Co-Pirate
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 64.93 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 61.56 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.6f1 (338bb68529b2)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/UnitySubsystems
@@ -36,792 +36,1300 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56388
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.004950 seconds.
+Registered in 0.004276 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 58.71 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 53.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.261 seconds
+- Completed reload, in  2.078 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009775 seconds.
+Registered in 0.009688 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 56.78 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 59.05 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.517 seconds
+- Completed reload, in  1.533 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3036 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 159.6 MB.
-System memory in use after: 159.8 MB.
+Unloading 3037 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.1 MB.
+System memory in use after: 160.3 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3528.
-Total: 22.899900 ms (FindLiveObjects: 0.561800 ms CreateObjectMapping: 0.251500 ms MarkObjects: 21.954800 ms  DeleteObjects: 0.130700 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/windows_2.mat
-  artifactKey: Guid(db1318ffb13bfef419a8dad09473425d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/windows_2.mat using Guid(db1318ffb13bfef419a8dad09473425d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa14234358d3552a7129a97cc14cb441') in 0.204138 seconds
-  Import took 0.208717 seconds .
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3529.
+Total: 21.070600 ms (FindLiveObjects: 0.622500 ms CreateObjectMapping: 0.157400 ms MarkObjects: 20.167500 ms  DeleteObjects: 0.121600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000580 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/leaves_palm_243.mat
-  artifactKey: Guid(6fe15af0e28a31a43bf683296709c6b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/leaves_palm_243.mat using Guid(6fe15af0e28a31a43bf683296709c6b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ee1008ce379039b21c03b16a1a25d8e') in 0.014596 seconds
-  Import took 0.022652 seconds .
+  path: Assets/Simple Toon Shader 1/ToonLit 1.shadergraph
+  artifactKey: Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit 1.shadergraph using Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28aae6388ab97d5770e0d144fc5ba928') in 0.044896 seconds
+  Import took 0.078599 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_GunMaterial.mat
-  artifactKey: Guid(5afa4a01a731c834d9a62da55c7cfa7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_GunMaterial.mat using Guid(5afa4a01a731c834d9a62da55c7cfa7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21d857ed8402dfca9e389943e9e8b95a') in 0.011025 seconds
-  Import took 0.016376 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_HelvetiHand.ttf
-  artifactKey: Guid(a270890d89d469c4eac24162df7177be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_HelvetiHand.ttf using Guid(a270890d89d469c4eac24162df7177be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8cb2a101b35f30230e19b391fefa709') in 0.021731 seconds
-  Import took 0.026273 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grey.mat
-  artifactKey: Guid(b34ebdee5d4d60b43baa8cb211b29444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grey.mat using Guid(b34ebdee5d4d60b43baa8cb211b29444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3942dec3119db337507a34e8042f262') in 0.013003 seconds
-  Import took 0.017389 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureGreen12x.mat
-  artifactKey: Guid(8c13ddd2bc8fa4e85943376cf7c8bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureGreen12x.mat using Guid(8c13ddd2bc8fa4e85943376cf7c8bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0d23e08af4e39fd0ea86d6e551bbbb2') in 0.029913 seconds
-  Import took 0.035335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/Gradient.mat
-  artifactKey: Guid(32e7ed8e6b80b884bbed8260b788648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/Gradient.mat using Guid(32e7ed8e6b80b884bbed8260b788648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b641d2ab097d8c4f51b6350f22943772') in 0.010740 seconds
-  Import took 0.014927 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Red.mat
-  artifactKey: Guid(ad7ce727a68a61f4897679b81da7b344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Red.mat using Guid(ad7ce727a68a61f4897679b81da7b344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daf0f9ce4495bdc9222ec9fd5dc03794') in 0.016614 seconds
-  Import took 0.020997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Hellephant.mat
-  artifactKey: Guid(20c2c861010d0ce49a4716087f02535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Hellephant.mat using Guid(20c2c861010d0ce49a4716087f02535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54682231d0fd075101fe1358c3c42a7f') in 0.012892 seconds
-  Import took 0.017793 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/SpaceshipHull.mat
-  artifactKey: Guid(de6b3d1666741b24597a4349a143eeb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/SpaceshipHull.mat using Guid(de6b3d1666741b24597a4349a143eeb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd72fef07944ecc1b11c7a0986792c9c0') in 0.010090 seconds
-  Import took 0.016425 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000247 seconds.
-  path: Assets/Toon Shader/Cell Shade/GrassSway/GrassSway.mat
-  artifactKey: Guid(0e23b2f367abcd8448653b7af71dd866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon Shader/Cell Shade/GrassSway/GrassSway.mat using Guid(0e23b2f367abcd8448653b7af71dd866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf85d924a1d757fbe75eae10a81c8454') in 1.432834 seconds
-  Import took 1.437298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/WhiteSmooth.mat
-  artifactKey: Guid(b05171e12835ff84fb155f51d69d7c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/WhiteSmooth.mat using Guid(b05171e12835ff84fb155f51d69d7c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8df5198aa53235c32f5993e2e46fe2f6') in 0.010823 seconds
-  Import took 0.015221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_02.mat
-  artifactKey: Guid(8759ec410a6774b4ea13ae32dc2b8d2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_02.mat using Guid(8759ec410a6774b4ea13ae32dc2b8d2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9b52a044a13a28168a2f8c323804c2e') in 0.651773 seconds
-  Import took 0.656083 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Orange.mat
-  artifactKey: Guid(09adc4af150569a4cb996354c367b8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Orange.mat using Guid(09adc4af150569a4cb996354c367b8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b345f8215c5c6afd13064ec555c86c1') in 0.010036 seconds
-  Import took 0.014084 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000171 seconds.
-  path: Assets/Toon Shader/Shader Graphs_ToonUnlit.mat
-  artifactKey: Guid(67a09cd1b4f1bbf488d65e7efad4943d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon Shader/Shader Graphs_ToonUnlit.mat using Guid(67a09cd1b4f1bbf488d65e7efad4943d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ec267111028fd731391cdf5fe0d53f') in 0.022699 seconds
-  Import took 0.026758 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/Robot_Color.mat
-  artifactKey: Guid(0aa851515cd3747d6b3b3e461199a2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/Robot_Color.mat using Guid(0aa851515cd3747d6b3b3e461199a2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57b65d72f6f377f5e9335df20efc1709') in 0.014093 seconds
-  Import took 0.018606 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Blox.mat
-  artifactKey: Guid(717d65321c603dd48a9bb1c2622f1e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Blox.mat using Guid(717d65321c603dd48a9bb1c2622f1e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867aa62b0ae1d25076203d41f8a0d086') in 0.011456 seconds
-  Import took 0.016107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Materials/SimpleLit.mat
-  artifactKey: Guid(3d959c443fee03245ada3108fa8399b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/SimpleLit.mat using Guid(3d959c443fee03245ada3108fa8399b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ed8d7e55f217125e0ca3ac5896253b1') in 0.015683 seconds
-  Import took 0.020379 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/insides_2.mat
-  artifactKey: Guid(9cc3c2bbff5d71d45ab82bdd222f75c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/insides_2.mat using Guid(9cc3c2bbff5d71d45ab82bdd222f75c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de037b045e236879dab781b3e810a11') in 0.010667 seconds
-  Import took 0.015196 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitCircleTexture.mat
-  artifactKey: Guid(80114bc117609cd4e9c988f8692e7a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitCircleTexture.mat using Guid(80114bc117609cd4e9c988f8692e7a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dd38fd5ed8ea7eec0445aebee2510c0') in 0.010721 seconds
-  Import took 0.015033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitTextureBlue.mat
-  artifactKey: Guid(1401c9e6acd739e49a9caa91ab07ac7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitTextureBlue.mat using Guid(1401c9e6acd739e49a9caa91ab07ac7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e2e15063d075909c8dab255f14cfb72') in 0.012981 seconds
-  Import took 0.017529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/EyesMaterial.mat
-  artifactKey: Guid(ce5a83fcea7762541ba43ca5bd854dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/EyesMaterial.mat using Guid(ce5a83fcea7762541ba43ca5bd854dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7df60a0aecc3c6a6cc46632da5755a8') in 0.009407 seconds
-  Import took 0.013797 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/ground_green232.mat
-  artifactKey: Guid(fd4000dd854ad0e40ba2a59fab94cad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/ground_green232.mat using Guid(fd4000dd854ad0e40ba2a59fab94cad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f1db43d437c9264a082c904ab76da7') in 0.012794 seconds
-  Import took 0.017517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/22 - Default.mat
-  artifactKey: Guid(86080a783905b5740ad2b81f63a2c650) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/22 - Default.mat using Guid(86080a783905b5740ad2b81f63a2c650) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c5e760d9ed0f24b790502e67373fbd') in 0.012449 seconds
-  Import took 0.017119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/road.mat
-  artifactKey: Guid(4b56a40ac6992974b8aac0882a4c7555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/road.mat using Guid(4b56a40ac6992974b8aac0882a4c7555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1315d1d21c1138d84d0cd11e4998d986') in 0.013974 seconds
-  Import took 0.018644 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Toon Shader/Cell Shade/botwLike/Shader Graphs_7_ZeldaPBRtransp.mat
-  artifactKey: Guid(2f051ad2fbc62e44c800389762323b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon Shader/Cell Shade/botwLike/Shader Graphs_7_ZeldaPBRtransp.mat using Guid(2f051ad2fbc62e44c800389762323b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31bb7b5bd34f6fb522f4bee33a34dfac') in 0.030972 seconds
-  Import took 0.035305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/LightGreen.mat
-  artifactKey: Guid(cd644746d7159df42b0c206b559af881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/LightGreen.mat using Guid(cd644746d7159df42b0c206b559af881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e49b6e5c55d5686142ec706924673f7') in 0.010568 seconds
-  Import took 0.015461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SuitMaterial.mat
-  artifactKey: Guid(ed4e4079e2e99084d8d914283565fc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SuitMaterial.mat using Guid(ed4e4079e2e99084d8d914283565fc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34d6dc698c119f42726a43cdd7d72ef1') in 0.012083 seconds
-  Import took 0.017126 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grass.mat
-  artifactKey: Guid(ba3bddb608259184783916ac7915d5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grass.mat using Guid(ba3bddb608259184783916ac7915d5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3a2517398b37290063fde9d0b08316') in 0.009874 seconds
-  Import took 0.014298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Simple Toon Shader 1/New Material.mat
-  artifactKey: Guid(c5746d09379219f4c83913eed882b199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Simple Toon Shader 1/New Material.mat using Guid(c5746d09379219f4c83913eed882b199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5087ae110dd17723d3ddf32a2cadc84') in 0.023590 seconds
-  Import took 0.028619 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000815 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/Asteroid.mat
-  artifactKey: Guid(be2c382f522695c4fa3947ac8e1d4457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/Asteroid.mat using Guid(be2c382f522695c4fa3947ac8e1d4457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9514f0a7134ced7af2635f513f69a158') in 0.011890 seconds
-  Import took 0.016564 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Eyes.mat
-  artifactKey: Guid(51d14e0fd3936be48bf8d5031d3e24c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Eyes.mat using Guid(51d14e0fd3936be48bf8d5031d3e24c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ead0d2f604f5627431e61f27119f3efc') in 0.011483 seconds
-  Import took 0.016386 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TeethMaterial.mat
-  artifactKey: Guid(17dd34e8a826d0641a0e0f43da1e03a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TeethMaterial.mat using Guid(17dd34e8a826d0641a0e0f43da1e03a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2b4085a3032bcacd0a722ec77618426') in 0.012098 seconds
-  Import took 0.016384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_03.mat
-  artifactKey: Guid(19ac4fcfcf42b4344a6c7d97a5cd61fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_03.mat using Guid(19ac4fcfcf42b4344a6c7d97a5cd61fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc192749e61644b830c498052b5af38') in 0.027172 seconds
-  Import took 0.032576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000233 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureRed12x.mat
-  artifactKey: Guid(3f171282ef46c4fbea54d9ab581fcb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureRed12x.mat using Guid(3f171282ef46c4fbea54d9ab581fcb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4526b92c09f25de9dc7a49ce3eaf284') in 0.011036 seconds
-  Import took 0.015861 seconds .
+  Time since last request: 161.093957 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png
+  artifactKey: Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png using Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc13bb7d3269752af450ab21c57badf1') in 0.216322 seconds
+  Import took 0.272987 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000178 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/No Name.mat
-  artifactKey: Guid(a773bd7a075f9534e9c9ed1eb6e9a30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/No Name.mat using Guid(a773bd7a075f9534e9c9ed1eb6e9a30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16adf9fe706bb816b8c1e97e7cbb4d84') in 0.012544 seconds
-  Import took 0.017111 seconds .
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg
+  artifactKey: Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg using Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9741bd53cedc44aed131c9f3e7efdcdc') in 0.120046 seconds
+  Import took 0.148895 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d97815085f509746e8c59838b277e92') in 0.104827 seconds
+  Import took 0.163124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png
+  artifactKey: Guid(519694efe2bb2914788b151fbd8c01f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png using Guid(519694efe2bb2914788b151fbd8c01f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63b88596911f373af82bf46921d2e4a') in 0.086934 seconds
+  Import took 0.133622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d97815085f509746e8c59838b277e92') in 0.006445 seconds
+  Import took 0.011373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png
+  artifactKey: Guid(519694efe2bb2914788b151fbd8c01f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png using Guid(519694efe2bb2914788b151fbd8c01f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63b88596911f373af82bf46921d2e4a') in 0.005663 seconds
+  Import took 0.011171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.847370 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit 1.shadergraph
+  artifactKey: Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit 1.shadergraph using Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c5220949dcf06949d9ed7b1629c7805') in 0.002629 seconds
+  Import took 0.246226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.218314 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit 1.shadergraph
+  artifactKey: Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit 1.shadergraph using Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c5220949dcf06949d9ed7b1629c7805') in 0.002457 seconds
+  Import took 0.007240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.589516 seconds.
+  path: Assets/Simple Toon Shader 1/Shader Graphs_ToonLit 1.mat
+  artifactKey: Guid(47fcdc6f26049e848b08678cf47a069e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Shader Graphs_ToonLit 1.mat using Guid(47fcdc6f26049e848b08678cf47a069e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e4718a709c5a666892ebe5e9b105fe3') in 0.175106 seconds
+  Import took 0.215043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 272.390951 seconds.
+  path: Assets/Simple Toon Shader 1/Barrel.mat
+  artifactKey: Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Barrel.mat using Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3bc0ca8dca58e0f9e7d0f7aec02fe0f') in 0.013664 seconds
+  Import took 0.105250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.514193 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Models/TCF_Demo_Arches.fbx
+  artifactKey: Guid(83ce4d1897bf5de438ba201190387a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Models/TCF_Demo_Arches.fbx using Guid(83ce4d1897bf5de438ba201190387a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '630f22fefe4a8c61797d7e1073e8e825') in 0.239726 seconds
+  Import took 0.376274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/billboardLower.fbx
+  artifactKey: Guid(271d69ba92e5ec94eaa3779f0ea4ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/billboardLower.fbx using Guid(271d69ba92e5ec94eaa3779f0ea4ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b58ef8ffea8a7dd7276162167cb74499') in 0.161341 seconds
+  Import took 0.187704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Models/TCF_Demo_Arches.fbx
+  artifactKey: Guid(83ce4d1897bf5de438ba201190387a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Models/TCF_Demo_Arches.fbx using Guid(83ce4d1897bf5de438ba201190387a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '630f22fefe4a8c61797d7e1073e8e825') in 0.013161 seconds
+  Import took 0.017292 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000170 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_ArchesMaterial.mat
-  artifactKey: Guid(f47747e933b49fc4d80c4175b842f8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_ArchesMaterial.mat using Guid(f47747e933b49fc4d80c4175b842f8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffbf585ea2277c5d7ac9d5906db23c50') in 0.011652 seconds
-  Import took 0.016170 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/20 - Default.mat
-  artifactKey: Guid(4e1a4e79a3548164da24123dbb0f3566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/20 - Default.mat using Guid(4e1a4e79a3548164da24123dbb0f3566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76065f098db48b4661de61ee7ed531be') in 0.010651 seconds
-  Import took 0.015031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/24 - Default.mat
-  artifactKey: Guid(c14837dfa515883428e5652d93e80c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/24 - Default.mat using Guid(c14837dfa515883428e5652d93e80c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '476c07cd5ae9216411dfdd448921977d') in 0.009801 seconds
-  Import took 0.014243 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/Jura-Flat-Material.mat
-  artifactKey: Guid(c190da5d14d0e904ba512abe82018576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/Jura-Flat-Material.mat using Guid(c190da5d14d0e904ba512abe82018576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e17606f811f9fcdc6e4bb4e46415bba') in 0.010751 seconds
-  Import took 0.016494 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/PlayerDiamond.mat
-  artifactKey: Guid(c597444fc6a08854d89baeeff4ba511d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/PlayerDiamond.mat using Guid(c597444fc6a08854d89baeeff4ba511d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a531b64a3fad4cc68aa6779614f0354') in 0.012074 seconds
-  Import took 0.016997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/SpaceshipGlow.mat
-  artifactKey: Guid(609dbe3d30c4bf84ca15ce89479d7919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/SpaceshipGlow.mat using Guid(609dbe3d30c4bf84ca15ce89479d7919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aebc6743ca6d7720ec51814eeee94de7') in 0.012765 seconds
-  Import took 0.017190 seconds .
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_1.FBX
+  artifactKey: Guid(92afa2e4e0d0b8542bf48b0de3ac19bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_1.FBX using Guid(92afa2e4e0d0b8542bf48b0de3ac19bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a751e21cdf5bf4e0d19ff596cd2ca6b9') in 0.117910 seconds
+  Import took 0.146542 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000188 seconds.
-  path: Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_01.mat
-  artifactKey: Guid(141d9d6ca43b6c843965491604c6deff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgniteCoders/Simple Water Shader/Resources/Water_mat_01.mat using Guid(141d9d6ca43b6c843965491604c6deff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab4aa570487c48912689a1478af50778') in 0.025131 seconds
-  Import took 0.030502 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/11 - Default.mat
-  artifactKey: Guid(b7d67d7d7ddb88542b23886a4b496c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/11 - Default.mat using Guid(b7d67d7d7ddb88542b23886a4b496c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec04656e72e0c19ba9d0fc7fbe4b9427') in 0.009672 seconds
-  Import took 0.014196 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/WhiteUnlit.mat
-  artifactKey: Guid(073b1ee561def20429e655b5c8893ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/WhiteUnlit.mat using Guid(073b1ee561def20429e655b5c8893ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a61c70ccdad5210f3d3373de646ad8b4') in 0.036481 seconds
-  Import took 0.041337 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/Red Beam.mat
-  artifactKey: Guid(409bf720e9924426b9f253cf037a8f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/Red Beam.mat using Guid(409bf720e9924426b9f253cf037a8f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '519c5ccb05bfd2c484a09473272a28a7') in 0.009718 seconds
-  Import took 0.015218 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TongueMaterial.mat
-  artifactKey: Guid(28498b9ebcb776a46b3c9479a664bfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TongueMaterial.mat using Guid(28498b9ebcb776a46b3c9479a664bfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '131f0651c7b4d857cf2ae3fd107289c4') in 0.015117 seconds
-  Import took 0.020225 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/white.mat
-  artifactKey: Guid(db16216c3f288ea4eb77dfefecada55a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/white.mat using Guid(db16216c3f288ea4eb77dfefecada55a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '226d34d51fb9ce9ba38abff5c5b46013') in 0.009557 seconds
-  Import took 0.014083 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/ground_green.mat
-  artifactKey: Guid(fef45cc204351a9458f02ad7c0243f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/ground_green.mat using Guid(fef45cc204351a9458f02ad7c0243f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8c7b8ade559a8e395f0a7d254d6dc0e') in 0.009466 seconds
-  Import took 0.014497 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_StarMaterial.mat
-  artifactKey: Guid(6b5c24d7a55839944bc4415eb3395d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_StarMaterial.mat using Guid(6b5c24d7a55839944bc4415eb3395d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edf16f7946fb6036be0732a1c6afd143') in 0.010586 seconds
-  Import took 0.015576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/FlyerAsteroid.mat
-  artifactKey: Guid(968fc57e6928a5448ae7d0644246d534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/FlyerAsteroid.mat using Guid(968fc57e6928a5448ae7d0644246d534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '976109b4956b8275e62c254df57b5620') in 0.010162 seconds
-  Import took 0.014443 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000347 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/wall.mat
-  artifactKey: Guid(b5e9e0cb388c83440adfb6c0c023ee8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/wall.mat using Guid(b5e9e0cb388c83440adfb6c0c023ee8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5929a82ee3cdcee55f92f9c4eacdf6') in 0.010999 seconds
-  Import took 0.016816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/red.mat
-  artifactKey: Guid(0d79812c7a78bb641b1ee85ce7da18c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/red.mat using Guid(0d79812c7a78bb641b1ee85ce7da18c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7a892df77b70864e963145255bdfad1') in 0.009724 seconds
-  Import took 0.014749 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Simple Toon Shader/New Material.mat
-  artifactKey: Guid(c1dce43fd99e8d243b202a14d98c5692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Simple Toon Shader/New Material.mat using Guid(c1dce43fd99e8d243b202a14d98c5692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c012ca03f41e85c7606c80763208246') in 0.014325 seconds
-  Import took 0.019477 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Ground.mat
-  artifactKey: Guid(048acdcd23bf75045a3a7bd88630b838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Ground.mat using Guid(048acdcd23bf75045a3a7bd88630b838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbee53ba2c966ca9ec49f3f6c7706cf8') in 0.009833 seconds
-  Import took 0.014417 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/13 - Default54.mat
-  artifactKey: Guid(831e4ea6beda02947bdca5aeb8543156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/13 - Default54.mat using Guid(831e4ea6beda02947bdca5aeb8543156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f16162ec207722127c98808d4198fd') in 0.010997 seconds
-  Import took 0.016135 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000185 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/13 - Default.mat
-  artifactKey: Guid(b957742c5b9bfd441b9b330c8b55d0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/13 - Default.mat using Guid(b957742c5b9bfd441b9b330c8b55d0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1d72a41ff5b60770b8a43e4db558939') in 0.010253 seconds
-  Import took 0.014415 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/QuickOutline/Resources/Materials/OutlineFill.mat
-  artifactKey: Guid(311313efa011949e98b6761d652ad13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/QuickOutline/Resources/Materials/OutlineFill.mat using Guid(311313efa011949e98b6761d652ad13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27f7a30282dbbf8f793b54f6e0e06d2') in 0.014857 seconds
-  Import took 0.021323 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitCircleMaterial.mat
-  artifactKey: Guid(fb6c12085a6b0a5429029fcd6478a816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitCircleMaterial.mat using Guid(fb6c12085a6b0a5429029fcd6478a816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0460c33e29fc404cd22235f130e29638') in 0.009662 seconds
-  Import took 0.014284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Zombear.mat
-  artifactKey: Guid(0e554613ca2e81743a244dd20c8d44a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Zombear.mat using Guid(0e554613ca2e81743a244dd20c8d44a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f83a42e9584f8724080c815a92682c1') in 0.010263 seconds
-  Import took 0.015807 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/insides_3.mat
-  artifactKey: Guid(cdcec2345c1d1af4da10b1c5d9cbff65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/insides_3.mat using Guid(cdcec2345c1d1af4da10b1c5d9cbff65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9525db89ddebe7d32aabfd90647237ac') in 0.010774 seconds
-  Import took 0.015539 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Black.mat
-  artifactKey: Guid(1598ff147655ecb4893e78f88baa9475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Black.mat using Guid(1598ff147655ecb4893e78f88baa9475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fbbad1eb8b3d4e3663a5cf8a43d051b') in 0.010001 seconds
-  Import took 0.015092 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SkinMaterial.mat
-  artifactKey: Guid(37d0d4d178b5dbf449ff0814718dc354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SkinMaterial.mat using Guid(37d0d4d178b5dbf449ff0814718dc354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92cb2dd3a4bde8a7d9b3c0b144fd17b') in 0.011655 seconds
-  Import took 0.016721 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/FlyerAsteroid1.mat
-  artifactKey: Guid(294f02eac9561704ebe4baa5b1bc4163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Models/Materials/FlyerAsteroid1.mat using Guid(294f02eac9561704ebe4baa5b1bc4163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25cd0aa53d114fbb38b8029e0d8fd9b0') in 0.011976 seconds
-  Import took 0.016739 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/ExampleAssets/Materials/Stud_Mat.mat
-  artifactKey: Guid(027cb3d3d7dc79d41ad763e01759de07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ExampleAssets/Materials/Stud_Mat.mat using Guid(027cb3d3d7dc79d41ad763e01759de07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3848e31a4cbc095790d7d237fc83c40b') in 0.859122 seconds
-  Import took 0.863327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_ZMaterial.mat
-  artifactKey: Guid(873ef8d3bcaa6cc43a14baa2f647a5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_ZMaterial.mat using Guid(873ef8d3bcaa6cc43a14baa2f647a5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '390b732fca788a6350511182a2a54f33') in 0.038081 seconds
-  Import took 0.043772 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Yellow.mat
-  artifactKey: Guid(90623549d4482f042ade35d8a0758e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoProcedural/Materials/Yellow.mat using Guid(90623549d4482f042ade35d8a0758e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '578ec6e9889926fe1a7a298333aaca38') in 0.010351 seconds
-  Import took 0.014976 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/ExampleAssets/Models/safetyhat_low.fbx
-  artifactKey: Guid(9d0d902f71acfe646a46cb625f815a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ExampleAssets/Models/safetyhat_low.fbx using Guid(9d0d902f71acfe646a46cb625f815a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496fcaef328f7c8e85c5ea34f0dffcc2') in 0.124374 seconds
-  Import took 0.128869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_PlayerMaterial.mat
-  artifactKey: Guid(3ea44298aa419344dbdcf87dd1a50533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_PlayerMaterial.mat using Guid(3ea44298aa419344dbdcf87dd1a50533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1386cb18ff5cd7e0cb6d7da0514f76f4') in 0.010102 seconds
-  Import took 0.015716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/tank.mat
-  artifactKey: Guid(479cbf10a2ba803449168e0148bcdbb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/tank.mat using Guid(479cbf10a2ba803449168e0148bcdbb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eccaa42bddfd4dacbebdfd5765b8c443') in 0.009602 seconds
-  Import took 0.013725 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitTextureRed.mat
-  artifactKey: Guid(4c506c95d32f3494e9453ef5c0124b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitTextureRed.mat using Guid(4c506c95d32f3494e9453ef5c0124b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd671ad0f0ef4d4d2990ba8e36f1eb9b8') in 0.010789 seconds
-  Import took 0.015230 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/ExampleAssets/Materials/Strap_Mat.mat
-  artifactKey: Guid(81c1860e7800e5340bf8a54c565ba9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ExampleAssets/Materials/Strap_Mat.mat using Guid(81c1860e7800e5340bf8a54c565ba9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f811c85e2d1658832c722db7bfda6b31') in 0.150581 seconds
-  Import took 0.157809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000487 seconds.
-  path: Assets/Simple Toon/Shaders/Simple Toon_SToon Transparent.mat
-  artifactKey: Guid(eaafb48a2ebf28d4eb24c29b0d2e4994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Simple Toon/Shaders/Simple Toon_SToon Transparent.mat using Guid(eaafb48a2ebf28d4eb24c29b0d2e4994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0a59aa5d0f1675594943d0ee7bc5152') in 0.012668 seconds
-  Import took 0.017935 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureYellow12x.mat
-  artifactKey: Guid(ceba02e8dfaf34474b36fe43b51b69db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureYellow12x.mat using Guid(ceba02e8dfaf34474b36fe43b51b69db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3f304903e16b90fdf0b65bbaafa8f7d') in 0.012726 seconds
-  Import took 0.017525 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/FlyerPlayership.mat
-  artifactKey: Guid(99fced4bc2985174cac8512dc765d2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/FlyerPlayership.mat using Guid(99fced4bc2985174cac8512dc765d2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99268881146d0d39d982ecedd7f3e5b1') in 0.011107 seconds
-  Import took 0.015715 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/QuickOutline/Resources/Materials/OutlineMask.mat
-  artifactKey: Guid(106f3ff43a17d4967a2b64c7a92e49ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/QuickOutline/Resources/Materials/OutlineMask.mat using Guid(106f3ff43a17d4967a2b64c7a92e49ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c22c9e6972b3a5ce9e0088f1240768') in 0.011393 seconds
-  Import took 0.015820 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000185 seconds.
-  path: Assets/ExampleAssets/Materials/Plastic_Yellow_Mat.mat
-  artifactKey: Guid(bd2d742ee2ce7a740ae0cf992a38be74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ExampleAssets/Materials/Plastic_Yellow_Mat.mat using Guid(bd2d742ee2ce7a740ae0cf992a38be74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e89c860e868522dba9335177b6495c2') in 0.109070 seconds
-  Import took 0.115056 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/_defaultMat.mat
-  artifactKey: Guid(f0a6a86e908f6204ab518387a784ed36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/_defaultMat.mat using Guid(f0a6a86e908f6204ab518387a784ed36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33120585edf041ee2e2f90c6c409a659') in 0.013367 seconds
-  Import took 0.018444 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Zombunny.mat
-  artifactKey: Guid(90309a9ae07af7a4baf27031c594f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_Zombunny.mat using Guid(90309a9ae07af7a4baf27031c594f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a8fe0b5a8efe9097ca34207106370e') in 0.010845 seconds
-  Import took 0.015932 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/13 - Default22662.mat
-  artifactKey: Guid(7d91274cc4a876a439f75445704f421b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/13 - Default22662.mat using Guid(7d91274cc4a876a439f75445704f421b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f650981e2c47e266e990911b7f9992') in 0.011100 seconds
-  Import took 0.015361 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/tankco.mat
-  artifactKey: Guid(cceec12884c418c4bb19cef32dc2abc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/tankco.mat using Guid(cceec12884c418c4bb19cef32dc2abc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00e198963f095920ccdab25405a73896') in 0.012391 seconds
-  Import took 0.016720 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/QuickOutline/Samples/Materials/Plane.mat
-  artifactKey: Guid(f58cf65ea995c4b45be95713bdea8134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/QuickOutline/Samples/Materials/Plane.mat using Guid(f58cf65ea995c4b45be95713bdea8134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed4a9a99defe645885acd668bf0f8b96') in 0.011436 seconds
-  Import took 0.016441 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitTextureBlue12x.mat
-  artifactKey: Guid(c676d877ef241ab4686e2f237b1e2f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitTextureBlue12x.mat using Guid(c676d877ef241ab4686e2f237b1e2f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60c5edff8ec6cac06b1d3365372b0a44') in 0.012280 seconds
-  Import took 0.016865 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/ParticleAfterburner.mat
-  artifactKey: Guid(dc1a05fba9a6af241a25a35b4caf5e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Materials/ParticleAfterburner.mat using Guid(dc1a05fba9a6af241a25a35b4caf5e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac2c7e646311ccb018cb1ccf5b46dd3') in 0.011162 seconds
-  Import took 0.015491 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/Toon Shader/Cell Shade/Example/Shader Graphs_Cel-shaded.mat
-  artifactKey: Guid(a7bab33d5e97a094584a420a9e580468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon Shader/Cell Shade/Example/Shader Graphs_Cel-shaded.mat using Guid(a7bab33d5e97a094584a420a9e580468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de624fe3a2b4d8d8782cc8ea52c4b287') in 0.017007 seconds
-  Import took 0.021433 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/bark.mat
-  artifactKey: Guid(5b3826dd21e1d2b4a947c774023d1db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/bark.mat using Guid(5b3826dd21e1d2b4a947c774023d1db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7e3ba8f5ac18f8a1e34eee4cf343937') in 0.015109 seconds
-  Import took 0.019881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_WallMaterial.mat
-  artifactKey: Guid(e196a25074146564d886222649fb88d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Materials/TCF_Demo_WallMaterial.mat using Guid(e196a25074146564d886222649fb88d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f3229a422086e78067ea8bb14d0c00b') in 0.010527 seconds
-  Import took 0.015001 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000185 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/roof.mat
-  artifactKey: Guid(ede00b712b6fb134282e1efba44fefd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/roof.mat using Guid(ede00b712b6fb134282e1efba44fefd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99099d8ed28bcb5ee231baef7b9485e') in 0.011628 seconds
-  Import took 0.016318 seconds .
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_3.FBX
+  artifactKey: Guid(09f4942833b61cf429ab5ae4addaacac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_3.FBX using Guid(09f4942833b61cf429ab5ae4addaacac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a87d05acd7bc35bdc7e4879c140e782') in 0.117792 seconds
+  Import took 0.197881 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000180 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/car.mat
-  artifactKey: Guid(c282d31bf082fca4a822239b62ff8257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Materials/car.mat using Guid(c282d31bf082fca4a822239b62ff8257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa3a0ad0258a4fe1e8facc3a0f3ec9ea') in 0.009668 seconds
-  Import took 0.013712 seconds .
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Models/TCF_Demo_Blox.FBX
+  artifactKey: Guid(6b9fc1d48e3e9874da5b00cc4970419a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Models/TCF_Demo_Blox.FBX using Guid(6b9fc1d48e3e9874da5b00cc4970419a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd58b82b417e04fd06c939891498dd74a') in 0.072179 seconds
+  Import took 0.096157 seconds .
 
 ========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 5.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 23 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 90.6 MB.
-System memory in use after: 90.9 MB.
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/hamvee.FBX
+  artifactKey: Guid(7b912c5dfa554a04296ecbf246180058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/hamvee.FBX using Guid(7b912c5dfa554a04296ecbf246180058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcb1c9cfb76fb1aa26960c4e668aa0b1') in 0.083164 seconds
+  Import took 0.111330 seconds .
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3649.
-Total: 35.591800 ms (FindLiveObjects: 0.620400 ms CreateObjectMapping: 0.494000 ms MarkObjects: 34.320300 ms  DeleteObjects: 0.154900 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_6.FBX
+  artifactKey: Guid(45e438e80c2860545b63beb8d6718edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_6.FBX using Guid(45e438e80c2860545b63beb8d6718edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '507e023c361b4cc226359435e057036a') in 0.105982 seconds
+  Import took 0.125450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_4.FBX
+  artifactKey: Guid(f3cb3c8f5cd4b514ebf9fbfda32cb36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_4.FBX using Guid(f3cb3c8f5cd4b514ebf9fbfda32cb36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ef52894c7d5c253078de04fb1e1365b') in 0.103205 seconds
+  Import took 0.128628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/bush1.FBX
+  artifactKey: Guid(c8680fab33c72bb4ba3e31987e0b0182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/bush1.FBX using Guid(c8680fab33c72bb4ba3e31987e0b0182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a797a34f9625ed09430498a0455c405') in 0.031516 seconds
+  Import took 0.052834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_1.FBX
+  artifactKey: Guid(1ec55baed88ac07429a52bee4c519015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_1.FBX using Guid(1ec55baed88ac07429a52bee4c519015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6793ba02948e807bb423c433dd0057af') in 0.128991 seconds
+  Import took 0.156074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.073808 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Odin Inspector Logo.png
+  artifactKey: Guid(a78bffbeb81b48ae9ec71ad7969613e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Odin Inspector Logo.png using Guid(a78bffbeb81b48ae9ec71ad7969613e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cc98b0061d436dd7efa04a34e69fab5') in 0.133814 seconds
+  Import took 0.170601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003857 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Odin Inspector Logo.png
+  artifactKey: Guid(a78bffbeb81b48ae9ec71ad7969613e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Odin Inspector Logo.png using Guid(a78bffbeb81b48ae9ec71ad7969613e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cc98b0061d436dd7efa04a34e69fab5') in 0.006272 seconds
+  Import took 0.011263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.418321 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Code/Editor/PunGradient.png
+  artifactKey: Guid(1faa1cf0448470c4ebbb23b97759ab50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Code/Editor/PunGradient.png using Guid(1faa1cf0448470c4ebbb23b97759ab50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b06fb8d94497123c37b07cb12fa116fe') in 0.146046 seconds
+  Import took 0.187546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/RoundedBox.png
+  artifactKey: Guid(9b2eedba1e3057e4b998cdef3d448105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/RoundedBox.png using Guid(9b2eedba1e3057e4b998cdef3d448105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c8d0e696f04d7766d7c833fcd9fd848') in 0.055071 seconds
+  Import took 0.076573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp512.png
+  artifactKey: Guid(7377013011b4c3348809ff574abe799e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp512.png using Guid(7377013011b4c3348809ff574abe799e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '023d5fcde8147e4d069b3f1ffea34b38') in 0.059636 seconds
+  Import took 0.079432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp128.png
+  artifactKey: Guid(f00feafcf0675cd47a48f83ae42b06d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp128.png using Guid(f00feafcf0675cd47a48f83ae42b06d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb548baf866cf808d1ae79fec6ddd93') in 0.096137 seconds
+  Import took 0.136449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_WallDiffuse.tif
+  artifactKey: Guid(126be8c13a9084940b9b4338b8b32126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_WallDiffuse.tif using Guid(126be8c13a9084940b9b4338b8b32126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b7964b89bad4e58369b2c7d35f0fbae') in 0.191196 seconds
+  Import took 0.229570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle_on active copy.png
+  artifactKey: Guid(ae66aa97758b4044c809e30690f3ce45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle_on active copy.png using Guid(ae66aa97758b4044c809e30690f3ce45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8d605ce262d5262b1616db651cc261c') in 0.037894 seconds
+  Import took 0.147201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle over copy.png
+  artifactKey: Guid(fa69cda3929ae1d4aae1e48cae7a8f7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle over copy.png using Guid(fa69cda3929ae1d4aae1e48cae7a8f7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01de11683a09964d39df8b5578e236e7') in 0.014871 seconds
+  Import took 0.038944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gButton active copy.png
+  artifactKey: Guid(0d5bb03751a8d8445946155a144be1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gButton active copy.png using Guid(0d5bb03751a8d8445946155a144be1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6f737caaf1ee5b0db03a2b1146a57dc') in 0.017884 seconds
+  Import took 0.044282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_HellephantDiffuse.png
+  artifactKey: Guid(f5b7dc99608666b4e85d0acaefbab666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_HellephantDiffuse.png using Guid(f5b7dc99608666b4e85d0acaefbab666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a06078cb66348967b93aa69b9cdf305') in 0.099246 seconds
+  Import took 0.142562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_GunDiffuse.png
+  artifactKey: Guid(e9150748290dbc94d8bda1f5c80bd5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_GunDiffuse.png using Guid(e9150748290dbc94d8bda1f5c80bd5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bac05dff0cf53bccbdb529d418052cf1') in 0.055272 seconds
+  Import took 0.075650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle active copy.png
+  artifactKey: Guid(86d2e86f4f60cde468bd365687015b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle active copy.png using Guid(86d2e86f4f60cde468bd365687015b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9c945a000ad4e527cd7fb071c14d96') in 0.014559 seconds
+  Import took 0.080959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_PlanksDiffuse.png
+  artifactKey: Guid(ed4459798e3ab83429bd2e8fbae927d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_PlanksDiffuse.png using Guid(ed4459798e3ab83429bd2e8fbae927d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870e5e25998c85cd7d23e6bdf9f2cbea') in 0.052593 seconds
+  Import took 0.092138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Textures/tankco.png
+  artifactKey: Guid(438c80613d3f26e4e80aa3455101d21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Textures/tankco.png using Guid(438c80613d3f26e4e80aa3455101d21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ab573cf3d31378b49ac1e183cea1d5') in 0.009280 seconds
+  Import took 0.013442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_BoyDiffuse.png
+  artifactKey: Guid(19094c3293a842344a24bde051122939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_BoyDiffuse.png using Guid(19094c3293a842344a24bde051122939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a0cd61a7c5e0fa488433222b503212f') in 0.053405 seconds
+  Import took 0.072349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000778 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp32.png
+  artifactKey: Guid(436c5e63723127948af8857e903f658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp32.png using Guid(436c5e63723127948af8857e903f658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c00f00e55cedb8200a8bffb5bb290af') in 0.083170 seconds
+  Import took 0.113335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/Toggle.png
+  artifactKey: Guid(b213d4a4b20760f49a105e29da3e4a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/Toggle.png using Guid(b213d4a4b20760f49a105e29da3e4a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9affceb2da31bd8a921c9c1421cc0f73') in 0.041739 seconds
+  Import took 0.087323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp48.png
+  artifactKey: Guid(44ebd8e6f42cae445ab4b22f0a9b48a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp48.png using Guid(44ebd8e6f42cae445ab4b22f0a9b48a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '863acf2c7c34d2aca20ba96e1f80af7e') in 0.044265 seconds
+  Import took 0.062994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle_on copy.png
+  artifactKey: Guid(259110fbb6b4cc2429fdabbd395bd05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle_on copy.png using Guid(259110fbb6b4cc2429fdabbd395bd05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c74aa5d7da4b18b2f83743e07747ae6') in 0.029091 seconds
+  Import took 0.050752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gBox copy.png
+  artifactKey: Guid(83ed0c75680399d4999fefcb33bf81d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gBox copy.png using Guid(83ed0c75680399d4999fefcb33bf81d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc6b61db5a139b648d03c5f524c6c2c') in 0.035607 seconds
+  Import took 0.059859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/SlotCar-Scene/ReflectionProbe-0.exr
+  artifactKey: Guid(ca2a72e1727404226a9166460e788ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/SlotCar-Scene/ReflectionProbe-0.exr using Guid(ca2a72e1727404226a9166460e788ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c97fc42a986d87b9c26315c96dc10eb') in 0.049947 seconds
+  Import took 0.053940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/PunIcon-White-129.png
+  artifactKey: Guid(56bbc6b42271d4177ac313247f47ac1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/PunIcon-White-129.png using Guid(56bbc6b42271d4177ac313247f47ac1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b3a7964d06346a76d749bd557787e31') in 0.039621 seconds
+  Import took 0.063849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_ArchesDiffuse.png
+  artifactKey: Guid(41e6b4acbac3f0a48ab2b35967b5a097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_ArchesDiffuse.png using Guid(41e6b4acbac3f0a48ab2b35967b5a097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8b65ed7090a51d47bf8ba12e6b541df') in 0.082375 seconds
+  Import took 0.098924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_WallDiffuse.png
+  artifactKey: Guid(f47966cc6353aee4886861b2e8efbfc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_WallDiffuse.png using Guid(f47966cc6353aee4886861b2e8efbfc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae8df7517e4aa344b346437ae4560402') in 0.060392 seconds
+  Import took 0.102120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_BloxDiffuse.png
+  artifactKey: Guid(714533ddef5b1ff4d876f35e1e7ab90c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_BloxDiffuse.png using Guid(714533ddef5b1ff4d876f35e1e7ab90c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149c7d57cf51221f9f6938f22e7d9c2f') in 0.076303 seconds
+  Import took 0.105735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_ZomBearDiffuse.png
+  artifactKey: Guid(e37ef2d95dba2694a8557b9c34370f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_ZomBearDiffuse.png using Guid(e37ef2d95dba2694a8557b9c34370f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af2fd6b185eafb62e17633de145a58d') in 0.055051 seconds
+  Import took 0.073960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_ZomBunnyDiffuse.png
+  artifactKey: Guid(e33cda09cacfe3e4599e37e98fb637da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/TCF_Demo_ZomBunnyDiffuse.png using Guid(e33cda09cacfe3e4599e37e98fb637da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84757a117c4323690f6a77a5604ce026') in 0.020342 seconds
+  Import took 0.039223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/Robot_Normal.png
+  artifactKey: Guid(a1454d7237641fa49a7f66d6bee624ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/Robot_Normal.png using Guid(a1454d7237641fa49a7f66d6bee624ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e940e38120c7a9b285320a824c0830') in 0.092922 seconds
+  Import took 0.112528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle_on over copy.png
+  artifactKey: Guid(48eb6ed69c273564ba09c79ae1eb79d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle_on over copy.png using Guid(48eb6ed69c273564ba09c79ae1eb79d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d5aab49b560b3798a3e4f85b5696d7e') in 0.015336 seconds
+  Import took 0.031469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gButton copy.png
+  artifactKey: Guid(7ce80c0bdb1f3584ca53451adffebd50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gButton copy.png using Guid(7ce80c0bdb1f3584ca53451adffebd50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8379ca44c34d2769f9123015476ca60') in 0.016081 seconds
+  Import took 0.128682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Icons/PunIcon-128.png
+  artifactKey: Guid(bd293dc32f4aaf94e8274f2fac2cdf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Icons/PunIcon-128.png using Guid(bd293dc32f4aaf94e8274f2fac2cdf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03249a3cdd44dba6e2e67594912049a0') in 0.064989 seconds
+  Import took 0.109758 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gButton over copy.png
+  artifactKey: Guid(dade12ee942dec74abad3fadfad744c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gButton over copy.png using Guid(dade12ee942dec74abad3fadfad744c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d231a8a5a83fb9e20af4d23e709cb7a') in 0.015442 seconds
+  Import took 0.067412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle copy.png
+  artifactKey: Guid(9325233afbc8e274280b4527156465ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_gToggle copy.png using Guid(9325233afbc8e274280b4527156465ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd241db9ba5eaaf8168c5ea281dd1d6cc') in 0.014992 seconds
+  Import took 0.105300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/Robot_Color.png
+  artifactKey: Guid(1fbb41709a1d9334696860db720026e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/Robot_Color.png using Guid(1fbb41709a1d9334696860db720026e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '589d0c37b92b1ee448f976e506c28dc6') in 0.047990 seconds
+  Import took 0.070915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_Title.png
+  artifactKey: Guid(1f1ba0fb546672a41a86d1eaeb19e79f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/UI/TCF_Demo_Title.png using Guid(1f1ba0fb546672a41a86d1eaeb19e79f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66e6d2ada387cd2ff419aa0acb60e8b8') in 0.037858 seconds
+  Import took 0.042068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 122.687901 seconds.
+  path: Assets/Simple Toon Shader 1/Boxes.mat
+  artifactKey: Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Boxes.mat using Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d1b77f401590af6ad938b35a6d7d901') in 0.012549 seconds
+  Import took 0.053891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 181.698620 seconds.
+  path: Assets/Simple Toon Shader 1/Cannons.mat
+  artifactKey: Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Cannons.mat using Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3330c1b2ea8c861ab499b63ba8b856') in 0.012464 seconds
+  Import took 0.017837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 144.014408 seconds.
+  path: Assets/Simple Toon Shader 1/Fin + Basket.mat
+  artifactKey: Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Fin + Basket.mat using Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c1fcf1bb697842cc92225670f54132b') in 0.011230 seconds
+  Import took 0.028507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 131.555377 seconds.
+  path: Assets/Simple Toon Shader 1/Barrel.mat
+  artifactKey: Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Barrel.mat using Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b84b7e73e73460bbb291a4ad4dcfc6e6') in 0.011011 seconds
+  Import took 0.041298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Simple Toon Shader 1/Floor +Wheel.mat
+  artifactKey: Guid(f0efdb37537d37546b56c0ee97c3349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Floor +Wheel.mat using Guid(f0efdb37537d37546b56c0ee97c3349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc1fac5dfaba09b35f75645ec544499') in 0.017466 seconds
+  Import took 0.035067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Simple Toon Shader 1/Boxes.mat
+  artifactKey: Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Boxes.mat using Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '381661e20a7383cccecb7abc6ae67588') in 0.012891 seconds
+  Import took 0.028522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Simple Toon Shader 1/Fin + Basket.mat
+  artifactKey: Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Fin + Basket.mat using Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5c65f6a5639024f330c86bb64854635') in 0.015416 seconds
+  Import took 0.020522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Simple Toon Shader 1/Boxes.mat
+  artifactKey: Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Boxes.mat using Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '381661e20a7383cccecb7abc6ae67588') in 0.012903 seconds
+  Import took 0.017786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Simple Toon Shader 1/Cannons.mat
+  artifactKey: Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Cannons.mat using Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3339c50fbe0a5f36e69ed245cd04562e') in 0.011593 seconds
+  Import took 0.029448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 118.289186 seconds.
+  path: Assets/Simple Toon Shader 1/Hathes+ Stairs.mat
+  artifactKey: Guid(9c1a72340648f6a44bce34eda1ce69bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Hathes+ Stairs.mat using Guid(9c1a72340648f6a44bce34eda1ce69bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78850dda1b2daf0eacefd70000c01543') in 0.012414 seconds
+  Import took 0.022797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 211.056620 seconds.
+  path: Assets/Simple Toon Shader 1/Lanterns + Sandbags.mat
+  artifactKey: Guid(9d53b51cc8a1027478c902d1e47e1743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Lanterns + Sandbags.mat using Guid(9d53b51cc8a1027478c902d1e47e1743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a497474eb1489adf1ff2638688707cf') in 0.012623 seconds
+  Import took 0.035262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 123.926650 seconds.
+  path: Assets/Simple Toon Shader 1/Must_01.mat
+  artifactKey: Guid(b3be9aca7eaa87e41afc15a69940587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Must_01.mat using Guid(b3be9aca7eaa87e41afc15a69940587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ebc59dd14c37e3fe61808564a69fbf') in 0.010908 seconds
+  Import took 0.015638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 214.610910 seconds.
+  path: Assets/Simple Toon Shader 1/Must_02.mat
+  artifactKey: Guid(e7e74339712f435408d7fee166027980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Must_02.mat using Guid(e7e74339712f435408d7fee166027980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beca1f031b34c13c093f9a085758fcfe') in 0.014414 seconds
+  Import took 0.019933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.759446 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleHover.png
+  artifactKey: Guid(b5771695f174e1143b3090393989b688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleHover.png using Guid(b5771695f174e1143b3090393989b688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71515d0d7779f727ca163baef0dadd8c') in 0.207345 seconds
+  Import took 0.234067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTexture.png
+  artifactKey: Guid(df33d7843e7ff98489b55381f6cdd866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTexture.png using Guid(df33d7843e7ff98489b55381f6cdd866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ce457448ae1f502db7a916d83c43b8d') in 0.080945 seconds
+  Import took 0.099455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/toHub.png
+  artifactKey: Guid(9587663c4d27e47b19a118aabaac4a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/toHub.png using Guid(9587663c4d27e47b19a118aabaac4a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e98cde57605ab3e72bfc89f17f83e3') in 0.054701 seconds
+  Import took 0.075223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_single.tif
+  artifactKey: Guid(11154d936b05e66498f68fa178c5cfbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_single.tif using Guid(11154d936b05e66498f68fa178c5cfbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1266d75e22dbf9ad77408f3e395f9831') in 0.081634 seconds
+  Import took 0.104367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/ZParticle.png
+  artifactKey: Guid(dfc6ee92e0e44194e909d4e5967d4d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Demo 2.0/Textures/ZParticle.png using Guid(dfc6ee92e0e44194e909d4e5967d4d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4087bb9a23a05aa564fc1f5b4abd82e9') in 0.054598 seconds
+  Import took 0.085804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTextureBlue.png
+  artifactKey: Guid(bf44fd0b5bb0c4142b16ba9db02789fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTextureBlue.png using Guid(bf44fd0b5bb0c4142b16ba9db02789fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30afca92c213c423cbadc59ee88dfb18') in 0.090414 seconds
+  Import took 0.106770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.renderTexture
+  artifactKey: Guid(4ae8ae7350b67b44785d874c413a2e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.renderTexture using Guid(4ae8ae7350b67b44785d874c413a2e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c520f5365407d86624faa0f4caa948f9') in 0.048353 seconds
+  Import took 0.052439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitCircleTexture.png
+  artifactKey: Guid(875557e634eec5c42a4681b331501c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitCircleTexture.png using Guid(875557e634eec5c42a4681b331501c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b6e7f68d65051fa99a2acfa264e227') in 0.073557 seconds
+  Import took 0.087156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/JMO Assets/Toony Colors/Texture/toon ramp.png
+  artifactKey: Guid(4a056241e2722dc46a7262a8e7073fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Texture/toon ramp.png using Guid(4a056241e2722dc46a7262a8e7073fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e27302bef0ffc708346f1ceed657625') in 0.028307 seconds
+  Import took 0.065534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_atlas.tif
+  artifactKey: Guid(2ed3d41b7c655bf4daa77f71b994f6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IgniteCoders/Simple Water Shader/Resources/WaterSurface_atlas.tif using Guid(2ed3d41b7c655bf4daa77f71b994f6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f376820956f0a421e5e873dd016f0eb5') in 0.086209 seconds
+  Import took 0.114155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/toHub.png
+  artifactKey: Guid(56d51860189dbec438e8e3fba90c46cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/toHub.png using Guid(56d51860189dbec438e8e3fba90c46cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccf4384824094535526f9a0ecb57814b') in 0.034870 seconds
+  Import took 0.062128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleHover.png
+  artifactKey: Guid(b5771695f174e1143b3090393989b688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleHover.png using Guid(b5771695f174e1143b3090393989b688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71515d0d7779f727ca163baef0dadd8c') in 0.008913 seconds
+  Import took 0.013983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/JMO Assets/Toony Colors/Texture/toon ramp 3 levels.png
+  artifactKey: Guid(207cd7d6bdf48884581528e5cefd1cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Texture/toon ramp 3 levels.png using Guid(207cd7d6bdf48884581528e5cefd1cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '629372f779974437e2ff8bb2de6e9c6f') in 0.039166 seconds
+  Import took 0.044141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTextureRed.png
+  artifactKey: Guid(9349ff1a2d6d7804486fef5d7c3a67de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTextureRed.png using Guid(9349ff1a2d6d7804486fef5d7c3a67de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcd6f577d45bfcdeff753748576f26cb') in 0.052212 seconds
+  Import took 0.057198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/TutorialInfo/Icons/Water Shader icon.PNG
+  artifactKey: Guid(766a7edc5f25e3b4daafb5554da17927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Icons/Water Shader icon.PNG using Guid(766a7edc5f25e3b4daafb5554da17927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41335d4d012abdcea4d675a11afc81be') in 0.042659 seconds
+  Import took 0.063589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOnHover.png
+  artifactKey: Guid(e10a16d9e8c6b844db2d3c1c5e4f231e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOnHover.png using Guid(e10a16d9e8c6b844db2d3c1c5e4f231e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '874c9d4cb99f9648fe15e602a6a15e3e') in 0.058682 seconds
+  Import took 0.063782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOn.png
+  artifactKey: Guid(0520b1e88ad26ae4bb758a35cdf13a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOn.png using Guid(0520b1e88ad26ae4bb758a35cdf13a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7715613ebaab89891f13a4d8a904ab') in 0.015006 seconds
+  Import took 0.031073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/JMO Assets/Toony Colors/Texture/toon ramp hard.png
+  artifactKey: Guid(e76780aad0739d84b829b556d64b2e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Texture/toon ramp hard.png using Guid(e76780aad0739d84b829b556d64b2e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbb0c79fe5056f3425c862e3bc970944') in 0.031889 seconds
+  Import took 0.037847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/JMO Assets/Toony Colors/Texture/toon ramp soft.png
+  artifactKey: Guid(4878e8b0a382c26449edcb1fe24ab2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Toony Colors/Texture/toon ramp soft.png using Guid(4878e8b0a382c26449edcb1fe24ab2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e1171ca3344c44be13a3b6e148f177') in 0.015376 seconds
+  Import took 0.033483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.041143 seconds.
+  path: Assets/Simple Toon Shader 1/Rail.mat
+  artifactKey: Guid(841d9db95ea80a74ab27437fcbd27213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rail.mat using Guid(841d9db95ea80a74ab27437fcbd27213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc46cdb1821605a1a2a7eb718c047c93') in 0.012334 seconds
+  Import took 0.017275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 145.258618 seconds.
+  path: Assets/Simple Toon Shader 1/Rail 1.mat
+  artifactKey: Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rail 1.mat using Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21222a008f306f7be71d88e36e86ff78') in 0.010964 seconds
+  Import took 0.016286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 50.879346 seconds.
+  path: Assets/Simple Toon Shader 1/Rig.mat
+  artifactKey: Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rig.mat using Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85540bbed707d58ead0dc186742b7e34') in 0.026867 seconds
+  Import took 0.039156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005918 seconds.
+  path: Assets/Simple Toon Shader 1/Rig.mat
+  artifactKey: Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rig.mat using Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85540bbed707d58ead0dc186742b7e34') in 0.011588 seconds
+  Import took 0.018306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.489773 seconds.
+  path: Assets/Simple Toon Shader 1/Ropes.mat
+  artifactKey: Guid(a707297fb1553d045b0182393a771e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Ropes.mat using Guid(a707297fb1553d045b0182393a771e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48974d53f056ff5093efbe975316b7d5') in 0.014268 seconds
+  Import took 0.032742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 131.998738 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_01.mat
+  artifactKey: Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_01.mat using Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09711b7671963ad9f724813252ef4ae') in 0.013369 seconds
+  Import took 0.043209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 168.102587 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat
+  artifactKey: Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat using Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9b4ec8e00dfaa1df1774841a7474b6') in 0.011486 seconds
+  Import took 0.016388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 191.403452 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat
+  artifactKey: Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat using Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b62b22c8327fb0b2a232f939f4431db4') in 0.017020 seconds
+  Import took 0.093642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_jib+back.mat
+  artifactKey: Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_jib+back.mat using Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36ace6a2f05ede064b3635ed457dea0a') in 0.017002 seconds
+  Import took 0.023199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 257.593690 seconds.
+  path: Assets/Simple Toon Shader 1/Barrel.mat
+  artifactKey: Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Barrel.mat using Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'decf996b970c27616ef3c176a3a5ccfb') in 0.012632 seconds
+  Import took 0.032902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Simple Toon Shader 1/Ropes.mat
+  artifactKey: Guid(a707297fb1553d045b0182393a771e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Ropes.mat using Guid(a707297fb1553d045b0182393a771e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f93555c7e0deba30592b4da5634a18b7') in 0.010407 seconds
+  Import took 0.030798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Simple Toon Shader 1/Floor +Wheel.mat
+  artifactKey: Guid(f0efdb37537d37546b56c0ee97c3349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Floor +Wheel.mat using Guid(f0efdb37537d37546b56c0ee97c3349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7263e575132cfef95f4f0f67e982979') in 0.011813 seconds
+  Import took 0.020865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Simple Toon Shader 1/Must_02.mat
+  artifactKey: Guid(e7e74339712f435408d7fee166027980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Must_02.mat using Guid(e7e74339712f435408d7fee166027980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea59692a56917d4977f21a15ed551296') in 0.012729 seconds
+  Import took 0.072048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Simple Toon Shader 1/Rail.mat
+  artifactKey: Guid(841d9db95ea80a74ab27437fcbd27213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rail.mat using Guid(841d9db95ea80a74ab27437fcbd27213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '048a07f76f8d7e458f9b0354a10cacac') in 0.012367 seconds
+  Import took 0.029443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Simple Toon Shader 1/Hathes+ Stairs.mat
+  artifactKey: Guid(9c1a72340648f6a44bce34eda1ce69bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Hathes+ Stairs.mat using Guid(9c1a72340648f6a44bce34eda1ce69bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7534da9c72905c6dd6f8de6f193bf97') in 0.013085 seconds
+  Import took 0.041051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Simple Toon Shader 1/Lanterns + Sandbags.mat
+  artifactKey: Guid(9d53b51cc8a1027478c902d1e47e1743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Lanterns + Sandbags.mat using Guid(9d53b51cc8a1027478c902d1e47e1743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37fd13d43f53e310cee2c153a8fc5c9a') in 0.011550 seconds
+  Import took 0.017918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000875 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_01.mat
+  artifactKey: Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_01.mat using Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824c3ace83cf90b190785ddf7eb19a5f') in 0.011784 seconds
+  Import took 0.035820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Simple Toon Shader 1/Must_01.mat
+  artifactKey: Guid(b3be9aca7eaa87e41afc15a69940587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Must_01.mat using Guid(b3be9aca7eaa87e41afc15a69940587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf816dc686a26f88247cac3aeeca978c') in 0.015378 seconds
+  Import took 0.043245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_jib+back.mat
+  artifactKey: Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_jib+back.mat using Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17440655990a4435ee3703bcfd537b75') in 0.013993 seconds
+  Import took 0.030080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Simple Toon Shader 1/Boxes.mat
+  artifactKey: Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Boxes.mat using Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f20ef306b638d2b9f4ad85d94586b10') in 0.015743 seconds
+  Import took 0.032411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat
+  artifactKey: Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat using Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '585c8ba5cc8eb38e2f0a4555add47938') in 0.015717 seconds
+  Import took 0.026461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000424 seconds.
+  path: Assets/Simple Toon Shader 1/Boxes.mat
+  artifactKey: Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Boxes.mat using Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f20ef306b638d2b9f4ad85d94586b10') in 0.014958 seconds
+  Import took 0.021489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Simple Toon Shader 1/Fin + Basket.mat
+  artifactKey: Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Fin + Basket.mat using Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ee02b5fa52ffcd2e4681be52d6fa6a5') in 0.012764 seconds
+  Import took 0.017956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Simple Toon Shader 1/Rig.mat
+  artifactKey: Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rig.mat using Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '749ebe48227f15b811100a9b65fb2d67') in 0.010896 seconds
+  Import took 0.016740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Simple Toon Shader 1/Cannons.mat
+  artifactKey: Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Cannons.mat using Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7813429724221a9b4503e15179b8a07d') in 0.013568 seconds
+  Import took 0.030531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1002.765031 seconds.
+  path: Assets/Simple Toon Shader 1/Ship_body.mat
+  artifactKey: Guid(815004d060554c342b0771850d23f30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Ship_body.mat using Guid(815004d060554c342b0771850d23f30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a779978fb096762ab7b69847cd551e7') in 0.015145 seconds
+  Import took 0.122709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.230327 seconds.
+  path: Assets/Simple Toon Shader 1/Staircase.mat
+  artifactKey: Guid(89a00fe7c4eec734a9fe1338eed9bff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Staircase.mat using Guid(89a00fe7c4eec734a9fe1338eed9bff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d140bbd825ea7b389423941c0600bf3') in 0.352672 seconds
+  Import took 0.359458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 483.082034 seconds.
+  path: Assets/JMO Assets
+  artifactKey: Guid(469e5bc21f8aa914a93a14f0aac7345c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets using Guid(469e5bc21f8aa914a93a14f0aac7345c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b4bb098f1f1deddc799dbd20c4adf8') in 0.008518 seconds
+  Import took 0.014243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.543016 seconds.
+  path: Assets/Photon
+  artifactKey: Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon using Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66531c2086fedd9d84bad6dfc697fce4') in 0.006827 seconds
+  Import took 0.022078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 193.621961 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_01.mat
+  artifactKey: Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_01.mat using Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '940f42d55578913b6be4e3d7a76a6d53') in 0.016768 seconds
+  Import took 0.029940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Simple Toon Shader 1/Staircase 1.mat
+  artifactKey: Guid(87b6a5ea76d94b245858977e518d757f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Staircase 1.mat using Guid(87b6a5ea76d94b245858977e518d757f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ec57be4696a57b1d47ae9305b5c0c66') in 0.016126 seconds
+  Import took 0.021184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_jib+back.mat
+  artifactKey: Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_jib+back.mat using Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80a9de00cb29d6428d76dd88fd7ae7c1') in 0.011063 seconds
+  Import took 0.017195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat
+  artifactKey: Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat using Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47fe7e922bd30e4e157ec18147ce5544') in 0.013575 seconds
+  Import took 0.072687 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010200 seconds.
+Registered in 0.010686 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.461 seconds
+- Completed reload, in  1.556 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2898 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 174.2 MB.
-System memory in use after: 174.4 MB.
+System memory in use before: 163.0 MB.
+System memory in use after: 163.2 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3626.
-Total: 31.632900 ms (FindLiveObjects: 0.808000 ms CreateObjectMapping: 0.309300 ms MarkObjects: 30.334900 ms  DeleteObjects: 0.177500 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3636.
+Total: 19.919400 ms (FindLiveObjects: 0.316500 ms CreateObjectMapping: 0.162900 ms MarkObjects: 19.365000 ms  DeleteObjects: 0.073600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1502.415066 seconds.
+  path: Assets/Simple Toon Shader 1/Ropes.mat
+  artifactKey: Guid(a707297fb1553d045b0182393a771e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Ropes.mat using Guid(a707297fb1553d045b0182393a771e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '718e7f5ec21a4d6cb366fe7597053ef1') in 0.174284 seconds
+  Import took 0.179630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Simple Toon Shader 1/Staircase.mat
+  artifactKey: Guid(89a00fe7c4eec734a9fe1338eed9bff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Staircase.mat using Guid(89a00fe7c4eec734a9fe1338eed9bff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc49183f35de7135a25e179274da481') in 0.010052 seconds
+  Import took 0.014465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Simple Toon Shader 1/Floor +Wheel.mat
+  artifactKey: Guid(f0efdb37537d37546b56c0ee97c3349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Floor +Wheel.mat using Guid(f0efdb37537d37546b56c0ee97c3349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878ed406ae13fa483eb5c34e5871fa43') in 0.013254 seconds
+  Import took 0.165198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Simple Toon Shader 1/Must_02.mat
+  artifactKey: Guid(e7e74339712f435408d7fee166027980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Must_02.mat using Guid(e7e74339712f435408d7fee166027980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfee7bf59a0ae2e2f11c2be2c17fafa2') in 0.011879 seconds
+  Import took 0.110878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Simple Toon Shader 1/Barrel.mat
+  artifactKey: Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Barrel.mat using Guid(874d1ecd76b09344d842550f6dd4e0d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1dffbdce1fb35c15f3f9710941e914c') in 0.009616 seconds
+  Import took 0.013765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Simple Toon Shader 1/Rail.mat
+  artifactKey: Guid(841d9db95ea80a74ab27437fcbd27213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rail.mat using Guid(841d9db95ea80a74ab27437fcbd27213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88554ca9ee5189c5fd5dca1912d2b561') in 0.008714 seconds
+  Import took 0.085933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Simple Toon Shader 1/Shader Graphs_ToonLit 1.mat
+  artifactKey: Guid(47fcdc6f26049e848b08678cf47a069e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Shader Graphs_ToonLit 1.mat using Guid(47fcdc6f26049e848b08678cf47a069e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02529d334c37a50074174c770739c3a1') in 0.015765 seconds
+  Import took 0.022391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Simple Toon Shader 1/Hathes+ Stairs.mat
+  artifactKey: Guid(9c1a72340648f6a44bce34eda1ce69bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Hathes+ Stairs.mat using Guid(9c1a72340648f6a44bce34eda1ce69bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad1ae10a09e63c4c3b698be6a5d2e276') in 0.006361 seconds
+  Import took 0.198865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Simple Toon Shader 1/Ship_body.mat
+  artifactKey: Guid(815004d060554c342b0771850d23f30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Ship_body.mat using Guid(815004d060554c342b0771850d23f30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9867d7263fd2c4829aafd6381e86220') in 0.008937 seconds
+  Import took 0.013772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Simple Toon Shader 1/Windows+Glasses.mat
+  artifactKey: Guid(4a9b68b9009e209479c5c722b9ae2baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Windows+Glasses.mat using Guid(4a9b68b9009e209479c5c722b9ae2baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f105f49da010cf2214e30b0003652c5') in 0.010387 seconds
+  Import took 0.014870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Simple Toon Shader 1/Lanterns + Sandbags.mat
+  artifactKey: Guid(9d53b51cc8a1027478c902d1e47e1743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Lanterns + Sandbags.mat using Guid(9d53b51cc8a1027478c902d1e47e1743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffdcf4dd476600232af38a6b8110c98') in 0.010454 seconds
+  Import took 0.024273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Simple Toon Shader 1/Staircase 1.mat
+  artifactKey: Guid(87b6a5ea76d94b245858977e518d757f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Staircase 1.mat using Guid(87b6a5ea76d94b245858977e518d757f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecaedb761c88cb9162b8257c0352487b') in 0.006820 seconds
+  Import took 0.023848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_01.mat
+  artifactKey: Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_01.mat using Guid(4589be2590d4f014d83dc82301ea4db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58cba70b243580f425f40c0ded95dc5b') in 0.010211 seconds
+  Import took 0.014981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Simple Toon Shader 1/Must_01.mat
+  artifactKey: Guid(b3be9aca7eaa87e41afc15a69940587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Must_01.mat using Guid(b3be9aca7eaa87e41afc15a69940587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425bf1278f335b2f846d64ddf4d9c39c') in 0.009450 seconds
+  Import took 0.027718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_jib+back.mat
+  artifactKey: Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_jib+back.mat using Guid(a5d9c93a54fce16469728127116d2728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4031b853c2de381f84b2c41bb2f47af0') in 0.010113 seconds
+  Import took 0.032060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Simple Toon Shader 1/Boxes.mat
+  artifactKey: Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Boxes.mat using Guid(f146ac5fef829a546a763c1706c1d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18c9fcc260ce0d61f9ccf7fec625319d') in 0.011365 seconds
+  Import took 0.029147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat
+  artifactKey: Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Sailes_02 + ladders + foremast.mat using Guid(59766f5706b5dab40bd8a299aba39e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ca092af7f63a53c3290cfc430816c7') in 0.010937 seconds
+  Import took 0.015386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Simple Toon Shader 1/Fin + Basket.mat
+  artifactKey: Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Fin + Basket.mat using Guid(e431e6761049f93468a9c3d2a4a09476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f3c78c87361c9ad35538a355e68e927') in 0.010809 seconds
+  Import took 0.015799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Simple Toon Shader 1/Rig.mat
+  artifactKey: Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rig.mat using Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c984ff328c0d2ce9d0e31ae8538f3d31') in 0.009913 seconds
+  Import took 0.024137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Simple Toon Shader 1/Cannons.mat
+  artifactKey: Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Cannons.mat using Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92de874346beec438c3f28e9dc3d1416') in 0.009794 seconds
+  Import took 0.013935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034287 seconds.
+  path: Assets/Simple Toon Shader 1/Rig.mat
+  artifactKey: Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Rig.mat using Guid(ef201bcfde6398c41a6cb917003ca97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c984ff328c0d2ce9d0e31ae8538f3d31') in 0.009699 seconds
+  Import took 0.014449 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009282 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.397 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2898 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 172.9 MB.
+System memory in use after: 173.1 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3676.
+Total: 18.964500 ms (FindLiveObjects: 0.311100 ms CreateObjectMapping: 0.133500 ms MarkObjects: 18.445600 ms  DeleteObjects: 0.072700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 171.328384 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit 1.shadergraph
+  artifactKey: Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit 1.shadergraph using Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1045d3bd82eb2cea3e9cfbe44ce1b65') in 0.014492 seconds
+  Import took 0.019843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013607 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit 1.shadergraph
+  artifactKey: Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit 1.shadergraph using Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1045d3bd82eb2cea3e9cfbe44ce1b65') in 0.002688 seconds
+  Import took 0.007148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 394.481608 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit 1.shadergraph
+  artifactKey: Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit 1.shadergraph using Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a4f0075adc529d18f5c7840be3e5038') in 0.002712 seconds
+  Import took 0.028330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.444662 seconds.
+  path: Assets/Simple Toon Shader 1/ToonLit 1.shadergraph
+  artifactKey: Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/ToonLit 1.shadergraph using Guid(91528976af811db4baad89529202a527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a4f0075adc529d18f5c7840be3e5038') in 0.002279 seconds
+  Import took 0.007195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 219.317439 seconds.
+  path: Assets/Simple Toon Shader 1/Cannons.mat
+  artifactKey: Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Cannons.mat using Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0518b1961fee6a1663134bbb363ca610') in 0.148867 seconds
+  Import took 0.154233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.608405 seconds.
+  path: Assets/Simple Toon Shader 1/Cannons.mat
+  artifactKey: Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Cannons.mat using Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0518b1961fee6a1663134bbb363ca610') in 0.008888 seconds
+  Import took 0.013994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.805392 seconds.
+  path: Assets/Simple Toon Shader 1/Cannons.mat
+  artifactKey: Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Toon Shader 1/Cannons.mat using Guid(92c985892165de54da7bce91744d6fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a671319cdc0e2ecec2173c556753c3fa') in 0.009938 seconds
+  Import took 0.118325 seconds .
 
