@@ -5687,7 +5687,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 889736968}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Photon.Pun.Demo.PunBasics.Launcher, Assembly-CSharp
         m_MethodName: Connect
         m_Mode: 1
         m_Arguments:
