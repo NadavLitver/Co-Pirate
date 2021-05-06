@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 //
@@ -11,11 +9,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float speed;
 
+    [SerializeField]
+    private float _interactionRange;
 
-    
-    InteractableHandler curInteractableHandlers;
 
-    
+
+    InteractableHit curInteractableHit;
+
+
 
     CharacterController characterController;
 
@@ -23,31 +24,59 @@ public class PlayerController : MonoBehaviour
     {
         InputManager.controls.Gameplay.Enable();
         InputManager.controls.Gameplay.Move.performed += OnMove;
+        InputManager.controls.Gameplay.Move.canceled += (x) => dir = Vector3.zero;
         InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
         characterController = GetComponent<CharacterController>();
     }
     private void FixedUpdate()
     {
-        velocity = dir * speed * Time.deltaTime;
-        characterController.Move(new Vector3(velocity.x,0,velocity.y));
+
+
+        if (dir != Vector2.zero)
+        {
+            velocity = dir * speed * Time.deltaTime;
+            characterController.Move(new Vector3(velocity.x, 0, velocity.y));
+            CheckForInteractables();
+        }
+
+
     }
+
+    private void CheckForInteractables()
+    {
+        InteractableHit hit = InteractableHandler.GetClosestInteractable(transform.position);
+        if ((curInteractableHit.interactable == null || curInteractableHit.distance > hit.distance) && hit.distance <= _interactionRange && hit.interactable != null)
+            ChangeCurInteratable(hit);
+        else if (hit.distance > _interactionRange)
+            ChangeCurInteratable(new InteractableHit(hit.distance, null));
+    }
+
     private void OnMove(InputAction.CallbackContext context)
     {
         dir = context.ReadValue<Vector2>();
     }
     void OnInteractPreformed(InputAction.CallbackContext context)
     {
-        if(curInteractableHandlers != null)
+        if (curInteractableHit.interactable != null && curInteractableHit.distance <= _interactionRange)
         {
-            curInteractableHandlers.OnInteract();
+            curInteractableHit.interactable.OnInteract();
         }
     }
-    public void ChangeCurInteratable(InteractableHandler newInteractable)
+    public void ChangeCurInteratable(InteractableHit newInteractableHit)
     {
-        curInteractableHandlers = newInteractable;
+        if (curInteractableHit.interactable != newInteractableHit.interactable)
+        {
+            if (curInteractableHit.interactable != null)
+                curInteractableHit.interactable.OnUnbecomingTarget();
+
+            curInteractableHit = newInteractableHit;
+
+            if (curInteractableHit.interactable != null)
+                curInteractableHit.interactable.OnBecomingTarget();
+        }
     }
-    public void SetcurInteractableNull()
+    public void SetCurInteractableNull()
     {
-        curInteractableHandlers = null;
+        curInteractableHit.interactable = null;
     }
 }
