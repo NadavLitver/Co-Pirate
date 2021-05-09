@@ -156,7 +156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   _interactionRange: 3
-  personalCamera: {fileID: 0}
   cameraWork: {fileID: 0}
 --- !u!114 &3637321198286871908
 MonoBehaviour:

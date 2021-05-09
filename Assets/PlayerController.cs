@@ -1,7 +1,11 @@
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.InputSystem;
-//
+using Photon.Pun.Demo.PunBasics;
+using System.Collections;
+
+
+
 public class PlayerController : MonoBehaviourPunCallbacks
 {
     // Controls controls;
@@ -34,10 +38,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
         cameraWork = GetComponent<CameraWork>();
         if (photonView.IsMine)
         {
-           // personalCamera.SetActive(true);
+            // personalCamera.SetActive(true);
             cameraWork.OnStartFollowing();
+          
+
         }
     }
+
+    
+    
     private void FixedUpdate()
     {
         if (dir != Vector2.zero)
