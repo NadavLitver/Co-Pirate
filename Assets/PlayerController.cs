@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     
     private void FixedUpdate()
     {
-        if (dir != Vector2.zero)
+        if (dir != Vector2.zero && photonView.IsMine)
         {
             velocity = dir * speed * Time.deltaTime;
             characterController.Move(new Vector3(velocity.x, 0, velocity.y));
