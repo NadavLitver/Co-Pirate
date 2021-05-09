@@ -1,7 +1,8 @@
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.InputSystem;
 //
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPunCallbacks
 {
     // Controls controls;
     Vector2 dir;
@@ -12,10 +13,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _interactionRange;
 
+    private GameObject personalCamera;
 
+    [SerializeField]
+    private CameraWork cameraWork;
 
     InteractableHit curInteractableHit;
-
 
 
     CharacterController characterController;
@@ -27,19 +30,22 @@ public class PlayerController : MonoBehaviour
         InputManager.controls.Gameplay.Move.canceled += (x) => dir = Vector3.zero;
         InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
         characterController = GetComponent<CharacterController>();
+        personalCamera = Camera.main.gameObject;
+        cameraWork = GetComponent<CameraWork>();
+        if (photonView.IsMine)
+        {
+           // personalCamera.SetActive(true);
+            cameraWork.OnStartFollowing();
+        }
     }
     private void FixedUpdate()
     {
-
-
         if (dir != Vector2.zero)
         {
             velocity = dir * speed * Time.deltaTime;
             characterController.Move(new Vector3(velocity.x, 0, velocity.y));
             CheckForInteractables();
         }
-
-
     }
 
     private void CheckForInteractables()

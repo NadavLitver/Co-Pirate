@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 692593654332813147}
   - component: {fileID: 692593654332813148}
   - component: {fileID: 692593654332813149}
+  - component: {fileID: 3637321198286871908}
   - component: {fileID: 692593654332813150}
   m_Layer: 0
   m_Name: Player
@@ -154,6 +155,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  _interactionRange: 3
+  personalCamera: {fileID: 0}
+  cameraWork: {fileID: 0}
+--- !u!114 &3637321198286871908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692593654332813151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd08475b23aa548b7b9d28397d430b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 7
+  height: 3
+  centerOffset: {x: 0, y: 0, z: 0}
+  followOnStart: 0
+  smoothSpeed: 0.125
 --- !u!114 &692593654332813150
 MonoBehaviour:
   m_ObjectHideFlags: 0
