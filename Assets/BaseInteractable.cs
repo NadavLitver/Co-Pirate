@@ -6,6 +6,9 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private Sprite _icon;
+
+    public Sprite Icon => _icon;
+
     protected virtual void Awake()
     {
         InteractableHandler.Subscribe(this);

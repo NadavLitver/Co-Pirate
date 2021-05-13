@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Pun.Demo.PunBasics;
 using System.Collections;
-
-
+using CustomAttributes;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
@@ -20,9 +20,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [SerializeField]
     private float _interactionRange;
     [SerializeField]
-    private float gravityScale;
-    [SerializeField]
     private float maxAcceleration = 1;
+    [SerializeField]
+    private float _gravity;
+
+    [SerializeField, LocalComponent(true, true)]
+    private IconHandler _iconHandler;
 
     private GameObject personalCamera;
 
@@ -67,7 +70,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 CheckForInteractables();
 
             
-            characterController.Move(new Vector3(currentVelocity.x, 0, currentVelocity.y));
+            characterController.Move(new Vector3(currentVelocity.x, -_gravity, currentVelocity.y));
         }
 
        
@@ -107,6 +110,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             if (curInteractableHit.interactable != null)
                 curInteractableHit.interactable.OnBecomingTarget();
+
+            Sprite icon = (curInteractableHit.interactable == null ? null : curInteractableHit.interactable.Icon);
+
+            _iconHandler.SetIcon(icon);
         }
     }
     public void SetCurInteractableNull()

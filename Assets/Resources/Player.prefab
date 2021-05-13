@@ -157,8 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   _interactionRange: 3
-  gravityScale: 5
   maxAcceleration: 0.2
+  _gravity: 0
+  _iconHandler: {fileID: 0}
 --- !u!114 &3637321198286871908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,3 +383,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 692593654332813151}
   _offsetY: 2
+  _iconImage: {fileID: 8125457926686349334}

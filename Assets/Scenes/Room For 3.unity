@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cab67662a046aa42b26578579f67477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 56bbc6b42271d4177ac313247f47ac1f, type: 3}
 --- !u!1 &845870277
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +421,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1193099220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1459428123888791057, guid: 111c941957003cd4f87e186e903d9c48, type: 3}
+  m_PrefabInstance: {fileID: 1281948929}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa89871d1784bd4cb53412ba4f78ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1281948929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -472,6 +483,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 692593654332813149, guid: 111c941957003cd4f87e186e903d9c48, type: 3}
+      propertyPath: _gravity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 692593654332813149, guid: 111c941957003cd4f87e186e903d9c48, type: 3}
+      propertyPath: _iconHandler
+      value: 
+      objectReference: {fileID: 1193099220}
     - target: {fileID: 692593654332813151, guid: 111c941957003cd4f87e186e903d9c48, type: 3}
       propertyPath: m_Name
       value: Player
