@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
     Vector2 dir;
-    Vector2 velocity;
+    Vector2 currentVelocity = Vector2.zero;
+    Vector2 targetVelocity = Vector2.zero;
     [SerializeField]
     float speed;
 
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private float _interactionRange;
     [SerializeField]
     private float gravityScale;
+    [SerializeField]
+    private float maxAcceleration = 1;
 
     private GameObject personalCamera;
 
@@ -48,20 +51,24 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         }
     }
-
-    
-    
     private void FixedUpdate()
     {
         if (photonView.IsMine)
         {
+            targetVelocity = Vector2.zero;
             if(dir != Vector2.zero)
             {
-                velocity = dir * speed * Time.deltaTime;
+                targetVelocity = dir * speed * Time.deltaTime;
                 CheckForInteractables();
             }
-            characterController.Move(new Vector3(velocity.x, -gravityScale, velocity.y));
+
+            Vector2 acceleration = targetVelocity - currentVelocity;
+
+            currentVelocity += Vector2.ClampMagnitude(acceleration, maxAcceleration * Time.deltaTime);
+            
+            characterController.Move(new Vector3(currentVelocity.x, 0, currentVelocity.y));
         }
+
        
     }
     // gravity

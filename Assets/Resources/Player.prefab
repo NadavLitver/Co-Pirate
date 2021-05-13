@@ -157,6 +157,7 @@ MonoBehaviour:
   speed: 1
   _interactionRange: 3
   gravityScale: 5
+  maxAcceleration: 0.7
 --- !u!114 &3637321198286871908
 MonoBehaviour:
   m_ObjectHideFlags: 0
