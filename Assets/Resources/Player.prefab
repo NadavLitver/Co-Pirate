@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   _interactionRange: 3
-  cameraWork: {fileID: 0}
+  gravityScale: 5
 --- !u!114 &3637321198286871908
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviourPunCallbacks
 {
     // Controls controls;
+
+
     Vector2 dir;
     Vector2 velocity;
     [SerializeField]
@@ -16,10 +18,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     [SerializeField]
     private float _interactionRange;
+    [SerializeField]
+    private float gravityScale;
 
     private GameObject personalCamera;
 
-    [SerializeField]
+   
     private CameraWork cameraWork;
 
     InteractableHit curInteractableHit;
@@ -49,14 +53,21 @@ public class PlayerController : MonoBehaviourPunCallbacks
     
     private void FixedUpdate()
     {
-        if (dir != Vector2.zero && photonView.IsMine)
+        if (photonView.IsMine)
         {
-            velocity = dir * speed * Time.deltaTime;
-            characterController.Move(new Vector3(velocity.x, 0, velocity.y));
-            CheckForInteractables();
+            if(dir != Vector2.zero)
+            {
+                velocity = dir * speed * Time.deltaTime;
+                CheckForInteractables();
+            }
+            characterController.Move(new Vector3(velocity.x, -gravityScale, velocity.y));
         }
+       
     }
-
+    // gravity
+    // deaccleration
+    // lerp on movement
+   
     private void CheckForInteractables()
     {
         InteractableHit hit = InteractableHandler.GetClosestInteractable(transform.position);
