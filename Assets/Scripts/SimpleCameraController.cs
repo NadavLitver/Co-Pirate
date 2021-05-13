@@ -159,7 +159,7 @@ namespace UnityTemplateProjects
             return direction;
         }
         
-        void Update()
+        void LateUpdate()
         {
             // Exit Sample  
 

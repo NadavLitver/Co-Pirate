@@ -4,7 +4,9 @@ using UnityEngine;
 
 public abstract class BaseInteractable : MonoBehaviour, IInteractable
 {
-    protected virtual void Start()
+    [SerializeField]
+    private Sprite _icon;
+    protected virtual void Awake()
     {
         InteractableHandler.Subscribe(this);
     }

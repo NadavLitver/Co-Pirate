@@ -57,14 +57,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
         {
             targetVelocity = Vector2.zero;
             if(dir != Vector2.zero)
-            {
                 targetVelocity = dir * speed * Time.deltaTime;
-                CheckForInteractables();
-            }
 
             Vector2 acceleration = targetVelocity - currentVelocity;
 
             currentVelocity += Vector2.ClampMagnitude(acceleration, maxAcceleration * Time.deltaTime);
+
+            if (currentVelocity.magnitude >= 0.001f)
+                CheckForInteractables();
+
             
             characterController.Move(new Vector3(currentVelocity.x, 0, currentVelocity.y));
         }
@@ -111,5 +112,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public void SetCurInteractableNull()
     {
         curInteractableHit.interactable = null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, _interactionRange);
     }
 }
