@@ -9,17 +9,24 @@ using System.Collections;
 public class PlayerController : MonoBehaviourPunCallbacks
 {
     // Controls controls;
+
+
     Vector2 dir;
-    Vector2 velocity;
+    Vector2 currentVelocity = Vector2.zero;
+    Vector2 targetVelocity = Vector2.zero;
     [SerializeField]
     float speed;
 
     [SerializeField]
     private float _interactionRange;
+    [SerializeField]
+    private float gravityScale;
+    [SerializeField]
+    private float maxAcceleration = 1;
 
     private GameObject personalCamera;
 
-    [SerializeField]
+   
     private CameraWork cameraWork;
 
     InteractableHit curInteractableHit;
@@ -44,19 +51,30 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         }
     }
-
-    
-    
     private void FixedUpdate()
     {
-        if (dir != Vector2.zero && photonView.IsMine)
+        if (photonView.IsMine)
         {
-            velocity = dir * speed * Time.deltaTime;
-            characterController.Move(new Vector3(velocity.x, 0, velocity.y));
-            CheckForInteractables();
-        }
-    }
+            targetVelocity = Vector2.zero;
+            if(dir != Vector2.zero)
+            {
+                targetVelocity = dir * speed * Time.deltaTime;
+                CheckForInteractables();
+            }
 
+            Vector2 acceleration = targetVelocity - currentVelocity;
+
+            currentVelocity += Vector2.ClampMagnitude(acceleration, maxAcceleration * Time.deltaTime);
+            
+            characterController.Move(new Vector3(currentVelocity.x, 0, currentVelocity.y));
+        }
+
+       
+    }
+    // gravity
+    // deaccleration
+    // lerp on movement
+   
     private void CheckForInteractables()
     {
         InteractableHit hit = InteractableHandler.GetClosestInteractable(transform.position);
