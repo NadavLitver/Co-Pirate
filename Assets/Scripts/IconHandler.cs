@@ -1,4 +1,5 @@
 using CustomAttributes;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,10 @@ public class IconHandler : MonoBehaviour
     private GameObject _player;
     [SerializeField]
     private float _offsetY;
+    [SerializeField]
+    private float _fadeoutSpeed;
+    [SerializeField]
+    private float _fadeinSpeed;
     [SerializeField, LocalComponent(true)]
     private Image _iconImage;
 
@@ -39,13 +44,31 @@ public class IconHandler : MonoBehaviour
         if (_iconImage != null)
         {
             if (icon == null)
-                _iconImage.enabled = false;
+                FadeOut();
             else
-            {
-                _iconImage.enabled = true;
-                _iconImage.sprite = icon;
-            }
+                FadeOut(0, () => SwapIcon(icon));
 
         }
+        void SwapIcon(Sprite newIcon)
+        {
+            _iconImage.sprite = icon;
+            FadeIn();
+        }
+    }
+
+    private void FadeIn(float delay = 0, TweenCallback callback = null)
+    {
+        if (_iconImage.color.a != 1)
+            _iconImage.DOFade(1, (1 - _iconImage.color.a) / _fadeinSpeed).SetDelay(delay).OnComplete(callback);
+        else
+            callback?.Invoke();
+    }
+
+    private void FadeOut(float delay = 0, TweenCallback callback = null)
+    {
+        if (_iconImage.color.a != 0)
+            _iconImage.DOFade(0, _iconImage.color.a / _fadeoutSpeed).SetDelay(delay).OnComplete(callback);
+        else
+            callback?.Invoke();
     }
 }
