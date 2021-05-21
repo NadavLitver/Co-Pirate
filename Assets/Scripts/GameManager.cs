@@ -27,6 +27,10 @@ namespace Photon.Pun.Demo.PunBasics
 		
 
 		private GameObject instance;
+
+		public Camera redCamera;
+		public Camera blueCamera;
+
 		private int playerNumber;
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]
@@ -75,8 +79,20 @@ namespace Photon.Pun.Demo.PunBasics
 				    Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-					PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
-				}else{
+			    	GameObject playerClone =  PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
+					if(playerNumber - 1 > 1)
+                    {
+						playerClone.GetComponent<PlayerController>().isTeam1 = false;
+                    }
+                    else
+                    {
+						playerClone.GetComponent<PlayerController>().isTeam1 = true;
+
+					}
+					
+
+				}
+				else{
 
 					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
 				}

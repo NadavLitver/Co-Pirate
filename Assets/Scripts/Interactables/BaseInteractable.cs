@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class BaseInteractable : MonoBehaviour, IInteractable
@@ -9,11 +7,16 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
 
     public Sprite Icon => _icon;
 
-    protected virtual void Awake()
+    void OnEnable()
     {
-        InteractableHandler.Subscribe(this);
+        InteractablesObserver.Subscribe(this);
+    }
+    void OnDisable()
+    {
+        InteractablesObserver.Unsubscribe(this);
     }
     public abstract void OnInteract();
     public abstract void OnBecomingTarget();
     public abstract void OnUnbecomingTarget();
+    public virtual bool InteractableCondition() => true;
 }

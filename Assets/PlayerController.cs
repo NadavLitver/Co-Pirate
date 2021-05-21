@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
 {
     // Controls controls;
 
+    [SerializeField]
+    Material redMat;
+
+    [SerializeField]
+    Material blueMat;
 
     Vector2 dir;
     Vector2 currentVelocity = Vector2.zero;
@@ -24,13 +29,17 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [SerializeField]
     private float _gravity;
 
+  
+    public bool isTeam1;
+
     [SerializeField, LocalComponent(true, true)]
     private IconHandler _iconHandler;
 
     private GameObject personalCamera;
 
    
-    private CameraWork cameraWork;
+    //
+    //private CameraWork cameraWork;
 
     InteractableHit curInteractableHit;
 
@@ -44,15 +53,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
         InputManager.controls.Gameplay.Move.canceled += (x) => dir = Vector3.zero;
         InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
         characterController = GetComponent<CharacterController>();
-        personalCamera = Camera.main.gameObject;
-        cameraWork = GetComponent<CameraWork>();
-        if (photonView.IsMine)
-        {
-            // personalCamera.SetActive(true);
-            cameraWork.OnStartFollowing();
-          
-
-        }
+        GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
+        personalCamera = isTeam1 ? GameManager.Instance.redCamera.gameObject : GameManager.Instance.blueCamera.gameObject;
+        personalCamera.SetActive(true);
+        personalCamera.GetComponent<CameraController>().myfollow = this.transform;
     }
     private void FixedUpdate()
     {
@@ -75,13 +79,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
        
     }
-    // gravity
-    // deaccleration
-    // lerp on movement
    
     private void CheckForInteractables()
     {
-        InteractableHit hit = InteractableHandler.GetClosestInteractable(transform.position);
+        InteractableHit hit = InteractablesObserver.GetClosestInteractable(transform.position);
         if ((curInteractableHit.interactable == null || curInteractableHit.distance > hit.distance) && hit.distance <= _interactionRange && hit.interactable != null)
             ChangeCurInteratable(hit);
         else if (hit.distance > _interactionRange)
