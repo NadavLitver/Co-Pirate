@@ -386,11 +386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 692593654332813151}
   _offsetY: 2
-<<<<<<< Updated upstream
   _fadeoutSpeed: 3
   _fadeinSpeed: 1.5
-=======
-  _fadeoutSpeed: 0
-  _fadeinSpeed: 0
->>>>>>> Stashed changes
   _iconImage: {fileID: 8125457926686349334}
