@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
    
     private void CheckForInteractables()
     {
-        InteractableHit hit = InteractableHandler.GetClosestInteractable(transform.position);
+        InteractableHit hit = InteractablesObserver.GetClosestInteractable(transform.position);
         if ((curInteractableHit.interactable == null || curInteractableHit.distance > hit.distance) && hit.distance <= _interactionRange && hit.interactable != null)
             ChangeCurInteratable(hit);
         else if (hit.distance > _interactionRange)
