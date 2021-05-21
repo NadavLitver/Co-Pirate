@@ -73,8 +73,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
             if (currentVelocity.magnitude >= 0.001f)
                 CheckForInteractables();
 
-            
-            characterController.Move(new Vector3(currentVelocity.x, -_gravity, currentVelocity.y));
+            Vector3 forwardDirection = (transform.position - new Vector3(personalCamera.transform.position.x, transform.position.y, personalCamera.transform.position.z)).normalized;
+            Vector3 rightDir = Vector3.Cross(Vector3.up, forwardDirection).normalized;
+            Vector3 move = forwardDirection * currentVelocity.y + rightDir * currentVelocity.x;
+            characterController.Move(move -_gravity * Vector3.up);
         }
 
        
