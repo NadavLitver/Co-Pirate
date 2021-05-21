@@ -383,4 +383,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 692593654332813151}
   _offsetY: 2
+  _fadeoutSpeed: 3
+  _fadeinSpeed: 1.5
   _iconImage: {fileID: 8125457926686349334}
