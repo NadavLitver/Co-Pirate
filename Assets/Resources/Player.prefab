@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 692593654332813149}
   - component: {fileID: 3637321198286871908}
   - component: {fileID: 692593654332813150}
-  - component: {fileID: 986198334868527839}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -165,6 +164,7 @@ MonoBehaviour:
   _gravity: 2
   isTeam1: 0
   _iconHandler: {fileID: 1459428123888791057}
+  personalCamera: {fileID: 0}
 --- !u!114 &3637321198286871908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,19 +198,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &986198334868527839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692593654332813151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b28dd60f6abf16d4094cf0f642a043e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
 --- !u!1 &2088248405522910714
 GameObject:
   m_ObjectHideFlags: 0
