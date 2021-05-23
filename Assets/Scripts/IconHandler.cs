@@ -1,5 +1,7 @@
 using CustomAttributes;
 using DG.Tweening;
+using Photon.Pun;
+using Photon.Pun.Demo.PunBasics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,12 +20,10 @@ public class IconHandler : MonoBehaviour
     private Image _iconImage;
 
     private Camera _mainCam;
-    private void Awake()
-    {
-        _mainCam = Camera.main;
-    }
     private void Start()
     {
+        _mainCam = GameManager.Instance.localPlayerObject.GetComponent<PlayerController>().personalCamera;
+
         GetComponentInParent<Canvas>().worldCamera = _mainCam;
 
         if (_player != null)
