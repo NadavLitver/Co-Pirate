@@ -58,7 +58,6 @@ namespace Photon.Pun.Demo.PunBasics
 			//Instance = this;
 			
 			playerNumber = PhotonNetwork.CurrentRoom.PlayerCount;
-			Debug.Log("Player number: " + playerNumber + " connected! Is mine: " + photonView.IsMine);
 			
 			// in case we started this demo with the wrong scene being active, simply load the menu scene
 			if (!PhotonNetwork.IsConnected)
@@ -80,6 +79,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
 			    	GameObject playerClone =  PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
+					Debug.Log("Player number: " + playerNumber + " connected! Is mine: " + playerClone.GetComponent<PhotonView>().IsMine);
 					if(playerNumber > 2)
                     {
 						playerClone.GetComponent<PlayerController>().isTeam1 = false;
