@@ -58,7 +58,7 @@ namespace Photon.Pun.Demo.PunBasics
 			//Instance = this;
 			
 			playerNumber = PhotonNetwork.CurrentRoom.PlayerCount;
-			Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
+			Debug.Log("Player number: " + playerNumber + " connected! Is mine: " + photonView.IsMine);
 			
 			// in case we started this demo with the wrong scene being active, simply load the menu scene
 			if (!PhotonNetwork.IsConnected)
