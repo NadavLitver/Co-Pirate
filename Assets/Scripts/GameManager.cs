@@ -31,7 +31,6 @@ namespace Photon.Pun.Demo.PunBasics
 		public Camera redCamera;
 		public Camera blueCamera;
 
-		private int playerNumber;
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]
         private GameObject playerPrefab;
@@ -39,6 +38,7 @@ namespace Photon.Pun.Demo.PunBasics
 		[SerializeField]
 		Transform[] spawnPoints;
 
+		public Player localPlayer;
         #endregion
 
         #region MonoBehaviour CallBacks
@@ -55,9 +55,6 @@ namespace Photon.Pun.Demo.PunBasics
         /// </summary>
         void Start()
 		{
-			//Instance = this;
-			
-			playerNumber = PhotonNetwork.CurrentRoom.PlayerCount;
 			
 			// in case we started this demo with the wrong scene being active, simply load the menu scene
 			if (!PhotonNetwork.IsConnected)
@@ -78,8 +75,7 @@ namespace Photon.Pun.Demo.PunBasics
 				    Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-			    	GameObject playerClone =  PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
-					Debug.Log("Player number: " + playerNumber + " connected! Is mine: " + playerClone.GetComponent<PhotonView>().IsMine);
+					PlayerManager.LocalPlayerInstance =  PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
 				}
 				else{
 
@@ -162,7 +158,7 @@ namespace Photon.Pun.Demo.PunBasics
 		}
 		public Vector3 SpawnPoint()
         {	
-		 return spawnPoints[playerNumber - 1].position;
+		 return spawnPoints[PhotonNetwork.CountOfPlayers - 1].position;
 		}
 		#endregion
 

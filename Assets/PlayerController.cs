@@ -5,6 +5,8 @@ using Photon.Pun.Demo.PunBasics;
 using System.Collections;
 using CustomAttributes;
 using System.Collections.Generic;
+using Photon.Pun.UtilityScripts;
+using Photon.Realtime;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
@@ -35,20 +37,24 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [SerializeField, LocalComponent(true, true)]
     private IconHandler _iconHandler;
 
-    private GameObject personalCamera;
-
-   
+    public Camera personalCamera;
     //
     //private CameraWork cameraWork;
 
     InteractableHit curInteractableHit;
 
+    static int playerCount;
 
     CharacterController characterController;
 
+    public Player player;
+
     private void Start()
     {
-        isTeam1 = PhotonNetwork.CurrentRoom.PlayerCount <= 2;
+
+        player = PlayerNumbering.SortedPlayers[playerCount];
+        playerCount++;
+        isTeam1 = player.GetPlayerNumber() <= 2;
 
         GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
 
@@ -64,9 +70,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
             
-            personalCamera = isTeam1 ? GameManager.Instance.redCamera.gameObject : GameManager.Instance.blueCamera.gameObject;
-            personalCamera.SetActive(true);
-            personalCamera.GetComponent<CameraController>().myfollow = this.transform;
+            personalCamera = isTeam1 ? GameManager.Instance.redCamera : GameManager.Instance.blueCamera;
+            personalCamera.gameObject.SetActive(true);
+            personalCamera.GetComponent<CameraController>().myfollow = transform;
         }
     }
 
