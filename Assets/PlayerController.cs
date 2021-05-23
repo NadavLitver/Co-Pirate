@@ -48,17 +48,28 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        InputManager.controls.Gameplay.Enable();
-        InputManager.controls.Gameplay.Move.performed += OnMove;
-        InputManager.controls.Gameplay.Move.canceled += (x) => dir = Vector3.zero;
-        InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
-        characterController = GetComponent<CharacterController>();
+        isTeam1 = PhotonNetwork.CurrentRoom.PlayerCount <= 2;
+
         GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
+
         Debug.Log(isTeam1);
-        personalCamera = isTeam1 ? GameManager.Instance.redCamera.gameObject : GameManager.Instance.blueCamera.gameObject;
-        personalCamera.SetActive(true);
-        personalCamera.GetComponent<CameraController>().myfollow = this.transform;
+
+        if (photonView.IsMine)
+        {
+            InputManager.controls.Gameplay.Enable();
+            InputManager.controls.Gameplay.Move.performed += OnMove;
+            InputManager.controls.Gameplay.Move.canceled += (x) => dir = Vector3.zero;
+            InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
+            characterController = GetComponent<CharacterController>();
+
+
+            
+            personalCamera = isTeam1 ? GameManager.Instance.redCamera.gameObject : GameManager.Instance.blueCamera.gameObject;
+            personalCamera.SetActive(true);
+            personalCamera.GetComponent<CameraController>().myfollow = this.transform;
+        }
     }
+
     private void FixedUpdate()
     {
         if (photonView.IsMine)
