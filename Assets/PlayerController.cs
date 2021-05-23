@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
         characterController = GetComponent<CharacterController>();
         GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
+        Debug.Log(isTeam1);
         personalCamera = isTeam1 ? GameManager.Instance.redCamera.gameObject : GameManager.Instance.blueCamera.gameObject;
         personalCamera.SetActive(true);
         personalCamera.GetComponent<CameraController>().myfollow = this.transform;

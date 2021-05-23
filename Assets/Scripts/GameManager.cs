@@ -80,7 +80,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
 			    	GameObject playerClone =  PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
-					if(playerNumber - 1 > 1)
+					if(playerNumber > 2)
                     {
 						playerClone.GetComponent<PlayerController>().isTeam1 = false;
                     }
