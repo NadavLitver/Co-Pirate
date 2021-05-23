@@ -39,6 +39,7 @@ namespace Photon.Pun.Demo.PunBasics
 		Transform[] spawnPoints;
 
 		public Player localPlayer;
+		public GameObject localPlayerObject;
         #endregion
 
         #region MonoBehaviour CallBacks
@@ -75,7 +76,7 @@ namespace Photon.Pun.Demo.PunBasics
 				    Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-					PlayerManager.LocalPlayerInstance =  PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
+					localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, SpawnPoint(), Quaternion.identity, 0);
 				}
 				else{
 

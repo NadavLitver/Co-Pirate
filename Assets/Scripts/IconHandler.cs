@@ -20,12 +20,10 @@ public class IconHandler : MonoBehaviour
     private Image _iconImage;
 
     private Camera _mainCam;
-    private void Awake()
-    {
-        _mainCam = PlayerManager.LocalPlayerInstance.GetComponent<PlayerController>().personalCamera;
-    }
     private void Start()
     {
+        _mainCam = GameManager.Instance.localPlayerObject.GetComponent<PlayerController>().personalCamera;
+
         GetComponentInParent<Canvas>().worldCamera = _mainCam;
 
         if (_player != null)
