@@ -12,7 +12,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             if (PhotonNetwork.IsMasterClient)
             {
                 SortedPlayers = new Player[4];
-                SortedPlayers[0] = photonView.Owner;
+                SortedPlayers[0] = PhotonNetwork.LocalPlayer
             }
         }
 
