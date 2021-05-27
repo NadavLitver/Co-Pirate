@@ -10,6 +10,7 @@ using Photon.Realtime;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
+    public static PlayerController localPlayerCtrl;
     // Controls controls;
 
     [SerializeField]
@@ -44,6 +45,13 @@ public class PlayerController : MonoBehaviourPunCallbacks
     InteractableHit curInteractableHit;
 
     CharacterController characterController;
+    private void Awake()
+    {
+        if (photonView.IsMine)
+        {
+            localPlayerCtrl = this;
+        }
+    }
 
     private void Start()
     {

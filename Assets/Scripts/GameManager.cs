@@ -74,7 +74,7 @@ namespace Photon.Pun.Demo.PunBasics
 			} else {
 
 
-				if (photonView.IsMine)
+				if (PlayerController.localPlayerCtrl == null)
 				{
 				    Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
