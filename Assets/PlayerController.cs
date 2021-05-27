@@ -47,14 +47,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     CharacterController characterController;
 
+
     public Player player;
 
     private void Start()
     {
-
-        player = PlayerNumbering.SortedPlayers[playerCount];
-        playerCount++;
-        isTeam1 = player.GetPlayerNumber() <= 2;
+        isTeam1 = photonView.Owner.GetPlayerNumber() <= 2;
 
         GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
 
