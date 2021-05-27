@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         var playerNum = photonView.Owner.GetPlayerNumber();
         isTeam1 = playerNum <= 2;
 
-        Debug.Log("Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient + ", Player num: " + playerNum);
+        Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
         GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
 
