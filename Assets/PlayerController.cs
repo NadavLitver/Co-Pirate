@@ -43,16 +43,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     InteractableHit curInteractableHit;
 
-    static int playerCount;
-
     CharacterController characterController;
-
-
-    public Player player;
 
     private void Start()
     {
-        isTeam1 = photonView.Owner.GetPlayerNumber() <= 2;
+        var playerNum = photonView.Owner.GetPlayerNumber();
+        isTeam1 = playerNum <= 2;
+
+        Debug.Log("Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient + ", Player num: " + playerNum);
 
         GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
 
