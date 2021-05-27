@@ -20,11 +20,11 @@ namespace Photon.Pun.Demo.PunBasics
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                SortedPlayers[PhotonNetwork.CountOfPlayers - 1] = other;
+                SortedPlayers[PhotonNetwork.CurrentRoom.PlayerCount - 1] = other;
                 
-                Debug.Log(PhotonNetwork.CountOfPlayers);
+                Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
 
-                if (PhotonNetwork.CountOfPlayers == 4)
+                if (PhotonNetwork.CurrentRoom.PlayerCount == 4)
                 {
                     photonView.RPC("SendPlayers", RpcTarget.All, SortedPlayers);
                     Debug.Log("SENT PLAYERS!!!!");
