@@ -38,7 +38,6 @@ namespace Photon.Pun.Demo.PunBasics
 		[SerializeField]
 		Transform[] spawnPoints;
 
-		public Player[] SortedPlayers = null;
 
 		public Player localPlayer;
 		public GameObject localPlayerObject;
@@ -53,11 +52,7 @@ namespace Photon.Pun.Demo.PunBasics
 				Instance = this;
 			}
 
-            if (PhotonNetwork.IsMasterClient)
-            {
-				SortedPlayers = new Player[4];
-				SortedPlayers[0] = photonView.Owner;
-            }
+          
 		}
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase.
@@ -121,14 +116,8 @@ namespace Photon.Pun.Demo.PunBasics
 			Debug.Log( "OnPlayerEnteredRoom() " + other.NickName); // not seen if you're the player connecting
           
 			if ( PhotonNetwork.IsMasterClient )
-			{
-				SortedPlayers[PhotonNetwork.CountOfPlayers - 1] = other;
-
-				if (PhotonNetwork.CountOfPlayers == 4)
-					photonView.RPC("SendPlayers", RpcTarget.All, SortedPlayers);
-				
+			{	
 				Debug.LogFormat( "OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient ); // called before OnPlayerLeftRoom
-
 				LoadArena();
 			}
 		}
@@ -149,14 +138,7 @@ namespace Photon.Pun.Demo.PunBasics
 		}
 
 
-		[PunRPC]
-		void SendPlayers(Player[] players)
-        {
-			SortedPlayers = players;
-
-			//Start game
-
-        }
+	
 		/// <summary>
 		/// Called when the local player left the room. We need to load the launcher scene.
 		/// </summary>
