@@ -5,14 +5,12 @@ namespace Photon.Pun.Demo.PunBasics
 {
     public class LobbyManager : MonoBehaviourPunCallbacks
     {
-        public Player[] SortedPlayers = null;
-
         private void Awake()
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                SortedPlayers = new Player[4];
-                SortedPlayers[0] = PhotonNetwork.LocalPlayer;
+                PlayerInformation.players = new Player[4];
+                PlayerInformation.players[0] = PhotonNetwork.LocalPlayer;
             }
         }
 
@@ -20,13 +18,13 @@ namespace Photon.Pun.Demo.PunBasics
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                SortedPlayers[PhotonNetwork.CurrentRoom.PlayerCount - 1] = other;
+                PlayerInformation.players[PhotonNetwork.CurrentRoom.PlayerCount - 1] = other;
                 
                 Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
 
                 if (PhotonNetwork.CurrentRoom.PlayerCount == 4)
                 {
-                    photonView.RPC("SendPlayers", RpcTarget.All, SortedPlayers);
+                    photonView.RPC("SendPlayers", RpcTarget.All, PlayerInformation.players);
                     Debug.Log("SENT PLAYERS!!!!");
                 }
             }
@@ -36,7 +34,7 @@ namespace Photon.Pun.Demo.PunBasics
         {
             Debug.Log("Recieved RPC");
 
-            SortedPlayers = players;
+            PlayerInformation.players = players;
             if (PhotonNetwork.IsMasterClient)
             {
                 PhotonNetwork.LoadLevel("Room For 4");
