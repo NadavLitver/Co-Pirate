@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3122451191887511092}
   - component: {fileID: 3122451191884643924}
   - component: {fileID: 3122451191885610004}
-  - component: {fileID: 4697836275164117977}
+  - component: {fileID: 934728447917889617}
   m_Layer: 0
   m_Name: Cannon_Balls_Set 1
   m_TagString: Untagged
@@ -83,19 +83,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4697836275164117977
-SphereCollider:
+--- !u!114 &934728447917889617
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3122451191887602260}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.5
-  m_Center: {x: -0.3, y: 0.39, z: -0.3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab0d007900103842aa32e7e062f12c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _icon: {fileID: 21300000, guid: 0d73e360f237e194499b44c97d074c4f, type: 3}
 --- !u!1 &6403051731073520704
 GameObject:
   m_ObjectHideFlags: 0

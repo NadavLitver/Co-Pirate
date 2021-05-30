@@ -157,16 +157,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4838762ce546bae4185fcd0bc91fa17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
-  blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
   speed: 4
   _interactionRange: 3
   maxAcceleration: 0.2
   maxRotationSpeed: 360
   _gravity: 2
-  isTeam1: 0
+  cannonBall: {fileID: 8684757971912350123}
+  redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
+  blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
   _iconHandler: {fileID: 1459428123888791057}
   personalCamera: {fileID: 0}
+  isTeam1: 0
 --- !u!114 &3637321198286871908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,12 +315,12 @@ GameObject:
   - component: {fileID: 7252828874414370857}
   - component: {fileID: 9184520857629826144}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: CannonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4984342636664649493
 Transform:
   m_ObjectHideFlags: 0
@@ -328,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8684757971912350123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.73, y: 0, z: 0}
+  m_LocalPosition: {x: 0.85, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 692593654332813143}

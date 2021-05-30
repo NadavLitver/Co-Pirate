@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "d0b7ea2376477d4c99f23bff357556f037e23d61"
+      "hash": "84bcd53e2b2974c49c70736d015ab5f4cf6e633e"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
@@ -104,7 +104,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.24",
+      "version": "1.1.26",
       "depth": 0,
       "source": "registry",
       "dependencies": {

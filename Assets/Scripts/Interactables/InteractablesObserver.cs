@@ -4,12 +4,12 @@ using UnityEngine;
 public static class InteractablesObserver
 {
     public static List<IInteractable> interactables = new List<IInteractable>();
-    public static void Subscribe(IInteractable interactable)
+    public static void Subscribe(this IInteractable interactable)
     {
         if(!interactables.Contains(interactable))
             interactables.Add(interactable);
     }
-    public static void Unsubscribe(IInteractable interactable)
+    public static void Unsubscribe(this IInteractable interactable)
     {
         interactables.Remove(interactable);
     }

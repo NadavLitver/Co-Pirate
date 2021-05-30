@@ -1,7 +1,5 @@
 using CustomAttributes;
 using DG.Tweening;
-using Photon.Pun;
-using Photon.Pun.Demo.PunBasics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +20,7 @@ public class IconHandler : MonoBehaviour
     private Camera _mainCam;
     private void Start()
     {
-        _mainCam = GameManager.Instance.localPlayerObject.GetComponent<PlayerController>().personalCamera;
+        _mainCam = PlayerController.localPlayerCtrl.GetComponent<PlayerController>().personalCamera;
 
         GetComponentInParent<Canvas>().worldCamera = _mainCam;
 
@@ -36,8 +34,11 @@ public class IconHandler : MonoBehaviour
 
     private void SetIconPosition()
     {
-        transform.position = _player.transform.position + Vector3.up * _offsetY;
-        transform.LookAt(_mainCam.transform.position, Vector3.up);
+        if (_mainCam != null)
+        {
+            transform.position = _player.transform.position + Vector3.up * _offsetY;
+            transform.LookAt(_mainCam.transform.position, Vector3.up);
+        }
     }
     public void SetIcon(Sprite icon)
     {

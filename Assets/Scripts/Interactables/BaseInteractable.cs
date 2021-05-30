@@ -9,14 +9,16 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
 
     void OnEnable()
     {
-        InteractablesObserver.Subscribe(this);
+        this.Subscribe();
     }
     void OnDisable()
     {
-        InteractablesObserver.Unsubscribe(this);
+        this.Unsubscribe();
     }
-    public abstract void OnInteract();
-    public abstract void OnBecomingTarget();
-    public abstract void OnUnbecomingTarget();
+    public abstract void OnInteract_Start(PlayerController ctrl);
+    public virtual void OnInteract_End(PlayerController ctrl) { }
+    public abstract void OnBecomingTarget(PlayerController ctrl);
+    public abstract void OnUnbecomingTarget(PlayerController ctrl);
     public virtual bool InteractableCondition() => true;
+
 }

@@ -1,45 +1,56 @@
+using CustomAttributes;
 using Photon.Pun;
+using Photon.Pun.Demo.PunBasics;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Photon.Pun.Demo.PunBasics;
-using System.Collections;
-using CustomAttributes;
-using System.Collections.Generic;
-using Photon.Pun.UtilityScripts;
-using Photon.Realtime;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
     public static PlayerController localPlayerCtrl;
-    // Controls controls;
+    #region Serielized
 
+    #region Settings
+    [FoldoutGroup("Settings")]
+    [SerializeField]
+    private float speed;
+
+    [FoldoutGroup("Settings")]
+    [SerializeField]
+    private float _interactionRange;
+
+    [FoldoutGroup("Settings")]
+    [SerializeField]
+    private float maxAcceleration = 1;
+
+    [FoldoutGroup("Settings")]
+    [SerializeField, SuffixLabel("ApS"), Tooltip("Maximum rotation in angles per second")]
+    private float maxRotationSpeed = 360;
+
+    [FoldoutGroup("Settings")]
+    [SerializeField]
+    private float _gravity;
+    #endregion
+
+    #region Refrences
+    [FoldoutGroup("Refrences")]
+    public GameObject cannonBall;
+
+    [FoldoutGroup("Refrences")]
     [SerializeField]
     Material redMat;
 
+    [FoldoutGroup("Refrences")]
     [SerializeField]
     Material blueMat;
 
-    Vector2 dir;
-    Vector2 currentVelocity = Vector2.zero;
-    Vector2 targetVelocity = Vector2.zero;
-    [SerializeField]
-    float speed;
-
-    [SerializeField]
-    private float _interactionRange;
-    [SerializeField]
-    private float maxAcceleration = 1;
-    [SerializeField, Suffix("ApS"), Tooltip("Maximum rotation in angles per second")]
-    private float maxRotationSpeed = 360;
-    [SerializeField]
-    private float _gravity;
-
-  
-    public bool isTeam1;
-
+    [FoldoutGroup("Refrences")]
     [SerializeField, LocalComponent(true, true)]
     private IconHandler _iconHandler;
+    #endregion
 
+    #endregion
+    [HideInInspector]
     public Camera personalCamera;
     //
     //private CameraWork cameraWork;
@@ -47,6 +58,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
     InteractableHit curInteractableHit;
 
     CharacterController characterController;
+
+    [ReadOnly]
+    public bool isTeam1;
+    Vector2 dir;
+    Vector2 currentVelocity = Vector2.zero;
+    Vector2 targetVelocity = Vector2.zero;
     private void Awake()
     {
         if (photonView.IsMine)
@@ -125,7 +142,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         if (curInteractableHit.interactable != null && curInteractableHit.distance <= _interactionRange)
         {
-            curInteractableHit.interactable.OnInteract();
+            curInteractableHit.interactable.OnInteract_Start(this);
         }
     }
     public void ChangeCurInteratable(InteractableHit newInteractableHit)
@@ -133,12 +150,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (curInteractableHit.interactable != newInteractableHit.interactable)
         {
             if (curInteractableHit.interactable != null)
-                curInteractableHit.interactable.OnUnbecomingTarget();
+                curInteractableHit.interactable.OnUnbecomingTarget(this);
 
             curInteractableHit = newInteractableHit;
 
             if (curInteractableHit.interactable != null)
-                curInteractableHit.interactable.OnBecomingTarget();
+                curInteractableHit.interactable.OnBecomingTarget(this);
 
             Sprite icon = (curInteractableHit.interactable == null ? null : curInteractableHit.interactable.Icon);
 
