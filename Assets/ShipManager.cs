@@ -13,19 +13,37 @@ public class ShipManager : MonoBehaviour
 
 
     [SerializeField] const float maxDamagedLevel = 100;
-    [Range(0.0f, maxDamagedLevel)]
-    [SerializeField] float curDamagedLevel;
+    float curDamagedLevel;
     [SerializeField] float maxDegrees = 1;
     float DamageDelta;
     float RotationDelta;
-  
+
+
+    float CurDamagedLevel {
+        get => curDamagedLevel;
+            
+            
+          set{
+                 if (curDamagedLevel == value)
+                     return;
+
+                curDamagedLevel = value;
+                DamageDelta = curDamagedLevel * sinkDistance * 0.01f;
+                RotationDelta = curDamagedLevel * maxRotation * 0.01f;
+
+
+          }
+    
+    }
 
 
     private void Update()
     {
 
-        DamageDelta = curDamagedLevel * sinkDistance * 0.01f;
-        RotationDelta = curDamagedLevel * maxRotation * 0.01f;
+       /* if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(90); // just a test dont judge me 
+        }*/
         UpdateShip();
 
     }
@@ -38,8 +56,9 @@ public class ShipManager : MonoBehaviour
     }
     void TakeDamage(float damage)//take damage in game from here instead of through the slider
     {
-        curDamagedLevel += damage;
-        if(curDamagedLevel == maxDamagedLevel)
+      
+        CurDamagedLevel += damage;
+        if(CurDamagedLevel == maxDamagedLevel)
         {
             Lose();
         }
@@ -52,7 +71,6 @@ public class ShipManager : MonoBehaviour
     void ChangeShipZRotation()
     {
       
-     // transform.rotation = Quaternion.Lerp(transform.rotation)
      transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(RotationDelta,0, 0), maxDegrees * Time.deltaTime);
 
     }
