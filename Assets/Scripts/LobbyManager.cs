@@ -13,9 +13,6 @@ namespace Photon.Pun.Demo.PunBasics
             {
                 PlayerInformation.players = new Player[_numOfPlayers];
                 PlayerInformation.players[0] = PhotonNetwork.LocalPlayer;
-
-                if (_numOfPlayers == 1)
-                    photonView.RPC("SendPlayers", RpcTarget.All, PlayerInformation.players);
             }
         }
 
@@ -24,6 +21,8 @@ namespace Photon.Pun.Demo.PunBasics
             if (PhotonNetwork.IsMasterClient)
             {
                 PlayerInformation.players[PhotonNetwork.CurrentRoom.PlayerCount - 1] = other;
+                
+                Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
 
                 if (PhotonNetwork.CurrentRoom.PlayerCount == _numOfPlayers)
                 {
@@ -43,9 +42,6 @@ namespace Photon.Pun.Demo.PunBasics
                 PhotonNetwork.LoadLevel("Room For 4");
                 Debug.Log("Trying to load game scene.");
             }
-
-
-
         }
     }
 }
