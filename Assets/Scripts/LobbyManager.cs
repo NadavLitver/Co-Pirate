@@ -5,11 +5,13 @@ namespace Photon.Pun.Demo.PunBasics
 {
     public class LobbyManager : MonoBehaviourPunCallbacks
     {
+        [SerializeField, Min(1)]
+        private int _numOfPlayers;
         private void Awake()
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                PlayerInformation.players = new Player[4];
+                PlayerInformation.players = new Player[_numOfPlayers];
                 PlayerInformation.players[0] = PhotonNetwork.LocalPlayer;
             }
         }
@@ -22,7 +24,7 @@ namespace Photon.Pun.Demo.PunBasics
                 
                 Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
 
-                if (PhotonNetwork.CurrentRoom.PlayerCount == 4)
+                if (PhotonNetwork.CurrentRoom.PlayerCount == _numOfPlayers)
                 {
                     photonView.RPC("SendPlayers", RpcTarget.All, PlayerInformation.players);
                     Debug.Log("SENT PLAYERS!!!!");
