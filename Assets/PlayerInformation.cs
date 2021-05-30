@@ -20,6 +20,6 @@ public class PlayerData
     {
         this.player = player;
         this.number = number;
-        this.playerinstance = playerinstance;
+        this.playerinstance = playerinstance; 
     }
 }
