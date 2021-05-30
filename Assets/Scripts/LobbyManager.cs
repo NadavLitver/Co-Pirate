@@ -17,7 +17,7 @@ namespace Photon.Pun.Demo.PunBasics
         }
         private void Start()
         {
-            if (_numOfPlayers == 1)
+            if (_numOfPlayers == 1 && PhotonNetwork.IsMasterClient)
                 SendPlayers(PlayerInformation.players);
         }
 

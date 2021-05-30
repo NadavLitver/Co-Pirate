@@ -10,7 +10,7 @@ public static class PlayerInformation
     public static PlayerData GetPlayerData(this Player player) => Array.Find(players, (X) => X.player == player);
 
 }
-public class PlayerData
+public struct PlayerData
 {
     public Player player;
     public int number;
