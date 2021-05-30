@@ -54,7 +54,7 @@ public class ShipManager : MonoBehaviour
         ChangeShipHeight();
         ChangeShipZRotation();
     }
-    void TakeDamage(float damage)//take damage in game from here instead of through the slider
+     public  void TakeDamage(float damage)//take damage in game from here instead of through the slider
     {
       
         CurDamagedLevel += damage;
