@@ -34,17 +34,21 @@ namespace Photon.Pun.Demo.PunBasics
 
                 if (PhotonNetwork.CurrentRoom.PlayerCount == _numOfPlayers)
                 {
-                    photonView.RPC("SendPlayers", RpcTarget.All, PlayerInformation.players as object);
+                    photonView.RPC("SendPlayers", RpcTarget.All, Array.ConvertAll(PlayerInformation.players, (x) => x.player));
                     Debug.Log("SENT PLAYERS!!!!");
                 }
             }
         }
         [PunRPC]
-        void SendPlayers(object[] players)
+        void SendPlayers(Player[] players)
         {
             Debug.Log("Recieved RPC");
 
-            PlayerInformation.players = Array.ConvertAll(players, (x) => (PlayerData)x);
+            PlayerInformation.players = new PlayerData[players.Length];
+
+            for (int i = 0; i < players.Length; i++)
+                PlayerInformation.players[i] = new PlayerData(players[i], i);
+
             if (PhotonNetwork.IsMasterClient)
             {
                 PhotonNetwork.LoadLevel("Room For 4");
