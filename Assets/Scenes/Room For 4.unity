@@ -205,10 +205,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipHolder (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2830455398903580306, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: sceneViewId
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_RootOrder
       value: 3
