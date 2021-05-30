@@ -134,33 +134,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipHolder
       objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186497, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186989, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186995, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186997, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462187003, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462187005, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462187007, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2830455398903580306, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_RootOrder
@@ -168,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37
+      value: -36.9
       objectReference: {fileID: 0}
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -229,33 +205,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipHolder (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186497, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186989, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186995, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462186997, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462187003, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462187005, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709931838462187007, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2830455398903580306, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_RootOrder
