@@ -40,10 +40,10 @@ public class ShipManager : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+       /* if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(90); // just a test dont judge me 
-        }
+        }*/
         UpdateShip();
 
     }
