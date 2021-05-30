@@ -162,6 +162,7 @@ MonoBehaviour:
   speed: 4
   _interactionRange: 3
   maxAcceleration: 0.2
+  maxRotationSpeed: 360
   _gravity: 2
   isTeam1: 0
   _iconHandler: {fileID: 1459428123888791057}
