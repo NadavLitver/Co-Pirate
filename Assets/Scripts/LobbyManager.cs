@@ -1,4 +1,5 @@
 using Photon.Realtime;
+using System;
 using UnityEngine;
 
 namespace Photon.Pun.Demo.PunBasics
@@ -17,8 +18,8 @@ namespace Photon.Pun.Demo.PunBasics
         }
         private void Start()
         {
-            if (_numOfPlayers == 1 && PhotonNetwork.IsMasterClient)
-                SendPlayers(PlayerInformation.players);
+            //if (_numOfPlayers == 1 && PhotonNetwork.IsMasterClient)
+                //SendPlayers(PlayerInformation.players);
         }
 
         public override void OnPlayerEnteredRoom(Player other)
@@ -33,17 +34,17 @@ namespace Photon.Pun.Demo.PunBasics
 
                 if (PhotonNetwork.CurrentRoom.PlayerCount == _numOfPlayers)
                 {
-                    photonView.RPC("SendPlayers", RpcTarget.All, PlayerInformation.players);
+                    photonView.RPC("SendPlayers", RpcTarget.All, PlayerInformation.players as object);
                     Debug.Log("SENT PLAYERS!!!!");
                 }
             }
         }
         [PunRPC]
-        void SendPlayers(PlayerData[] players)
+        void SendPlayers(object[] players)
         {
             Debug.Log("Recieved RPC");
 
-            PlayerInformation.players = players;
+            PlayerInformation.players = Array.ConvertAll(players, (x) => (PlayerData)x);
             if (PhotonNetwork.IsMasterClient)
             {
                 PhotonNetwork.LoadLevel("Room For 4");
