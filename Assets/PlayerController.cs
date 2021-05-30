@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private float _interactionRange;
     [SerializeField]
     private float maxAcceleration = 1;
+    [SerializeField, Suffix("ApS"), Tooltip("Maximum rotation in angles per second")]
+    private float maxRotationSpeed = 360;
     [SerializeField]
     private float _gravity;
 
@@ -92,7 +94,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             currentVelocity += Vector2.ClampMagnitude(acceleration, maxAcceleration * Time.deltaTime);
 
-            transform.rotation = Quaternion.FromToRotation(transform.forward, new Vector3(dir.x,0,dir.y)) * transform.rotation;
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.FromToRotation(transform.forward, new Vector3(dir.x,0,dir.y)) * transform.rotation, maxRotationSpeed * Time.deltaTime);
 
             if (currentVelocity.magnitude >= 0.001f)
                 CheckForInteractables();
