@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void Start()
     {
         var playerNum = photonView.Owner.GetPlayerNum();
+        photonView.Owner.GetPlayerData().playerinstance = gameObject;
         isTeam1 = playerNum <= 2;
 
         Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             characterController = GetComponent<CharacterController>();
 
 
-            
+
             personalCamera = isTeam1 ? GameManager.Instance.redCamera : GameManager.Instance.blueCamera;
             personalCamera.gameObject.SetActive(true);
             personalCamera.GetComponent<CameraController>().myfollow = transform;
@@ -104,14 +105,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
             targetVelocity = Vector2.zero;
-            if(dir != Vector2.zero)
+            if (dir != Vector2.zero)
                 targetVelocity = dir * speed * Time.deltaTime;
 
             Vector2 acceleration = targetVelocity - currentVelocity;
 
             currentVelocity += Vector2.ClampMagnitude(acceleration, maxAcceleration * Time.deltaTime);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0,Vector3.SignedAngle(transform.forward, new Vector3(dir.x,0,dir.y), Vector3.up),0) * transform.rotation, maxRotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, Vector3.SignedAngle(transform.forward, new Vector3(dir.x, 0, dir.y), Vector3.up), 0) * transform.rotation, maxRotationSpeed * Time.deltaTime);
 
             if (currentVelocity.magnitude >= 0.001f)
                 CheckForInteractables();
@@ -119,12 +120,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector3 forwardDirection = (transform.position - new Vector3(personalCamera.transform.position.x, transform.position.y, personalCamera.transform.position.z)).normalized;
             Vector3 rightDir = Vector3.Cross(Vector3.up, forwardDirection).normalized;
             Vector3 move = forwardDirection * currentVelocity.y + rightDir * currentVelocity.x;
-            characterController.Move(move -_gravity * Vector3.up);
+            characterController.Move(move - _gravity * Vector3.up);
         }
 
-       
+
     }
-   
+
     private void CheckForInteractables()
     {
         InteractableHit hit = InteractablesObserver.GetClosestInteractable(transform.position);
@@ -165,6 +166,16 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public void SetCurInteractableNull()
     {
         curInteractableHit.interactable = null;
+    }
+    public void PickedUpCannonball()
+    {
+        photonView.RPC("CollectedCannonBall", RpcTarget.All, photonView.Owner.GetPlayerNum());
+    }
+    [PunRPC]
+    public void CollectedCannonBall(int playerNum)
+    {
+        if (photonView.Owner.GetPlayerNum() == playerNum)
+            GetComponent<PlayerController>().cannonBall.SetActive(true);
     }
 
     private void OnDrawGizmos()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System;
 
 public class CannonBallsInteractable : BaseInteractable
 {
@@ -12,8 +13,9 @@ public class CannonBallsInteractable : BaseInteractable
 
     public override void OnInteract_Start(PlayerController ctrl)
     {
-        var view = PlayerController.localPlayerCtrl.photonView;
-        view.RPC("CollectedCannonBall", RpcTarget.All, view);
+        var view = ctrl.photonView;
+        Debug.Log(view);
+        view.RPC("CollectedCannonBall", RpcTarget.All, view.Owner.GetPlayerNum());
     }
 
     public override void OnUnbecomingTarget(PlayerController ctrl)
@@ -22,8 +24,9 @@ public class CannonBallsInteractable : BaseInteractable
     }
 
     [PunRPC]
-    public void CollectedCannonBall(PhotonView view)
+    public void CollectedCannonBall(int playerNum)
     {
-        view.GetComponent<PlayerController>().cannonBall.SetActive(true);
+        Debug.Log(playerNum);
+        PlayerInformation.players[playerNum].playerinstance.GetComponent<PlayerController>().cannonBall.SetActive(true);
     }
 }

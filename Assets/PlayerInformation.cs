@@ -1,14 +1,25 @@
 using Photon.Realtime;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using UnityEngine;
 
-public static class PlayerInformation 
+public static class PlayerInformation
 {
-  public static Player[] players;
-    public static int GetPlayerNum(this Player player)
+    public static PlayerData[] players;
+    public static int GetPlayerNum(this Player player) => player.GetPlayerData().number;
+    public static GameObject GetGameObject(this Player player) => player.GetPlayerData().playerinstance;
+    public static PlayerData GetPlayerData(this Player player) => Array.Find(players, (X) => X.player == player);
+
+}
+public class PlayerData
+{
+    public Player player;
+    public int number;
+    public GameObject playerinstance;
+
+    public PlayerData(Player player, int number, GameObject playerinstance = null)
     {
-        return Array.FindIndex(players, (X) => X == player) + 1;
+        this.player = player;
+        this.number = number;
+        this.playerinstance = playerinstance;
     }
 }

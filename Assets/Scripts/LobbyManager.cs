@@ -11,8 +11,8 @@ namespace Photon.Pun.Demo.PunBasics
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                PlayerInformation.players = new Player[_numOfPlayers];
-                PlayerInformation.players[0] = PhotonNetwork.LocalPlayer;
+                PlayerInformation.players = new PlayerData[_numOfPlayers];
+                PlayerInformation.players[0] = new PlayerData(PhotonNetwork.LocalPlayer, 0);
             }
         }
         private void Start()
@@ -25,7 +25,9 @@ namespace Photon.Pun.Demo.PunBasics
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                PlayerInformation.players[PhotonNetwork.CurrentRoom.PlayerCount - 1] = other;
+                int playerNum = PhotonNetwork.CurrentRoom.PlayerCount - 1;
+
+                PlayerInformation.players[playerNum] = new PlayerData(other, playerNum);
                 
                 Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
 
@@ -37,7 +39,7 @@ namespace Photon.Pun.Demo.PunBasics
             }
         }
         [PunRPC]
-        void SendPlayers(Player[] players)
+        void SendPlayers(PlayerData[] players)
         {
             Debug.Log("Recieved RPC");
 
