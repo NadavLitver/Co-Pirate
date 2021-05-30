@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector2 acceleration = targetVelocity - currentVelocity;
 
             currentVelocity += Vector2.ClampMagnitude(acceleration, maxAcceleration * Time.deltaTime);
-            transform.rotation = Quaternion.FromToRotation(transform.forward, dir) * transform.rotation;
+            transform.rotation = Quaternion.FromToRotation(transform.forward, new Vector3(dir.magnitude,0,dir.y)) * transform.rotation;
             if (currentVelocity.magnitude >= 0.001f)
                 CheckForInteractables();
 
