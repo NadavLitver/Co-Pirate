@@ -15,6 +15,11 @@ namespace Photon.Pun.Demo.PunBasics
                 PlayerInformation.players[0] = PhotonNetwork.LocalPlayer;
             }
         }
+        private void Start()
+        {
+            if (_numOfPlayers == 1)
+                SendPlayers(PlayerInformation.players);
+        }
 
         public override void OnPlayerEnteredRoom(Player other)
         {
