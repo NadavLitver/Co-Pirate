@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using Photon.Pun;
+using UnityEngine.Events;
 
-public class CannonController : MonoBehaviour
+public class CannonController : MonoBehaviourPun
 {
     #region Serielized
     [SerializeField]
     private GameObject _barrelEdge;
     [SerializeField, AssetSelector(Paths = "Assets/Resources")]
     private GameObject _cannonBall;
-
+    [SerializeField]
+    private UnityEvent OnShoot;
 
     #endregion
     public void SHOOT()
@@ -23,5 +25,13 @@ public class CannonController : MonoBehaviour
         var rotation =  Quaternion.LookRotation(forwardDirection);
 
         PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
+
+        photonView.RPC("ShootRPC", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void ShootRPC()
+    {
+        OnShoot?.Invoke();
     }
 }
