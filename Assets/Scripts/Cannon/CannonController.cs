@@ -5,6 +5,8 @@ using Sirenix.OdinInspector;
 using Photon.Pun;
 using UnityEngine.Events;
 
+[SelectionBase]
+
 public class CannonController : MonoBehaviourPun
 {
     #region Serielized
