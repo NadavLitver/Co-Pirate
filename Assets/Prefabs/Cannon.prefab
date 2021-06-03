@@ -4874,6 +4874,7 @@ GameObject:
   - component: {fileID: 6712851492656366684}
   - component: {fileID: 3819408783124797444}
   - component: {fileID: 7222168130590314312}
+  - component: {fileID: 5934341493750627865}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -5019,6 +5020,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: 7bf767847ed660a41a7faa2f987a8f82, type: 3}
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5934341493750627865}
+        m_TargetAssemblyTypeName: CannonController, Assembly-CSharp
+        m_MethodName: SHOOT
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8317577990268602868}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5934341493750627865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234933198815819260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdaa7c7e5dff87458cda025f7b857ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _barrelEdge: {fileID: 3993668106515041699}
+  _cannonBall: {fileID: 7391415562801425667, guid: 8fa4dc4ae9560db4fb3039509b714a6e, type: 3}
 --- !u!1 &3993668106515041699
 GameObject:
   m_ObjectHideFlags: 0

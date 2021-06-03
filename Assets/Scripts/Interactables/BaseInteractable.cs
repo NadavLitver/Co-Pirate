@@ -17,8 +17,8 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
     }
     public abstract void OnInteract_Start(PlayerController ctrl);
     public virtual void OnInteract_End(PlayerController ctrl) { }
-    public abstract void OnBecomingTarget(PlayerController ctrl);
-    public abstract void OnUnbecomingTarget(PlayerController ctrl);
-    public virtual bool InteractableCondition() => true;
+    public virtual void OnBecomingTarget(PlayerController ctrl) { }
+    public virtual void OnUnbecomingTarget(PlayerController ctrl) { }
+    public virtual bool InteractableCondition(PlayerController ctrl) => true;
 
 }

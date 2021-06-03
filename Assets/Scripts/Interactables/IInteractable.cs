@@ -7,5 +7,5 @@ public interface IInteractable
     void OnBecomingTarget(PlayerController ctrl);
     void OnUnbecomingTarget(PlayerController ctrl);
     Sprite Icon { get; }
-    bool InteractableCondition();
+    bool InteractableCondition(PlayerController ctrl);
 }

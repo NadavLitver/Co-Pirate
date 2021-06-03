@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private void CheckForInteractables()
     {
-        InteractableHit hit = InteractablesObserver.GetClosestInteractable(transform.position);
+        InteractableHit hit = InteractablesObserver.GetClosestInteractable(this);
         if ((curInteractableHit.interactable == null || curInteractableHit.distance > hit.distance) && hit.distance <= _interactionRange && hit.interactable != null)
             ChangeCurInteratable(hit);
         else if (hit.distance > _interactionRange)
@@ -169,6 +169,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (curInteractableHit.interactable != null && curInteractableHit.distance <= _interactionRange)
         {
             curInteractableHit.interactable.OnInteract_Start(this);
+            CheckForInteractables();
         }
     }
     public void ChangeCurInteratable(InteractableHit newInteractableHit)
@@ -194,14 +195,25 @@ public class PlayerController : MonoBehaviourPunCallbacks
     }
     public void PickedUpCannonball()
     {
-        photonView.RPC("CollectedCannonBall", RpcTarget.All, photonView.Owner.GetPlayerNum());
+        photonView.RPC("PickedUpCannonballRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
         _holdingCannonBall = true;
     }
     [PunRPC]
-    private void CollectedCannonBall(int playerNum)
+    private void PickedUpCannonballRPC(int playerNum)
     {
         if (photonView.Owner.GetPlayerNum() == playerNum)
             GetComponent<PlayerController>().cannonBall.SetActive(true);
+    }
+    public void UsedCannonball()
+    {
+        photonView.RPC("UsedCannonballRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
+        _holdingCannonBall = false;
+    }
+    [PunRPC]
+    private void UsedCannonballRPC(int playerNum)
+    {
+        if (photonView.Owner.GetPlayerNum() == playerNum)
+            GetComponent<PlayerController>().cannonBall.SetActive(false);
     }
 
     private void OnDrawGizmos()

@@ -13,13 +13,15 @@ public static class InteractablesObserver
     {
         interactables.Remove(interactable);
     }
-    public static InteractableHit GetClosestInteractable(Vector3 pos)
+    public static InteractableHit GetClosestInteractable(PlayerController ctrl)
     {
+        var pos = ctrl.transform.position;
+
         IInteractable closestInteractable = null;
         float closestInterDist = float.MaxValue;
         foreach (var inter in interactables)
         {
-            if (inter is Component _interactableComponent && inter.InteractableCondition())
+            if (inter is Component _interactableComponent && inter.InteractableCondition(ctrl))
             {
                 float _distance = Vector3.Distance(_interactableComponent.transform.position, pos);
 
