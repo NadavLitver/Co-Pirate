@@ -16,6 +16,12 @@ public class CannonController : MonoBehaviour
     #endregion
     public void SHOOT()
     {
-        PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, Quaternion.LookRotation(_barrelEdge.transform.position - transform.position, transform.up));
+        var forwardDirection = Vector3.ProjectOnPlane(_barrelEdge.transform.position - transform.position, Vector3.up);
+        
+        Debug.DrawLine(_barrelEdge.transform.position, _barrelEdge.transform.position + forwardDirection, Color.red, 5);
+        
+        var rotation =  Quaternion.LookRotation(forwardDirection);
+
+        PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
     }
 }
