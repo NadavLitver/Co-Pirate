@@ -165,6 +165,8 @@ MonoBehaviour:
   cannonBall: {fileID: 8684757971912350123}
   redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
   blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
+  Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
+  Body: {fileID: 2100000, guid: be60fc1c3a73a494e8d5c0eed521ad8b, type: 2}
   _iconHandler: {fileID: 1459428123888791057}
   personalCamera: {fileID: 0}
   isTeam1: 0
