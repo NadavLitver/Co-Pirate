@@ -95,16 +95,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
-        //GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
+        GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
         if (isTeam1) 
         {
             Hat.SetColor("_MainColor", Color.red);
-            Body.SetColor("_MainColor", Color.red);
         }
         else 
         {
             Hat.SetColor("_MainColor", Color.blue);
-            Body.SetColor("_MainColor", Color.blue);
         }
 
         Debug.Log(isTeam1);
