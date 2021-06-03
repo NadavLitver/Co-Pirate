@@ -16,10 +16,6 @@ public class Ball : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-    private void Awake()
-    {
-        gameObject.SetActive(true);
-    }
 
     // Update is called once per frame
     void Update()

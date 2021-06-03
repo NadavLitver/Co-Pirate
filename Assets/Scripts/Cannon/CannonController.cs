@@ -18,21 +18,20 @@ public class CannonController : MonoBehaviourPun
     #endregion
     public void SHOOT()
     {
+        var forwardDirection = Vector3.ProjectOnPlane(_barrelEdge.transform.position - transform.position, Vector3.up);
+        
+        Debug.DrawLine(_barrelEdge.transform.position, _barrelEdge.transform.position + forwardDirection, Color.red, 5);
+        
+        var rotation =  Quaternion.LookRotation(forwardDirection);
+
+        PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
+
         photonView.RPC("ShootRPC", RpcTarget.All);
     }
 
     [PunRPC]
     private void ShootRPC()
     {
-        var forwardDirection = Vector3.ProjectOnPlane(_barrelEdge.transform.position - transform.position, Vector3.up);
-
-        Debug.DrawLine(_barrelEdge.transform.position, _barrelEdge.transform.position + forwardDirection, Color.red, 5);
-
-        var rotation = Quaternion.LookRotation(forwardDirection);
-
-        //PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
-        Instantiate(_cannonBall, _barrelEdge.transform.position, rotation);
-
         OnShoot?.Invoke();
     }
 }
