@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5278049630090167776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670013652468427187}
+  - component: {fileID: 4167521407159810477}
+  m_Layer: 0
+  m_Name: colider_For_Bounce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670013652468427187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278049630090167776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6337312948766561111}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4167521407159810477
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278049630090167776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.4053663}
+  m_Center: {x: 0, y: -6.7241456e-16, z: -0.2973169}
 --- !u!1 &6337312947335271680
 GameObject:
   m_ObjectHideFlags: 0
@@ -4816,7 +4860,6 @@ GameObject:
   - component: {fileID: 6337312947844977870}
   - component: {fileID: 6337312947844977869}
   - component: {fileID: 6337312947844977868}
-  - component: {fileID: 6337312947844977871}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -4887,20 +4930,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6337312947844977871
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6337312947844977865}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &6337312948766561104
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,6 +4942,7 @@ GameObject:
   - component: {fileID: 6337312948766561110}
   - component: {fileID: 6337312948766561105}
   - component: {fileID: -8064873775477936263}
+  - component: {fileID: 719074577595538441}
   m_Layer: 0
   m_Name: Hole_in_Ship
   m_TagString: Untagged
@@ -4933,6 +4963,7 @@ Transform:
   m_Children:
   - {fileID: 6337312947844977870}
   - {fileID: 6337312947335271681}
+  - {fileID: 1670013652468427187}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -9721,7 +9752,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 44031ee732862a247b7850e340f872fe, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc921df53bc2a31469304c1564f5ac87, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9805,3 +9836,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &719074577595538441
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337312948766561104}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7334a5fff1f07f4aa10fd2aa2b60d27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
