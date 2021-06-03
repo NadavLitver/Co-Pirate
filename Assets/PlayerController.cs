@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     #endregion
 
     #region Refrences
-    [FoldoutGroup("Refrences")]
-    public GameObject cannonBall;
+    [SerializeField, FoldoutGroup("Refrences")]
+    private GameObject cannonBall;
 
     [FoldoutGroup("Refrences")]
     [SerializeField]
@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     #endregion
 
     #endregion
+
+    #region State
     [HideInInspector]
     public Camera personalCamera;
     //
@@ -64,6 +66,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
     Vector2 dir;
     Vector2 currentVelocity = Vector2.zero;
     Vector2 targetVelocity = Vector2.zero;
+
+    private bool _holdingCannonBall = false;
+
+    public bool HoldingCannonBall => _holdingCannonBall;
+    #endregion
     private void Awake()
     {
         if (photonView.IsMine)
@@ -170,9 +177,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public void PickedUpCannonball()
     {
         photonView.RPC("CollectedCannonBall", RpcTarget.All, photonView.Owner.GetPlayerNum());
+        _holdingCannonBall = true;
     }
     [PunRPC]
-    public void CollectedCannonBall(int playerNum)
+    private void CollectedCannonBall(int playerNum)
     {
         if (photonView.Owner.GetPlayerNum() == playerNum)
             GetComponent<PlayerController>().cannonBall.SetActive(true);

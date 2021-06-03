@@ -15,11 +15,11 @@ namespace Photon.Pun.Demo.PunBasics
                 PlayerInformation.players = new PlayerData[_numOfPlayers];
                 PlayerInformation.players[0] = new PlayerData(PhotonNetwork.LocalPlayer, 0);
             }
-        }
+        }   
         private void Start()
         {
-            //if (_numOfPlayers == 1 && PhotonNetwork.IsMasterClient)
-                //SendPlayers(PlayerInformation.players);
+            if (_numOfPlayers == 1 && PhotonNetwork.IsMasterClient)
+               SendPlayers(Array.ConvertAll(PlayerInformation.players, (x) => x.player));
         }
 
         public override void OnPlayerEnteredRoom(Player other)
