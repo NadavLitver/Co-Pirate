@@ -1,9 +1,10 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipManager : MonoBehaviour
+public class ShipManager : MonoBehaviourPun
 {
     [Tooltip("The distance the ship sinks")]
     [SerializeField] float sinkDistance;
@@ -18,6 +19,7 @@ public class ShipManager : MonoBehaviour
     float DamageDelta;
     float RotationDelta;
 
+     public int shipID;
 
     float CurDamagedLevel {
         get => curDamagedLevel;
@@ -54,10 +56,17 @@ public class ShipManager : MonoBehaviour
         ChangeShipHeight();
         ChangeShipZRotation();
     }
-     public  void TakeDamage(float damage)//take damage in game from here instead of through the slider
+    public void CallTakeDamageRPC(float damage)
     {
-      
-        CurDamagedLevel += damage;
+        photonView.RPC("TakeDamage", RpcTarget.All, damage,shipID);
+
+    }
+    [PunRPC]
+    public  void TakeDamage(float damage,int _shipID)//take damage in game from here instead of through the slider
+    {
+        if(_shipID == shipID)
+              CurDamagedLevel += damage;
+
         if(CurDamagedLevel == maxDamagedLevel)
         {
             Lose();

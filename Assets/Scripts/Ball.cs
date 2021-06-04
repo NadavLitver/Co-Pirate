@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class Ball : MonoBehaviour
+public class Ball : MonoBehaviourPun
 {
     [SerializeField]
     float Speed;
@@ -12,6 +12,10 @@ public class Ball : MonoBehaviour
     private float _gravity;
 
     private float _verticalSpeed;
+
+    [SerializeField]
+    private float damage;
+
     void OnPhotonInstantiate(PhotonMessageInfo info)
     {
         gameObject.SetActive(true);
@@ -26,4 +30,10 @@ public class Ball : MonoBehaviour
 
         _verticalSpeed += _gravity * Time.deltaTime;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        other.GetComponentInParent<ShipManager>().CallTakeDamageRPC(damage);
+    }    
+        
+    
 }
