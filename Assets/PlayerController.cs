@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         var playerNum = photonView.Owner.GetPlayerNum();
         PlayerInformation.players[playerNum].playerinstance = gameObject;
-        isTeam1 = playerNum <= 2;
+        isTeam1 = photonView.Owner.GetPlayerTeam();
 
         Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 

@@ -47,7 +47,10 @@ MonoBehaviour:
   redCamera: {fileID: 0}
   blueCamera: {fileID: 0}
   playerPrefab: {fileID: 692593654332813151, guid: 111c941957003cd4f87e186e903d9c48, type: 3}
-  spawnPoints:
+  team1SpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  team2SpawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   localPlayerObject: {fileID: 0}
