@@ -14,6 +14,5 @@ public class CannonBallsInteractable : BaseInteractable
     public override void OnInteract_Start(PlayerController ctrl)
     {
         ctrl.PickedUpCannonball();
-
     }
 }
