@@ -9,7 +9,7 @@ public class ShipManager : MonoBehaviourPun
     [Tooltip("The distance the ship sinks")]
     [SerializeField] float sinkDistance;
 
-    public int CurHoleAmountActive;
+    public int CurHoleAmountActive = 0;
 
     [SerializeField] float maxRotation = -4;
 
@@ -55,6 +55,7 @@ public class ShipManager : MonoBehaviourPun
     void UpdateShip()
     {
         damageOverTime = CurHoleAmountActive * Time.deltaTime;
+        CurDamagedLevel += damageOverTime;
         ChangeShipHeight();
         ChangeShipZRotation();
     }
@@ -62,10 +63,10 @@ public class ShipManager : MonoBehaviourPun
     {
         photonView.RPC("TakeDamageRPC", RpcTarget.All, damage,shipID);
 
-    }
+    }//NOT IN USE
     [PunRPC]
     public  void TakeDamageRPC(float damage,int _shipID)//take damage in game from here instead of through the slider
-    {
+    {// NOT IN USE
         if(_shipID == shipID)
               CurDamagedLevel += damage;
 

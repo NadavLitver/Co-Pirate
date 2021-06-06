@@ -9,18 +9,26 @@ public class HoleHandler : MonoBehaviourPun
     public ShipManager myShip;
     
 
-    public void localCallNewHoleRPC()
+    public void localCallNewHoleRPC(int ID)
     {
-        photonView.RPC("NewHoleRPC", RpcTarget.All);
+        photonView.RPC("NewHoleRPC", RpcTarget.All,ID);
+        Debug.Log("calling rpc");
 
     }
     [PunRPC]
-    void NewHoleRPC()
+    public void NewHoleRPC(int ID)
     {
-        int curIndex = Randomizer.RandomNum(holes.Length);
-        holes[curIndex].transform.position = new Vector3(holes[curIndex].transform.position.x + Randomizer.NormalizedFloat(), holes[curIndex].transform.position.y, holes[curIndex].transform.position.z + Randomizer.NormalizedFloat());
-        holes[curIndex].SetActive(true);
-        myShip.CurHoleAmountActive++;
+        Debug.Log("enterRPC for new hole");
+        if(ID == this.id)
+        {
+            Debug.Log("ID == this.id");
+
+            int curIndex = Randomizer.RandomNum(holes.Length);
+            holes[curIndex].transform.position = new Vector3(holes[curIndex].transform.position.x + Randomizer.NormalizedFloat(), holes[curIndex].transform.position.y, holes[curIndex].transform.position.z + Randomizer.NormalizedFloat());
+            holes[curIndex].SetActive(true);
+            myShip.CurHoleAmountActive++;
+        }
+       
 
     }
 }

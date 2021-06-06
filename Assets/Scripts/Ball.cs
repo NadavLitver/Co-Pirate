@@ -32,8 +32,10 @@ public class Ball : MonoBehaviourPun
     }
     private void OnTriggerEnter(Collider other)
     {
-        // other.GetComponentInParent<ShipManager>().;
-        other.GetComponent<HoleHandler>().localCallNewHoleRPC();
+        HoleHandler CurHoleHandler = other.GetComponent<HoleHandler>();
+        CurHoleHandler.localCallNewHoleRPC(CurHoleHandler.id);
+        Debug.Log("triggered");
+        // other.GetComponentInParent<ShipManager>().; 
     }    
         
     
