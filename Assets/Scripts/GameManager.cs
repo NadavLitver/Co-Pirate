@@ -162,7 +162,7 @@ namespace Photon.Pun.Demo.PunBasics
 		}
 		public Vector3 SpawnPoint()
         {	
-		 return spawnPoints[PhotonNetwork.CountOfPlayers - 1].position;
+		 return spawnPoints[PhotonNetwork.LocalPlayer.GetPlayerNum()].position;
 		}
 		#endregion
 

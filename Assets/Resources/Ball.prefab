@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3991395347086477259}
+  - component: {fileID: 8775017037999053005}
   - component: {fileID: 5187976255463531427}
   - component: {fileID: 5162965867620556794}
   - component: {fileID: 2493218464932762288}
   - component: {fileID: 5950699574350691174}
   - component: {fileID: 8950152584510318985}
-  - component: {fileID: 8775017037999053005}
   - component: {fileID: 3714972125041171890}
   - component: {fileID: 5320067673135193070}
   m_Layer: 6
@@ -38,6 +38,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8775017037999053005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7391415562801425667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28932a03d796024f879b1c590513050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 20
+  _gravity: -5
+  OnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8775017037999053005}
+        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damage: 10
 --- !u!33 &5187976255463531427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4872,36 +4902,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &8775017037999053005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7391415562801425667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c28932a03d796024f879b1c590513050, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 20
-  _gravity: -5
-  OnHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8775017037999053005}
-        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
-        m_MethodName: Destroy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  damage: 10
 --- !u!114 &3714972125041171890
 MonoBehaviour:
   m_ObjectHideFlags: 0
