@@ -261,7 +261,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 5
+    globalScale: 4
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -312,7 +312,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Armature
       parentName: uploads_files_252849_Silvertip+Shark(Clone)
-      position: {x: -0, y: 0, z: 11.187517}
+      position: {x: -0, y: 0, z: 8.950014}
       rotation: {x: 6.123234e-17, y: 1, z: -6.123234e-17, w: -6.123234e-17}
       scale: {x: 1.223905, y: 1.223905, z: 1.223905}
     - name: Bone
@@ -322,32 +322,32 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Bone.001
       parentName: Bone
-      position: {x: -0, y: 5, z: 0}
+      position: {x: -0, y: 4, z: 0}
       rotation: {x: -0.53309643, y: -0.023505786, z: 0.037254397, w: 0.844907}
       scale: {x: 0.9999996, y: 0.9999996, z: 1}
     - name: Bone.002
       parentName: Bone.001
-      position: {x: -0.00000011175871, y: 5.1045485, z: -4.440892e-15}
+      position: {x: -0.00000008940697, y: 4.0836387, z: -3.5527137e-15}
       rotation: {x: -1.3971085e-13, y: -0.000014902153, z: -0.043894827, w: 0.99903613}
       scale: {x: 1, y: 1, z: 1}
     - name: Bone.003
       parentName: Bone.002
-      position: {x: 1.797884e-10, y: 4.9507017, z: -4.5474735e-12}
+      position: {x: 1.4383073e-10, y: 3.9605615, z: -3.637979e-12}
       rotation: {x: -1.9979506e-13, y: 1.277261e-12, z: -0.091767065, w: 0.9957805}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: Bone.004
       parentName: Bone.003
-      position: {x: 0.0000000011615992, y: 5.079682, z: 3.4816594e-12}
+      position: {x: 9.292793e-10, y: 4.0637455, z: 2.7853275e-12}
       rotation: {x: -0.074134976, y: 0.006497124, z: -0.5126265, w: 0.85538054}
       scale: {x: 0.9999996, y: 0.9999996, z: 1}
     - name: Bone.004_end
       parentName: Bone.004
-      position: {x: -0, y: 3.3962584, z: 0}
+      position: {x: -0, y: 2.7170067, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Plane
       parentName: uploads_files_252849_Silvertip+Shark(Clone)
-      position: {x: -0, y: 1.0459859, z: -0.000000045721514}
+      position: {x: -0, y: 0.8367888, z: -0.000000036577212}
       rotation: {x: 0.48168674, y: 0.5176658, z: 0.48168674, w: 0.5176658}
       scale: {x: 0.9999999, y: 1.0000001, z: 1}
     armTwist: 0.5
@@ -357,7 +357,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 5
+    globalScale: 4
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
