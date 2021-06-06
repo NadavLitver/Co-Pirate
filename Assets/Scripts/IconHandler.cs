@@ -18,6 +18,8 @@ public class IconHandler : MonoBehaviour
     private Image _iconImage;
 
     private Camera _mainCam;
+
+    private Tween _transitionTween;
     private void Start()
     {
         _mainCam = PlayerController.localPlayerCtrl.GetComponent<PlayerController>().personalCamera;
@@ -59,17 +61,30 @@ public class IconHandler : MonoBehaviour
 
     private void FadeIn(float delay = 0, TweenCallback callback = null)
     {
+        KillTween();
+
         if (_iconImage.color.a != 1)
-            _iconImage.DOFade(1, (1 - _iconImage.color.a) / _fadeinSpeed).SetDelay(delay).OnComplete(callback);
+            _transitionTween = _iconImage.DOFade(1, (1 - _iconImage.color.a) / _fadeinSpeed).SetDelay(delay).OnComplete(callback);
         else
             callback?.Invoke();
     }
 
+
     private void FadeOut(float delay = 0, TweenCallback callback = null)
     {
+        KillTween();
+
         if (_iconImage.color.a != 0)
-            _iconImage.DOFade(0, _iconImage.color.a / _fadeoutSpeed).SetDelay(delay).OnComplete(callback);
+            _transitionTween = _iconImage.DOFade(0, _iconImage.color.a / _fadeoutSpeed).SetDelay(delay).OnComplete(callback);
         else
             callback?.Invoke();
+    }
+    private void KillTween()
+    {
+        if (_transitionTween != null)
+        {
+            _transitionTween.onComplete?.Invoke();
+            _transitionTween.Kill();
+        }
     }
 }
