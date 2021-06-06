@@ -1,11 +1,15 @@
 using Photon.Pun;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShipManager : MonoBehaviourPun
 {
+    #region Serielized
+    [SerializeField, ValueDropdown("TeamName")]
+    private bool _team;
+    public bool Team => _team;
+    private ValueDropdownList<bool> TeamName => new ValueDropdownList<bool>() { new ValueDropdownItem<bool>("Team 1", true), new ValueDropdownItem<bool>("Team 2", false) };
     [Tooltip("The distance the ship sinks")]
     [SerializeField] float sinkDistance;
 
@@ -13,41 +17,47 @@ public class ShipManager : MonoBehaviourPun
 
     [SerializeField] float maxRotation = -4;
 
-   private float damageOverTime;
+    private float damageOverTime;
 
     [SerializeField] const float maxDamagedLevel = 100;
     float curDamagedLevel;
     [SerializeField] float maxDegrees = 1;
     float DamageDelta;
-    float RotationDelta;
+    #endregion
 
-     public int shipID;
+    #region Events
+    [SerializeField, FoldoutGroup("Events", Order = 99)]
+    private UnityEvent OnTakeDamage;
+    #endregion
+    private float RotationDelta;
 
-    float CurDamagedLevel {
+    float CurDamagedLevel
+    {
         get => curDamagedLevel;
-            
-            
-          set{
-                 if (curDamagedLevel == value)
-                     return;
-
-                curDamagedLevel = value;
-                DamageDelta = curDamagedLevel * sinkDistance * 0.01f;
-                RotationDelta = curDamagedLevel * maxRotation * 0.01f;
 
 
-          }
-    
+        set
+        {
+            if (curDamagedLevel == value)
+                return;
+
+            curDamagedLevel = value;
+            DamageDelta = curDamagedLevel * sinkDistance * 0.01f;
+            RotationDelta = curDamagedLevel * maxRotation * 0.01f;
+
+
+        }
+
     }
 
 
     private void Update()
     {
 
-       /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(90); // just a test dont judge me 
-        }*/
+        /* if (Input.GetKeyDown(KeyCode.Space))
+         {
+             TakeDamage(90); // just a test dont judge me 
+         }*/
         UpdateShip();
 
     }
@@ -59,36 +69,35 @@ public class ShipManager : MonoBehaviourPun
         ChangeShipHeight();
         ChangeShipZRotation();
     }
-    public void localCallTakeDamageRPC(float damage)
+    public void TakeDamage(float damage)
     {
-        photonView.RPC("TakeDamageRPC", RpcTarget.All, damage,shipID);
+        photonView.RPC("TakeDamageRPC", RpcTarget.All);
 
     }//NOT IN USE
     [PunRPC]
-    public  void TakeDamageRPC(float damage,int _shipID)//take damage in game from here instead of through the slider
+    public void TakeDamageRPC(float damage, int _shipID)//take damage in game from here instead of through the slider
     {// NOT IN USE
-        if(_shipID == shipID)
-              CurDamagedLevel += damage;
+        CurDamagedLevel += damage;
 
-        if(CurDamagedLevel == maxDamagedLevel)
-        {
+        OnTakeDamage?.Invoke();
+
+        if (CurDamagedLevel == maxDamagedLevel)
             Lose();
-        }
     }
     void ChangeShipHeight()
     {
-      
-       transform.position = new Vector3(transform.position.x, Mathf.MoveTowards(transform.position.y, DamageDelta, Time.deltaTime), transform.position.z);
+
+        transform.position = new Vector3(transform.position.x, Mathf.MoveTowards(transform.position.y, DamageDelta, Time.deltaTime), transform.position.z);
     }
     void ChangeShipZRotation()
     {
-      
-     transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(RotationDelta,0, 0), maxDegrees * Time.deltaTime);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(RotationDelta, 0, 0), maxDegrees * Time.deltaTime);
 
     }
     private void Lose()
     {
-        
+
     }
 
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Events;
 
 public class Ball : MonoBehaviourPun
 {
@@ -11,13 +12,20 @@ public class Ball : MonoBehaviourPun
     [SerializeField, MaxValue(0)]
     private float _gravity;
 
+    [SerializeField]
+    private UnityEvent OnHit;
+
     private float _verticalSpeed;
 
     [SerializeField]
     private float damage;
 
-    void OnPhotonInstantiate(PhotonMessageInfo info)
+    private bool _team;
+    public bool Team => _team;
+    public void Init(bool team)
     {
+        _team = team;
+
         gameObject.SetActive(true);
     }
 
@@ -30,13 +38,13 @@ public class Ball : MonoBehaviourPun
 
         _verticalSpeed += _gravity * Time.deltaTime;
     }
-    private void OnTriggerEnter(Collider other)
+
+    public void HIT()
     {
-        HoleHandler CurHoleHandler = other.GetComponent<HoleHandler>();
-        CurHoleHandler.localCallNewHoleRPC(CurHoleHandler.id);
-        Debug.Log("triggered");
-        // other.GetComponentInParent<ShipManager>().; 
-    }    
-        
-    
+        OnHit?.Invoke();
+    }
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }

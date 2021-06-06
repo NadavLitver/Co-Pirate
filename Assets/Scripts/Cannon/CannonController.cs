@@ -16,8 +16,14 @@ public class CannonController : MonoBehaviourPun
     private GameObject _cannonBall;
     [SerializeField]
     private UnityEvent OnShoot;
-
     #endregion
+
+    private ShipManager _ship;
+
+    private void Awake()
+    {
+        _ship = GetComponentInParent<ShipManager>();
+    }
     public void SHOOT()
     {
         var forwardDirection = Vector3.ProjectOnPlane(_barrelEdge.transform.position - transform.position, Vector3.up);
@@ -26,7 +32,12 @@ public class CannonController : MonoBehaviourPun
         
         var rotation =  Quaternion.LookRotation(forwardDirection);
 
-        PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
+        var ballObj = PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
+
+        var cannonBall = ballObj.GetComponent<Ball>();
+
+        cannonBall.Init(_ship.Team);
+
 
         photonView.RPC("ShootRPC", RpcTarget.All);
     }

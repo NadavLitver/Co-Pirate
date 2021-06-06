@@ -1,34 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Photon.Pun;
+using UnityEngine;
+[SelectionBase]
 public class HoleHandler : MonoBehaviourPun
 {
     public GameObject[] holes;
-    public int id;
     public ShipManager myShip;
 
-   
-    public void localCallNewHoleRPC(int ID)
+
+    public void NewHole()
     {
-        photonView.RPC("NewHoleRPC", RpcTarget.All,ID);
+        photonView.RPC("NewHoleRPC", RpcTarget.All);
         Debug.Log("calling rpc");
 
     }
     [PunRPC]
-    public void NewHoleRPC(int ID)
+    public void NewHoleRPC()
     {
         Debug.Log("enterRPC for new hole");
-        if(ID == this.id)
+
+        int curIndex = Randomizer.RandomNum(holes.Length);
+        //holes[curIndex].transform.position = new Vector3(holes[curIndex].transform.position.x + Randomizer.NormalizedFloat(), holes[curIndex].transform.position.y, holes[curIndex].transform.position.z + Randomizer.NormalizedFloat());
+        holes[curIndex].SetActive(true);
+        myShip.CurHoleAmountActive++;
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Ball ball = other.GetComponent<Ball>();
+        if (ball.Team != myShip.Team)
         {
-            Debug.Log("ID == this.id");
-
-            int curIndex = Randomizer.RandomNum(holes.Length);
-            //holes[curIndex].transform.position = new Vector3(holes[curIndex].transform.position.x + Randomizer.NormalizedFloat(), holes[curIndex].transform.position.y, holes[curIndex].transform.position.z + Randomizer.NormalizedFloat());
-            holes[curIndex].SetActive(true);
-            myShip.CurHoleAmountActive++;
+            NewHole();
+            Debug.Log("Team " + (myShip.Team ? 1 : 2) + " took damage!");
+            ball.HIT();
         }
-       
-
     }
 }
