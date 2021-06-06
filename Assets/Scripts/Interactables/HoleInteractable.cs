@@ -16,14 +16,17 @@ public class HoleInteractable : BaseInteractable
     private UnityEvent OnFixed;
     #endregion
 
-    private float _fixProgress;
-
     private float _fixStartTime = Mathf.Infinity;
     private bool _interacting;
     private ShipManager myShip;
     private void Awake()
     {
         myShip = GetComponentInParent<ShipManager>();
+    }
+    private void Update()
+    {
+        if (_interacting && Time.time - _fixStartTime >= _fixTime)
+            Fixed();
     }
     public override bool InteractableCondition(PlayerController ctrl) => ctrl != null && !ctrl.HoldingCannonBall;
 
@@ -33,9 +36,6 @@ public class HoleInteractable : BaseInteractable
             return;
 
         base.OnInteract_End(ctrl);
-        _fixProgress -= Time.time - _fixStartTime;
-        if (_fixProgress <= 0)
-            Fixed();
 
         _interacting = false;
     }
