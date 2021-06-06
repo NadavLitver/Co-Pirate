@@ -209,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holes: []
   id: 0
+  myShip: {fileID: 0}
 --- !u!1001 &365027009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,6 +260,10 @@ PrefabInstance:
     - target: {fileID: 6254305847808407606, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024899921531429161, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7115707708332447428, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
@@ -1027,7 +1032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1815412886
 MonoBehaviour:
   m_ObjectHideFlags: 0
