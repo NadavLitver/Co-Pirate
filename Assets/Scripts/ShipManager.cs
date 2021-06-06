@@ -28,6 +28,8 @@ public class ShipManager : MonoBehaviourPun
     #region Events
     [SerializeField, FoldoutGroup("Events", Order = 99)]
     private UnityEvent OnTakeDamage;
+    [SerializeField, FoldoutGroup("Events", Order = 99)]
+    private UnityEvent OnLose;
     #endregion
     private float RotationDelta;
 
@@ -97,7 +99,7 @@ public class ShipManager : MonoBehaviourPun
     }
     private void Lose()
     {
-
+        OnLose?.Invoke();
     }
 
 }
