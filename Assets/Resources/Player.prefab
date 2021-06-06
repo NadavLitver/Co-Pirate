@@ -162,12 +162,65 @@ MonoBehaviour:
   maxAcceleration: 0.2
   maxRotationSpeed: 360
   _gravity: 2
-  cannonBall: {fileID: 8684757971912350123}
   redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
   blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
   Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
   Body: {fileID: 2100000, guid: be60fc1c3a73a494e8d5c0eed521ad8b, type: 2}
   _iconHandler: {fileID: 1459428123888791057}
+  OnTeam1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 692593654332813145}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3214884496640416601}
+        m_TargetAssemblyTypeName: MeshWrap, Assembly-CSharp
+        m_MethodName: SetColorToRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnTeam2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 692593654332813145}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3214884496640416601}
+        m_TargetAssemblyTypeName: MeshWrap, Assembly-CSharp
+        m_MethodName: SetColorToBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCannonballPickup:
     m_PersistentCalls:
       m_Calls:
@@ -333,6 +386,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &3214884496640416601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411522477393116879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1e39b09bacda042b2ec5b39658e5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mesh: {fileID: 8051107170790760218}
 --- !u!1 &8684757971912350123
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,8 +683,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6397bd8a05f7404cbdc902cf36bc29a, type: 3}
+--- !u!1 &8411522477393116879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6397bd8a05f7404cbdc902cf36bc29a, type: 3}
+  m_PrefabInstance: {fileID: 8681483165870048158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9218986686796178549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e6397bd8a05f7404cbdc902cf36bc29a, type: 3}
+  m_PrefabInstance: {fileID: 8681483165870048158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8051107170790760218 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: e6397bd8a05f7404cbdc902cf36bc29a, type: 3}
   m_PrefabInstance: {fileID: 8681483165870048158}
   m_PrefabAsset: {fileID: 0}

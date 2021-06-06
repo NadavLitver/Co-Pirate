@@ -57,6 +57,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     #region Events
     [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    private UnityEvent OnTeam1;
+    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    private UnityEvent OnTeam2;
+    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
     private UnityEvent OnCannonballPickup;
     [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
     private UnityEvent OnCannonballUse;
@@ -100,15 +104,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
-        GetComponent<MeshRenderer>().material = isTeam1 ? redMat : blueMat;
-        if (isTeam1) 
-        {
-            Hat.SetColor("_MainColor", Color.red);
-        }
-        else 
-        {
-            Hat.SetColor("_MainColor", Color.blue);
-        }
+        (isTeam1 ? OnTeam1 : OnTeam2)?.Invoke();
 
         Debug.Log(isTeam1);
 
@@ -158,7 +154,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         InteractableHit hit = InteractablesObserver.GetClosestInteractable(this);
         if ((curInteractableHit.interactable == null || curInteractableHit.distance > hit.distance) && hit.distance <= _interactionRange && hit.interactable != null)
+        {
             ChangeCurInteratable(hit);
+            Debug.Log("Changed interactable");
+        }
         else if (hit.distance > _interactionRange)
             ChangeCurInteratable(new InteractableHit(hit.distance, null));
     }
@@ -172,6 +171,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (curInteractableHit.interactable != null && curInteractableHit.distance <= _interactionRange)
         {
             curInteractableHit.interactable.OnInteract_Start(this);
+            CheckForInteractables();
         }
     }
     public void ChangeCurInteratable(InteractableHit newInteractableHit)
@@ -199,7 +199,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         photonView.RPC("PickedUpCannonballRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
         _holdingCannonBall = true;
-        CheckForInteractables();
     }
     [PunRPC]
     private void PickedUpCannonballRPC(int playerNum)
@@ -211,7 +210,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         photonView.RPC("UsedCannonballRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
         _holdingCannonBall = false;
-        CheckForInteractables();
     }
     [PunRPC]
     private void UsedCannonballRPC(int playerNum)

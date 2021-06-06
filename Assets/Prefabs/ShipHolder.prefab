@@ -375,9 +375,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sinkDistance: -4
-  shipID: 1
   maxRotation: -4
   maxDegrees: 1
+  shipID: 1
 --- !u!114 &6141486706137361946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10298,6 +10298,34 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5845394207879514716}
+    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DORestart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
 --- !u!4 &2637260269807179260 stripped
@@ -10305,6 +10333,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3234933198816242076, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
   m_PrefabInstance: {fileID: 611826151921613920}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5845394207879514716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6440894770332841532, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
+  m_PrefabInstance: {fileID: 611826151921613920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1596786792385762640
 PrefabInstance:
   m_ObjectHideFlags: 0
