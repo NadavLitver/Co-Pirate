@@ -32,7 +32,8 @@ public class Ball : MonoBehaviourPun
     }
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponentInParent<ShipManager>().CallTakeDamageRPC(damage);
+        // other.GetComponentInParent<ShipManager>().;
+        other.GetComponent<HoleHandler>().localCallNewHoleRPC();
     }    
         
     
