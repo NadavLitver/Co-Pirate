@@ -136,15 +136,20 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             currentVelocity += Vector2.ClampMagnitude(acceleration, maxAcceleration * Time.deltaTime);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, Vector3.SignedAngle(transform.forward, new Vector3(dir.x, 0, dir.y), Vector3.up), 0) * transform.rotation, maxRotationSpeed * Time.deltaTime);
 
             if (currentVelocity.magnitude >= 0.001f)
                 CheckForInteractables();
 
             Vector3 forwardDirection = (transform.position - new Vector3(personalCamera.transform.position.x, transform.position.y, personalCamera.transform.position.z)).normalized;
+            Debug.DrawLine(transform.position, transform.position + forwardDirection, Color.red, 5);
             Vector3 rightDir = Vector3.Cross(Vector3.up, forwardDirection).normalized;
             Vector3 move = forwardDirection * currentVelocity.y + rightDir * currentVelocity.x;
+
+            if (move != Vector3.zero)
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(move), maxRotationSpeed * Time.deltaTime);
+
             characterController.Move(move - _gravity * Vector3.up);
+
         }
 
 

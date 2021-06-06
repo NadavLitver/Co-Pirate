@@ -1,9 +1,12 @@
+using CustomAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class HoleInteractable : BaseInteractable
 {
+    [SerializeField, LocalComponent]
+    private HoleController _holeCtrl;
     [SerializeField]
     private float _fixTime;
 
@@ -22,6 +25,8 @@ public class HoleInteractable : BaseInteractable
     private void Awake()
     {
         myShip = GetComponentInParent<ShipManager>();
+        if (_holeCtrl == null)
+            _holeCtrl = GetComponent<HoleController>();
     }
     private void Update()
     {
@@ -43,7 +48,7 @@ public class HoleInteractable : BaseInteractable
     private void Fixed()
     {
         OnFixed?.Invoke();
-        gameObject.SetActive(false);
+        _holeCtrl.Fix();
         myShip.CurHoleAmountActive--;
     }
 
