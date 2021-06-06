@@ -3,6 +3,7 @@ using Photon.Pun;
 using Photon.Pun.Demo.PunBasics;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviourPunCallbacks
@@ -33,9 +34,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     #endregion
 
     #region Refrences
-    [SerializeField, FoldoutGroup("Refrences")]
-    private GameObject cannonBall;
-
     [FoldoutGroup("Refrences")]
     [SerializeField]
     Material redMat;
@@ -55,6 +53,13 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [FoldoutGroup("Refrences")]
     [SerializeField, LocalComponent(true, true)]
     private IconHandler _iconHandler;
+    #endregion
+
+    #region Events
+    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    private UnityEvent OnCannonballPickup;
+    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    private UnityEvent OnCannonballUse;
     #endregion
 
     #endregion
@@ -167,7 +172,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (curInteractableHit.interactable != null && curInteractableHit.distance <= _interactionRange)
         {
             curInteractableHit.interactable.OnInteract_Start(this);
-            CheckForInteractables();
         }
     }
     public void ChangeCurInteratable(InteractableHit newInteractableHit)
@@ -195,23 +199,25 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         photonView.RPC("PickedUpCannonballRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
         _holdingCannonBall = true;
+        CheckForInteractables();
     }
     [PunRPC]
     private void PickedUpCannonballRPC(int playerNum)
     {
         if (photonView.Owner.GetPlayerNum() == playerNum)
-            GetComponent<PlayerController>().cannonBall.SetActive(true);
+            OnCannonballPickup?.Invoke();
     }
     public void UsedCannonball()
     {
         photonView.RPC("UsedCannonballRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
         _holdingCannonBall = false;
+        CheckForInteractables();
     }
     [PunRPC]
     private void UsedCannonballRPC(int playerNum)
     {
         if (photonView.Owner.GetPlayerNum() == playerNum)
-            GetComponent<PlayerController>().cannonBall.SetActive(false);
+            OnCannonballUse?.Invoke();
     }
 
     private void OnDrawGizmos()

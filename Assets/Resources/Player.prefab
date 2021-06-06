@@ -168,6 +168,36 @@ MonoBehaviour:
   Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
   Body: {fileID: 2100000, guid: be60fc1c3a73a494e8d5c0eed521ad8b, type: 2}
   _iconHandler: {fileID: 1459428123888791057}
+  OnCannonballPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8684757971912350123}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnCannonballUse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8684757971912350123}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   personalCamera: {fileID: 0}
   isTeam1: 0
 --- !u!114 &3637321198286871908
