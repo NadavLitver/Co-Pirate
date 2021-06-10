@@ -210,9 +210,9 @@ namespace Photon.Pun.Demo.PunBasics
                 if (_skipLobby)
                     PhotonNetwork.LoadLevel("Room For 4");
                 else
+                    PhotonNetwork.LoadLevel("Lobby");
                     // #Critical
                     // Load the Room Level. 
-                    PhotonNetwork.LoadLevel("Lobby");
 
             }
         }
