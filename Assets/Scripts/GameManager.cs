@@ -86,7 +86,8 @@ namespace Photon.Pun.Demo.PunBasics
                     Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                    localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, LocalPlayerSpawnPoint(), Quaternion.identity, 0);
+                    localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, LocalPlayerSpawnPoint().position, Quaternion.identity, 0);
+                    localPlayerObject.transform.SetParent(LocalPlayerSpawnPoint().GetComponentInParent<ShipManager>().transform);
                 }
                 else
                 {
@@ -168,12 +169,12 @@ namespace Photon.Pun.Demo.PunBasics
         {
             Application.Quit();
         }
-        public Vector3 LocalPlayerSpawnPoint()
+        public Transform LocalPlayerSpawnPoint()
         {
             if (PhotonNetwork.LocalPlayer.GetPlayerTeam())
-                return team1SpawnPoints[PhotonNetwork.LocalPlayer.GetPlayerNum()].position;
+                return team1SpawnPoints[PhotonNetwork.LocalPlayer.GetPlayerNum()];
             else
-                return team2SpawnPoints[PhotonNetwork.LocalPlayer.GetPlayerNum()].position;
+                return team2SpawnPoints[PhotonNetwork.LocalPlayer.GetPlayerNum()];
         }
         #endregion
 

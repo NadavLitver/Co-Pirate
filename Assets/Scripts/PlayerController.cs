@@ -119,8 +119,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
             personalCamera = isTeam1 ? GameManager.Instance.redCamera : GameManager.Instance.blueCamera;
+
             personalCamera.gameObject.SetActive(true);
-            personalCamera.GetComponent<CameraController>().myfollow = transform;
+            var cameraCtrl = personalCamera.GetComponent<CameraController>();
+            cameraCtrl.myfollow = transform;
         }
     }
 
@@ -141,13 +143,13 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 CheckForInteractables();
 
             Vector3 forwardDirection = (transform.position - new Vector3(personalCamera.transform.position.x, transform.position.y, personalCamera.transform.position.z)).normalized;
-            Debug.DrawLine(transform.position, transform.position + forwardDirection, Color.red, 5);
             Vector3 rightDir = Vector3.Cross(Vector3.up, forwardDirection).normalized;
             Vector3 move = forwardDirection * currentVelocity.y + rightDir * currentVelocity.x;
 
             if (move != Vector3.zero)
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(move), maxRotationSpeed * Time.deltaTime);
 
+            Physics.SyncTransforms();
             characterController.Move(move - _gravity * Vector3.up);
 
         }

@@ -6,68 +6,63 @@ using UnityEngine.Events;
 public class ShipManager : MonoBehaviourPun
 {
     #region Serielized
+    [SerializeField, ReadOnly] float curDamageLevel;
+    [SerializeField] float maxDamageLevel = 100;
     [SerializeField, ValueDropdown("TeamName")]
     private bool _team;
     public bool Team => _team;
     private ValueDropdownList<bool> TeamName => new ValueDropdownList<bool>() { new ValueDropdownItem<bool>("Team 1", true), new ValueDropdownItem<bool>("Team 2", false) };
     [Tooltip("The distance the ship sinks")]
-    [SerializeField] float sinkDistance;
+    [SerializeField] float sinkDepth;
 
     public int CurHoleAmountActive = 0;
+    [SerializeField] private float DPSPerHole = 1;
 
     [SerializeField] float maxRotation = -4;
 
-    private float damageOverTime;
-
-    [SerializeField] const float maxDamagedLevel = 100;
-    float curDamagedLevel;
     [SerializeField] float maxDegrees = 1;
-    float DamageDelta;
+    public Transform center;
     #endregion
 
+    float startHeight;
+    Quaternion startRotation;
     #region Events
     [SerializeField, FoldoutGroup("Events", Order = 99)]
     private UnityEvent OnTakeDamage;
     [SerializeField, FoldoutGroup("Events", Order = 99)]
     private UnityEvent OnLose;
     #endregion
-    private float RotationDelta;
 
-    float CurDamagedLevel
+    float CurDamageLevel
     {
-        get => curDamagedLevel;
+        get => curDamageLevel;
 
 
         set
         {
-            if (curDamagedLevel == value)
+            value = Mathf.Clamp(value, 0, maxDamageLevel);
+
+            if (curDamageLevel == value)
                 return;
 
-            curDamagedLevel = value;
-            DamageDelta = curDamagedLevel * sinkDistance * 0.01f;
-            RotationDelta = curDamagedLevel * maxRotation * 0.01f;
+            curDamageLevel = value;
 
-
+            UpdateShip();
         }
 
     }
-
-
+    private void Start()
+    {
+        startHeight = transform.position.y;
+        startRotation = transform.rotation;
+    }
     private void Update()
     {
 
-        /* if (Input.GetKeyDown(KeyCode.Space))
-         {
-             TakeDamage(90); // just a test dont judge me 
-         }*/
-        UpdateShip();
-
+        CurDamageLevel += CurHoleAmountActive * DPSPerHole * Time.deltaTime;
     }
-
     void UpdateShip()
     {
-        damageOverTime = CurHoleAmountActive * Time.deltaTime;
-        CurDamagedLevel += damageOverTime;
         ChangeShipHeight();
         ChangeShipZRotation();
     }
@@ -79,23 +74,21 @@ public class ShipManager : MonoBehaviourPun
     [PunRPC]
     public void TakeDamageRPC(float damage, int _shipID)//take damage in game from here instead of through the slider
     {// NOT IN USE
-        CurDamagedLevel += damage;
+        CurDamageLevel += damage;
 
         OnTakeDamage?.Invoke();
 
-        if (CurDamagedLevel == maxDamagedLevel)
+        if (CurDamageLevel == maxDamageLevel)
             Lose();
     }
     void ChangeShipHeight()
     {
 
-        transform.position = new Vector3(transform.position.x, Mathf.MoveTowards(transform.position.y, DamageDelta, Time.deltaTime), transform.position.z);
+        transform.position = new Vector3(transform.position.x, Mathf.Lerp(startHeight, startHeight - sinkDepth, curDamageLevel / maxDamageLevel), transform.position.z);
     }
     void ChangeShipZRotation()
     {
-
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(RotationDelta, 0, 0), maxDegrees * Time.deltaTime);
-
+        transform.rotation = Quaternion.Euler(transform.TransformVector(Mathf.DeltaAngle(transform.rotation.eulerAngles.x, Mathf.Lerp(0, maxRotation, curDamageLevel / maxDamageLevel)), 0, 0)) * transform.rotation;
     }
     private void Lose()
     {
