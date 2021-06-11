@@ -130,13 +130,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 129988294, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 129988295, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 129988296, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 631627430285921313, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1221657489052502263, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 2106236639445798690, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 2526999123452071833, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_Name
       value: ShipHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190511332399713583, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3608421942663554079, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141486706137361946, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254305847808407606, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115707708332447428, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225441241865410824, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_RootOrder
@@ -182,6 +226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8736344906789713688, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
 --- !u!4 &129988282 stripped
@@ -203,15 +251,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 129988294, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 20
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 129988295, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 18
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 129988296, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 19
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1377982987, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: _team
@@ -223,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 631627430285921313, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 7
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 1221657489052502263, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
@@ -231,7 +279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2106236639445798690, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 4
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2526999123452071833, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_Name
@@ -239,27 +287,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190511332399713583, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 8
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3608421942663554079, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 6
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 6141486706137361946, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 10
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 6254305847808407606, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 5
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7115707708332447428, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 9
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8225441241865410824, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 1
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_RootOrder
@@ -307,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8736344906789713688, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
-      value: 2
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
@@ -992,6 +1040,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01f997458e4d054eb6e4b0189b32353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyShip: {fileID: 0}
+  offsetFromPlayer: {x: 0, y: 0, z: 0}
+  playerPosWeight: 1
+  enemyShipPosWeight: 1
+  myfollow: {fileID: 0}
 --- !u!1 &1815412885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1216,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01f997458e4d054eb6e4b0189b32353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyShip: {fileID: 0}
+  offsetFromPlayer: {x: 0, y: 0, z: 0}
+  playerPosWeight: 1
+  enemyShipPosWeight: 1
+  myfollow: {fileID: 0}
 --- !u!1 &1874903199
 GameObject:
   m_ObjectHideFlags: 0
