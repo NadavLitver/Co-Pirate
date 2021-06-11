@@ -22,8 +22,11 @@ public class Ball : MonoBehaviourPun
 
     private bool _team;
     public bool Team => _team;
-    public void Init(bool team)
+
+    Vector3 momentum;
+    public void Init(bool team, Vector3 momentum)
     {
+        this.momentum = momentum;
         _team = team;
 
         gameObject.SetActive(true);
@@ -32,7 +35,7 @@ public class Ball : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        var moveDir = (transform.forward * Speed + Vector3.up * _verticalSpeed) * Time.deltaTime;
+        var moveDir = (transform.forward * Speed + momentum + Vector3.up * _verticalSpeed) * Time.deltaTime;
 
         transform.Translate(moveDir, Space.World);
 

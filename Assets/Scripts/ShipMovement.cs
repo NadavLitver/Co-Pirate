@@ -16,7 +16,8 @@ public class ShipMovement : MonoBehaviour
     Range speedRangeZ;
 
     Vector3 lastPos;
-    Vector3 shipSpeed;
+    [HideInInspector]
+    public  Vector3 shipSpeed;
     private void Start()
     {
         center = transform.position;

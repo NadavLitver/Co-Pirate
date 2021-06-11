@@ -19,10 +19,12 @@ public class CannonController : MonoBehaviourPun
     #endregion
 
     private ShipManager _ship;
+    private ShipMovement _shipMover;
 
     private void Awake()
     {
         _ship = GetComponentInParent<ShipManager>();
+        _shipMover = _ship.GetComponent<ShipMovement>();
     }
     public void SHOOT()
     {
@@ -36,7 +38,7 @@ public class CannonController : MonoBehaviourPun
 
         var cannonBall = ballObj.GetComponent<Ball>();
 
-        cannonBall.Init(_ship.Team);
+        cannonBall.Init(_ship.Team, _shipMover.shipSpeed);
 
 
         photonView.RPC("ShootRPC", RpcTarget.All);
