@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 20
-  _gravity: -5
+  _gravity: -2
   OnHit:
     m_PersistentCalls:
       m_Calls:
