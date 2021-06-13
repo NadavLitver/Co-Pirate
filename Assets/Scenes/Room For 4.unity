@@ -568,6 +568,22 @@ PrefabInstance:
       propertyPath: team2SpawnPoints.Array.data[1]
       value: 
       objectReference: {fileID: 365027010}
+    - target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
+      propertyPath: team1SpawnPoints.Array.data[0].spawnPoint
+      value: 
+      objectReference: {fileID: 129988283}
+    - target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
+      propertyPath: team1SpawnPoints.Array.data[1].spawnPoint
+      value: 
+      objectReference: {fileID: 129988282}
+    - target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
+      propertyPath: team2SpawnPoints.Array.data[0].spawnPoint
+      value: 
+      objectReference: {fileID: 365027011}
+    - target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
+      propertyPath: team2SpawnPoints.Array.data[1].spawnPoint
+      value: 
+      objectReference: {fileID: 365027010}
     - target: {fileID: 2284339349136606370, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
       propertyPath: m_RootOrder
       value: 9

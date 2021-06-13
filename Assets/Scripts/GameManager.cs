@@ -1,7 +1,9 @@
 ﻿
 using Photon.Realtime;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Sirenix.OdinInspector;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -36,11 +38,11 @@ namespace Photon.Pun.Demo.PunBasics
         private GameObject playerPrefab;
 
         [SerializeField]
-        Transform[] team1SpawnPoints;
+        SpawnPoint[] team1SpawnPoints;
         [SerializeField]
-        Transform[] team2SpawnPoints;
+        SpawnPoint[] team2SpawnPoints;
 
-
+         
         [HideInInspector]
         public Player localPlayer;
         [HideInInspector]
@@ -86,8 +88,16 @@ namespace Photon.Pun.Demo.PunBasics
                     Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                    localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, LocalPlayerSpawnPoint().position, Quaternion.identity, 0);
-                    localPlayerObject.transform.SetParent(LocalPlayerSpawnPoint().GetComponentInParent<ShipManager>().transform);
+                    var spawnPoint = LocalPlayerSpawnPoint();
+
+                    if (spawnPoint != null)
+                    {
+                        localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPoint.spawnPoint.position, Quaternion.identity, 0);
+
+                        localPlayerObject.transform.SetParent(spawnPoint.spawnPoint.GetComponentInParent<ShipManager>().transform);
+
+                        spawnPoint.taken = true;
+                    }
                 }
                 else
                 {
@@ -115,39 +125,6 @@ namespace Photon.Pun.Demo.PunBasics
         #endregion
 
         #region Photon Callbacks
-
-        /// <summary>
-        /// Called when a Photon Player got connected. We need to then load a bigger scene.
-        /// </summary>
-        /// <param name="other">Other.</param>
-        public override void OnPlayerEnteredRoom(Player other)
-        {
-            Debug.Log("OnPlayerEnteredRoom() " + other.NickName); // not seen if you're the player connecting
-
-            if (PhotonNetwork.IsMasterClient)
-            {
-                Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
-                LoadArena();
-            }
-        }
-        /// <summary>
-        /// Called when a Photon Player got disconnected. We need to load a smaller scene.
-        /// </summary>
-        /// <param name="other">Other.</param>
-        public override void OnPlayerLeftRoom(Player other)
-        {
-            Debug.Log("OnPlayerLeftRoom() " + other.NickName); // seen when other disconnects
-
-            if (PhotonNetwork.IsMasterClient)
-            {
-                Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
-
-                LoadArena();
-            }
-        }
-
-
-
         /// <summary>
         /// Called when the local player left the room. We need to load the launcher scene.
         /// </summary>
@@ -155,7 +132,6 @@ namespace Photon.Pun.Demo.PunBasics
         {
             SceneManager.LoadScene("PunBasics-Launcher");
         }
-
         #endregion
 
         #region Public Methods
@@ -169,27 +145,26 @@ namespace Photon.Pun.Demo.PunBasics
         {
             Application.Quit();
         }
-        public Transform LocalPlayerSpawnPoint()
+        public SpawnPoint LocalPlayerSpawnPoint()
         {
             if (PhotonNetwork.LocalPlayer.GetPlayerTeam())
-                return team1SpawnPoints[PhotonNetwork.LocalPlayer.GetPlayerNum()];
+                return Array.Find(team1SpawnPoints, (x) => x.taken == false);
             else
-                return team2SpawnPoints[PhotonNetwork.LocalPlayer.GetPlayerNum()];
+                return Array.Find(team2SpawnPoints, (x) => x.taken == false);
         }
         #endregion
 
         #region Private Methods
-
-        void LoadArena()
-        {
-            if (!PhotonNetwork.IsMasterClient)
-            {
-                Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
-            }
-            Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
-            //PhotonNetwork.LoadLevel("Room For 4");
-        }
         #endregion
+        [Serializable]
+        public class SpawnPoint
+        {
+            [HideLabel]
+            public Transform spawnPoint;
+            [HideInInspector]
+            public bool taken = false;
+        }
+
     }
 
 }
