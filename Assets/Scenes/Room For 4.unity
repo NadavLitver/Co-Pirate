@@ -478,6 +478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedTeamCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 7098256796087287125, guid: 49c5eb20b4d7e94408f7512517e42134, type: 3}
+      propertyPath: reflectionPlane
+      value: 
+      objectReference: {fileID: 1373328010}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c5eb20b4d7e94408f7512517e42134, type: 3}
 --- !u!20 &589774531 stripped
@@ -673,6 +677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueTeamCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 7098256796087287125, guid: 49c5eb20b4d7e94408f7512517e42134, type: 3}
+      propertyPath: reflectionPlane
+      value: 
+      objectReference: {fileID: 1373328010}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c5eb20b4d7e94408f7512517e42134, type: 3}
 --- !u!20 &1280358582 stripped
