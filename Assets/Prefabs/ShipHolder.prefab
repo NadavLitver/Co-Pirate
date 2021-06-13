@@ -10844,34 +10844,6 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: DORestart
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934341493750627865, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95eb7ea6bd815be47bc4d9eb6488822f, type: 3}
 --- !u!4 &2637260269807179260 stripped
