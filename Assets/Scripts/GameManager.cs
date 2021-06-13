@@ -1,9 +1,9 @@
 ﻿
 using Photon.Realtime;
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Sirenix.OdinInspector;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -42,7 +42,7 @@ namespace Photon.Pun.Demo.PunBasics
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
 
-         
+
         [HideInInspector]
         public Player localPlayer;
         [HideInInspector]
@@ -94,7 +94,8 @@ namespace Photon.Pun.Demo.PunBasics
                     {
                         localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPoint.spawnPoint.position, Quaternion.identity, 0);
 
-                        localPlayerObject.transform.SetParent(spawnPoint.spawnPoint.GetComponentInParent<ShipManager>().transform);
+                        //localPlayerObject.transform.SetParent(spawnPoint.spawnPoint.GetComponentInParent<ShipManager>().transform);
+                        localPlayerObject.GetComponent<PlayerController>().SetParentShip(spawnPoint.spawnPoint.GetComponentInParent<ShipMovement>());
 
                         spawnPoint.taken = true;
                     }
