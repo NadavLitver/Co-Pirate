@@ -53,16 +53,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [FoldoutGroup("Refrences")]
     [SerializeField, LocalComponent(true, true)]
     private IconHandler _iconHandler;
-
-    [SerializeField, ReadOnly]
-    private ShipMovement parentShip = null;
-
-    public void SetParentShip(ShipMovement ship)
-    {
-        parentShip = ship;
-        parentShip.Subscribe(transform);
-    }
-
     #endregion
 
     #region Events

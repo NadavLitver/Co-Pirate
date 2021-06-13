@@ -1,5 +1,4 @@
 using Sirenix.OdinInspector;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
@@ -16,10 +15,7 @@ public class ShipMovement : MonoBehaviour
 
     Vector3 lastPos;
     [HideInInspector]
-    public Vector3 shipSpeed;
-
-    [SerializeField, ReadOnly]
-    private List<Transform> subscibers = new List<Transform>();
+    public  Vector3 shipSpeed;
     private void Start()
     {
         lastPos = transform.position - transform.forward;
@@ -41,13 +37,7 @@ public class ShipMovement : MonoBehaviour
         float speedZ = Mathf.Lerp(speedRangeZ.minScalar, speedRangeZ.maxScalar, (cosX + 1) / 2) * speed;
 
         shipSpeed = new Vector3(cosX * speedX, 0, sinZ * speedZ);
-        Move(shipSpeed * Time.deltaTime);
-    }
-
-    private void Move(Vector3 movement)
-    {
-        transform.position += movement;
-        subscibers.ForEach((x) => { if (x != null) x.position += movement; });
+        transform.position += shipSpeed * Time.deltaTime;
     }
 
     private void UpdateRotation()
@@ -67,6 +57,4 @@ public class ShipMovement : MonoBehaviour
         public float minScalar = 1;
         public float maxScalar = 1;
     }
-    public void Subscribe(Transform transform) => subscibers.Add(transform);
-    public void Unsubscribe(Transform transform) => subscibers.Remove(transform);
 }
