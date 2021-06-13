@@ -1,3 +1,4 @@
+using Photon.Pun.Demo.PunBasics;
 using Photon.Realtime;
 using System;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class PlayerData
     public Player player;
     public int number;
     public GameObject playerinstance;
+    public SpawnPoint spawnPoint;
 
     public PlayerData(Player player, int number, GameObject playerinstance = null)
     {

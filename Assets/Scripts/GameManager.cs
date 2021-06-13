@@ -65,6 +65,7 @@ namespace Photon.Pun.Demo.PunBasics
         /// </summary>
         void Start()
         {
+            Array.ForEach(PlayerInformation.players, (x) => x.spawnPoint = GetSpawnPoint(x.player));
 
             // in case we started this demo with the wrong scene being active, simply load the menu scene
             if (!PhotonNetwork.IsConnected)
@@ -88,13 +89,13 @@ namespace Photon.Pun.Demo.PunBasics
                     Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                    var spawnPoint = LocalPlayerSpawnPoint();
+                    var spawnPoint = PlayerInformation.GetPlayerData(PhotonNetwork.LocalPlayer).spawnPoint;
 
                     if (spawnPoint != null)
                     {
-                        localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPoint.spawnPoint.position, Quaternion.identity, 0);
+                        localPlayerObject = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPoint.transform.position, Quaternion.identity, 0);
 
-                        localPlayerObject.transform.SetParent(spawnPoint.spawnPoint.GetComponentInParent<ShipManager>().transform);
+                        //localPlayerObject.transform.SetParent(spawnPoint.spawnPoint.GetComponentInParent<ShipManager>().transform);
 
                         spawnPoint.taken = true;
                     }
@@ -145,9 +146,9 @@ namespace Photon.Pun.Demo.PunBasics
         {
             Application.Quit();
         }
-        public SpawnPoint LocalPlayerSpawnPoint()
+        public SpawnPoint GetSpawnPoint(Player player)
         {
-            if (PhotonNetwork.LocalPlayer.GetPlayerTeam())
+            if (player.GetPlayerTeam())
                 return Array.Find(team1SpawnPoints, (x) => x.taken == false);
             else
                 return Array.Find(team2SpawnPoints, (x) => x.taken == false);
@@ -156,15 +157,13 @@ namespace Photon.Pun.Demo.PunBasics
 
         #region Private Methods
         #endregion
-        [Serializable]
-        public class SpawnPoint
-        {
-            [HideLabel]
-            public Transform spawnPoint;
-            [HideInInspector]
-            public bool taken = false;
-        }
-
     }
-
+    [Serializable]
+    public class SpawnPoint
+    {
+        [HideLabel]
+        public Transform transform;
+        [HideInInspector]
+        public bool taken = false;
+    }
 }
