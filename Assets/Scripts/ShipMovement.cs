@@ -17,13 +17,17 @@ public class ShipMovement : MonoBehaviour
     Vector3 lastPos;
     [HideInInspector]
     public  Vector3 shipSpeed;
+
+    float time;
     private void Start()
     {
         lastPos = transform.position - transform.forward;
+        time = (float)PhotonNetwork.Time;
         //circumference = 2 * Mathf.PI * Mathf.Sqrt((Mathf.Pow(radius.x, 2) + Mathf.Pow(radius.y, 2)) / 2);
     }
     private void Update()
     {
+        time += Time.deltaTime;
         UpdatePosition();
 
         UpdateRotation();
@@ -31,8 +35,8 @@ public class ShipMovement : MonoBehaviour
 
     private void UpdatePosition()
     {
-        float cosX = Mathf.Sin(((float)PhotonNetwork.Time * (Mathf.PI * 2)) / cycleDuration);
-        float sinZ = Mathf.Cos(((float)PhotonNetwork.Time * (Mathf.PI * 2)) / cycleDuration);
+        float cosX = Mathf.Sin((time * (Mathf.PI * 2)) / cycleDuration);
+        float sinZ = Mathf.Cos((time * (Mathf.PI * 2)) / cycleDuration);
 
         float speedX = Mathf.Lerp(speedRangeX.minScalar, speedRangeX.maxScalar, (sinZ + 1) / 2) * speed;
         float speedZ = Mathf.Lerp(speedRangeZ.minScalar, speedRangeZ.maxScalar, (cosX + 1) / 2) * speed;
