@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5e9d33d42a42247b06e65a60cea8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numOfPlayers: 1
+  _numOfPlayers: 4
 --- !u!114 &8615625357336907465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +64,6 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 0
+  sceneViewId: 999
   InstantiationId: 0
   isRuntimeInstantiated: 0
