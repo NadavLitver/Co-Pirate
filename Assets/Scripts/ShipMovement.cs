@@ -1,3 +1,4 @@
+using Photon.Pun;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -30,8 +31,8 @@ public class ShipMovement : MonoBehaviour
 
     private void UpdatePosition()
     {
-        float cosX = Mathf.Sin((Time.time * (Mathf.PI * 2)) / cycleDuration);
-        float sinZ = Mathf.Cos((Time.time * (Mathf.PI * 2)) / cycleDuration);
+        float cosX = Mathf.Sin(((float)PhotonNetwork.Time * (Mathf.PI * 2)) / cycleDuration);
+        float sinZ = Mathf.Cos(((float)PhotonNetwork.Time * (Mathf.PI * 2)) / cycleDuration);
 
         float speedX = Mathf.Lerp(speedRangeX.minScalar, speedRangeX.maxScalar, (sinZ + 1) / 2) * speed;
         float speedZ = Mathf.Lerp(speedRangeZ.minScalar, speedRangeZ.maxScalar, (cosX + 1) / 2) * speed;
