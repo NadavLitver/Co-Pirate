@@ -1,9 +1,10 @@
+using Photon.Pun;
 using UnityEngine;
 
 [SelectionBase]
 public class ShipMovement : MonoBehaviour
 {
-private enum axis { X, Z }
+    private enum axis { X, Z }
     [SerializeField]
     float diameter;
     [SerializeField]
@@ -17,14 +18,21 @@ private enum axis { X, Z }
     int maxDistance;
 
     const int centerX = 0;
-    int CenterZ => (maxDistance/2) * (fasterAxis == axis.Z ? -1 : 1);
+    int CenterZ => (maxDistance / 2) * (fasterAxis == axis.Z ? -1 : 1);
 
     private Vector3 lastPos;
 
     float xAxisDiameter => fasterAxis == axis.X ? diameter * speedRatio : diameter / speedRatio;
     float zAxisDiameter => fasterAxis == axis.Z ? diameter * speedRatio : diameter / speedRatio;
 
-    float startTime = Time.time;
+    float networkStartTime;
+    float localStartTime;
+    float time => networkStartTime + Time.time - localStartTime;
+    private void Awake()
+    {
+        networkStartTime = (float)PhotonNetwork.Time;
+        localStartTime = Time.time;
+    }
     void Update()
     {
         UpdatePosition();
@@ -34,7 +42,7 @@ private enum axis { X, Z }
 
     private void UpdatePosition()
     {
-        Vector2 position = PositionAtTime(Time.time - startTime);
+        Vector2 position = PositionAtTime(time);
         transform.position = new Vector3(position.x, transform.position.y, position.y);
     }
 
