@@ -561,6 +561,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8712331834815704004, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: fasterAxis
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712331834815704004, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: speedRangeX.maxScalar
       value: 1.15
       objectReference: {fileID: 0}
