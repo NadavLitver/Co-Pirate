@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 [SelectionBase]
@@ -23,6 +24,13 @@ private enum axis { X, Z }
 
     float xAxisDiameter => fasterAxis == axis.X ? diameter * speedRatio : diameter / speedRatio;
     float zAxisDiameter => fasterAxis == axis.Z ? diameter * speedRatio : diameter / speedRatio;
+
+    float time => startTime + Time.time;
+    float startTime;
+    private void Awake()
+    {
+        startTime = (float)PhotonNetwork.Time;
+    }
     void Update()
     {
         UpdatePosition();
@@ -32,7 +40,7 @@ private enum axis { X, Z }
 
     private void UpdatePosition()
     {
-        Vector2 position = PositionAtTime(Time.time);
+        Vector2 position = PositionAtTime(time);
         transform.position = new Vector3(position.x, transform.position.y, position.y);
     }
 
