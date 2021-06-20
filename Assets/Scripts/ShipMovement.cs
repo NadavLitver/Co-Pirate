@@ -1,35 +1,30 @@
-using Photon.Pun;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
+[SelectionBase]
 public class ShipMovement : MonoBehaviour
 {
-    [SerializeField, DisableInPlayMode]
-    float cycleDuration = 60;
+private enum axis { X, Z }
+    [SerializeField]
+    float diameter;
+    [SerializeField]
+    float speedRatio;
+    [SerializeField]
+    axis fasterAxis;
 
     [SerializeField]
-    float speed = 1;
+    int lapDuration;
     [SerializeField]
-    Range speedRangeX;
-    [SerializeField]
-    Range speedRangeZ;
+    int maxDistance;
 
-    Vector3 lastPos;
-    [HideInInspector]
-    public  Vector3 shipSpeed;
+    const int centerX = 0;
+    int CenterZ => (maxDistance/2) * (fasterAxis == axis.Z ? -1 : 1);
 
-    float startTime;
-    float time;
-    private void Start()
+    private Vector3 lastPos;
+
+    float xAxisDiameter => fasterAxis == axis.X ? diameter * speedRatio : diameter / speedRatio;
+    float zAxisDiameter => fasterAxis == axis.Z ? diameter * speedRatio : diameter / speedRatio;
+    void Update()
     {
-        lastPos = transform.position - transform.forward;
-        time = (float)PhotonNetwork.Time;
-        startTime = time;
-        //circumference = 2 * Mathf.PI * Mathf.Sqrt((Mathf.Pow(radius.x, 2) + Mathf.Pow(radius.y, 2)) / 2);
-    }
-    private void Update()
-    {
-        time += Time.deltaTime;
         UpdatePosition();
 
         UpdateRotation();
@@ -37,16 +32,19 @@ public class ShipMovement : MonoBehaviour
 
     private void UpdatePosition()
     {
-        float cosX = Mathf.Sin(((time - startTime) * (Mathf.PI * 2)) / cycleDuration);
-        float sinZ = Mathf.Cos(((time - startTime) * (Mathf.PI * 2)) / cycleDuration);
-
-        float speedX = Mathf.Lerp(speedRangeX.minScalar, speedRangeX.maxScalar, (sinZ + 1) / 2) * speed;
-        float speedZ = Mathf.Lerp(speedRangeZ.minScalar, speedRangeZ.maxScalar, (cosX + 1) / 2) * speed;
-
-        shipSpeed = new Vector3(cosX * speedX, 0, sinZ * speedZ);
-        transform.position += shipSpeed * Time.deltaTime;
+        Vector2 position = PositionAtTime(Time.time);
+        transform.position = new Vector3(position.x, transform.position.y, position.y);
     }
 
+    public Vector2 PositionAtTime(float time)
+    {
+        float lapProgress = (time / lapDuration) * 2 * Mathf.PI;
+        float X = centerX + (xAxisDiameter * Mathf.Cos(lapProgress));
+        X *= diameter / xAxisDiameter;
+        float Z = CenterZ + (zAxisDiameter * Mathf.Sin(lapProgress));
+        Z *= diameter / zAxisDiameter;
+        return new Vector2(X, Z);
+    }
     private void UpdateRotation()
     {
         Vector3 lookDir = GetLookDir();
@@ -54,14 +52,9 @@ public class ShipMovement : MonoBehaviour
         Vector3 eulerRotation = Quaternion.LookRotation(lookDir).eulerAngles;
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, eulerRotation.y, transform.rotation.eulerAngles.z);
         lastPos = transform.position;
+        Vector2 position = PositionAtTime(Time.time);
+        transform.position = new Vector3(position.x, transform.position.y, position.y);
     }
 
     private Vector3 GetLookDir() => transform.position - new Vector3(lastPos.x, transform.position.y, lastPos.z);
-
-    [System.Serializable, InlineProperty]
-    class Range
-    {
-        public float minScalar = 1;
-        public float maxScalar = 1;
-    }
 }

@@ -38,7 +38,7 @@ public class CannonController : MonoBehaviourPun
 
         var cannonBall = ballObj.GetComponent<Ball>();
 
-        cannonBall.Init(_ship.Team, _shipMover.shipSpeed);
+        //cannonBall.Init(_ship.Team, _shipMover.shipSpeed);
 
 
         photonView.RPC("ShootRPC", RpcTarget.All);
