@@ -165,9 +165,16 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
         }
         public void SetPlayerData()
         {
-        playerData.isTeam1 = isTeam1;
+        photonView.RPC("SetPlayerDataRpc", RpcTarget.All);
+
         }
-       public void SetLocalReady()
+         [PunRPC]
+        public void SetPlayerDataRpc()
+        {
+        playerData.isTeam1 = isTeam1;
+
+        }
+    public void SetLocalReady()
        {
 
           if (isReady)

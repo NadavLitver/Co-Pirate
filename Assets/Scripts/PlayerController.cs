@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     #endregion
 
     #region State
-    [HideInInspector]
+    [ReadOnly]
     public Camera personalCamera;
     //
     //private CameraWork cameraWork;

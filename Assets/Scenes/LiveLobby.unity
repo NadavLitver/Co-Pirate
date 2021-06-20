@@ -716,17 +716,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &723516887 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-  m_PrefabInstance: {fileID: 1425092244487046595}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590b3e5e1ebe3004da61b7b19fb00de8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &838247948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,62 +1442,6 @@ PrefabInstance:
     - target: {fileID: 1898944106758677144, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam1.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam2.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam1.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam2.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam1.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 723516887}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam2.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 723516887}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam1.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam2.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam1.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetPlayerData
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam2.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetPlayerData
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam1.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PlayerLobbyController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam2.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PlayerLobbyController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam1.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898944106758677147, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
-      propertyPath: OnTeam2.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caac407f96d08ad458b6b12d3ffa82fc, type: 3}
