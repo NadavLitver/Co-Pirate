@@ -153,6 +153,23 @@ namespace Photon.Pun.Demo.PunBasics
             else
                 return Array.Find(team2SpawnPoints, (x) => x.taken == false);
         }
+
+        public void loadLobby()
+        {
+            if (PhotonNetwork.IsMasterClient)
+            {
+                PhotonNetwork.LoadLevel("Lobby");
+                Debug.Log("Trying to load Lobby.");
+            }
+        }
+        public void loadLauncher()
+        {
+            if (PhotonNetwork.IsMasterClient)
+            {
+                PhotonNetwork.LoadLevel("Launcher");
+                Debug.Log("Trying to load Launcher scene.");
+            }
+        }
         #endregion
       
         #region Private Methods
@@ -166,4 +183,6 @@ namespace Photon.Pun.Demo.PunBasics
         [HideInInspector]
         public bool taken = false;
     }
+
+   
 }

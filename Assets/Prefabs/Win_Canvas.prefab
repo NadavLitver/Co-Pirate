@@ -657,7 +657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2256399083186051156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
+        m_TargetAssemblyTypeName: Photon.Pun.Demo.PunBasics.GameManager, Assembly-CSharp
+        m_MethodName: loadLauncher
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2256399083233706568
 GameObject:
   m_ObjectHideFlags: 0
