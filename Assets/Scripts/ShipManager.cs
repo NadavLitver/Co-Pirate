@@ -23,14 +23,17 @@ public class ShipManager : MonoBehaviourPun
     [SerializeField] float maxDegrees = 1;
     public Transform center;
     #endregion
-
+   
     float startHeight;
     Quaternion startRotation;
+
     #region Events
     [SerializeField, FoldoutGroup("Events", Order = 99)]
     private UnityEvent OnTakeDamage;
     [SerializeField, FoldoutGroup("Events", Order = 99)]
     private UnityEvent OnLose;
+    [SerializeField, FoldoutGroup("Events", Order = 99)]
+    private UnityEvent OnWin;
     #endregion
 
     float CurDamageLevel
@@ -94,5 +97,8 @@ public class ShipManager : MonoBehaviourPun
     {
         OnLose?.Invoke();
     }
-
+    public void Win()
+    {
+        OnWin?.Invoke();
+    }
 }
