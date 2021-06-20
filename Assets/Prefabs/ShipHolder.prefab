@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cycleDuration: 180
-  speed: 10
+  speed: 2
   speedRangeX:
     minScalar: 1
     maxScalar: 1
