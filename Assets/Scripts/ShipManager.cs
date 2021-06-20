@@ -2,6 +2,7 @@ using Photon.Pun;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ShipManager : MonoBehaviourPun
 {
@@ -34,6 +35,7 @@ public class ShipManager : MonoBehaviourPun
     private UnityEvent OnLose;
     [SerializeField, FoldoutGroup("Events", Order = 99)]
     private UnityEvent OnWin;
+    
     #endregion
 
     float CurDamageLevel
