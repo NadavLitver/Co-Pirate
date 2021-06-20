@@ -1,9 +1,11 @@
-﻿
-using Photon.Realtime;
+
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Sirenix.OdinInspector;
+using Photon.Realtime;
+using UnityEngine.UI;
+using TMPro;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -15,23 +17,22 @@ namespace Photon.Pun.Demo.PunBasics
     /// Deals with quiting the room and the game
     /// Deals with level loading (outside the in room synchronization)
     /// </summary>
-    public class GameManager : MonoBehaviourPunCallbacks
+    /// 
+   
+    public class LiveLobbyGameManager : MonoBehaviourPunCallbacks
     {
 
         #region Public Fields
 
-        static public GameManager Instance;
+        static public LiveLobbyGameManager Instance;
 
         #endregion
 
         #region Private Fields
 
+        [ReadOnly]
+        public int readyCount;
 
-
-        private GameObject instance;
-
-        public Camera redCamera;
-        public Camera blueCamera;
 
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]
@@ -41,8 +42,10 @@ namespace Photon.Pun.Demo.PunBasics
         SpawnPoint[] team1SpawnPoints;
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
+       
+        public Button readyButton;
+        public TextMeshProUGUI debugText;
 
-         
         [HideInInspector]
         public Player localPlayer;
         [HideInInspector]
@@ -110,6 +113,7 @@ namespace Photon.Pun.Demo.PunBasics
             }
 
         }
+      
 
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity on every frame.
@@ -154,16 +158,18 @@ namespace Photon.Pun.Demo.PunBasics
                 return Array.Find(team2SpawnPoints, (x) => x.taken == false);
         }
         #endregion
-      
+       public void JoinGameRoom()
+        {
+            if (PhotonNetwork.IsMasterClient && readyCount == LobbyInfromation._numOfPlayer)
+            {
+                PhotonNetwork.LoadLevel("Room For 4");
+                Debug.Log("Trying to load game scene.");
+            }
+
+        }
         #region Private Methods
         #endregion
+
     }
-    [Serializable]
-    public class SpawnPoint
-    {
-        [HideLabel]
-        public Transform transform;
-        [HideInInspector]
-        public bool taken = false;
-    }
+   
 }

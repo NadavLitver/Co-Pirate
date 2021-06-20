@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2284339349136606370}
   - component: {fileID: 2284339349136606369}
-  - component: {fileID: 7529973620017276462}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,22 +47,13 @@ MonoBehaviour:
   blueCamera: {fileID: 0}
   playerPrefab: {fileID: 692593654332813151, guid: 111c941957003cd4f87e186e903d9c48, type: 3}
   team1SpawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - transform: {fileID: 0}
+    taken: 0
+  - transform: {fileID: 0}
+    taken: 0
   team2SpawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - transform: {fileID: 0}
+    taken: 0
+  - transform: {fileID: 0}
+    taken: 0
   localPlayerObject: {fileID: 0}
---- !u!114 &7529973620017276462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2284339349136606371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b28dd60f6abf16d4094cf0f642a043e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0

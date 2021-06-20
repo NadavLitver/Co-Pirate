@@ -51,7 +51,8 @@ namespace Photon.Pun.Demo.PunBasics
 
             if (PhotonNetwork.IsMasterClient)
             {
-                PhotonNetwork.LoadLevel("Room For 4");
+                LobbyInfromation._numOfPlayer = _numOfPlayers;
+                PhotonNetwork.LoadLevel("LiveLobby");
                 Debug.Log("Trying to load game scene.");
             }
         }
