@@ -423,7 +423,7 @@ MonoBehaviour:
   _team: 0
   sinkDepth: 0
   CurHoleAmountActive: 0
-  DPSPerHole: 1
+  DPSPerHole: 0
   maxRotation: -30
   maxDegrees: 99999
   center: {fileID: 5709931838462282169}
