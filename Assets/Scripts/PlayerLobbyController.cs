@@ -200,9 +200,9 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
           [PunRPC]
            public void AddReadyRPC()
            {
-             LiveLobbyGameManager.Instance.readyCount++;
-             LiveLobbyGameManager.Instance.debugText.text = "Players Ready: " + LiveLobbyGameManager.Instance.readyCount;
-            LiveLobbyGameManager.Instance.JoinGameRoom();
+              LiveLobbyGameManager.Instance.readyCount++;
+              LiveLobbyGameManager.Instance.debugText.text = "Players Ready: " + LiveLobbyGameManager.Instance.readyCount;
+              LiveLobbyGameManager.Instance.JoinGameRoom();
            }
           [PunRPC]
            public void RetractReadyRPC()
@@ -210,13 +210,13 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
            {
                LiveLobbyGameManager.Instance.readyCount--;
                LiveLobbyGameManager.Instance.debugText.text = "Players Ready: " + LiveLobbyGameManager.Instance.readyCount;
-                LiveLobbyGameManager.Instance.JoinGameRoom();
+               LiveLobbyGameManager.Instance.JoinGameRoom();
 
-            }
-    private void OnMove(InputAction.CallbackContext context)
-       {
+           }
+        private void OnMove(InputAction.CallbackContext context)
+          {
             dir = context.ReadValue<Vector2>();
-       }
+          }
      
       
     
