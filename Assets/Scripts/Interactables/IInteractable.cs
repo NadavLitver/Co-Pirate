@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public interface IInteractable
@@ -8,4 +9,5 @@ public interface IInteractable
     void OnUnbecomingTarget(PlayerController ctrl);
     Sprite Icon { get; }
     bool InteractableCondition(PlayerController ctrl);
+    event Action InteractFinished;
 }

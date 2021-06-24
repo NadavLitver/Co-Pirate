@@ -6,6 +6,7 @@ using Sirenix.OdinInspector;
 using Photon.Realtime;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -46,6 +47,9 @@ namespace Photon.Pun.Demo.PunBasics
         public Button readyButton;
         public TextMeshProUGUI debugText;
 
+        [ReadOnly]
+        public bool isReady;
+
         [HideInInspector]
         public Player localPlayer;
         [HideInInspector]
@@ -61,7 +65,7 @@ namespace Photon.Pun.Demo.PunBasics
                 Instance = this;
             }
 
-
+            InputManager.controls.Gameplay.Speak.performed += SetLocalReady;
         }
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase.
@@ -140,7 +144,41 @@ namespace Photon.Pun.Demo.PunBasics
         #endregion
 
         #region Public Methods
+        public void SetLocalReady(InputAction.CallbackContext context)
+        {
 
+            isReady = !isReady;
+
+            CallReadyRPC(isReady);
+        }
+        public void CallReadyRPC(bool isReady)
+        {
+            if (isReady)
+
+                photonView.RPC("AddReadyRPC", RpcTarget.All);
+
+            else
+                photonView.RPC("RetractReadyRPC", RpcTarget.All);
+
+
+
+        }
+        [PunRPC]
+        public void AddReadyRPC()
+        {
+           readyCount++;
+           debugText.text = "Players Ready: " + readyCount;
+           JoinGameRoom();
+        }
+        [PunRPC]
+        public void RetractReadyRPC()
+
+        {
+          readyCount--;
+          debugText.text = "Players Ready: " + readyCount;
+          JoinGameRoom();
+
+        }
         public void LeaveRoom()
         {
             PhotonNetwork.LeaveRoom();

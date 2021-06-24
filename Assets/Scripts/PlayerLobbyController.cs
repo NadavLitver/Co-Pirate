@@ -81,8 +81,7 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
 
         [ReadOnly]
         public bool isTeam1;
-         [ReadOnly]
-         public bool isReady;
+     
          Vector2 dir;
         Vector2 currentVelocity = Vector2.zero;
         Vector2 targetVelocity = Vector2.zero;
@@ -128,11 +127,11 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
 
                 personalCamera.gameObject.SetActive(true);
                 var cameraCtrl = personalCamera.GetComponent<CameraController>();
-                LiveLobbyGameManager.Instance.readyButton.onClick.AddListener(SetLocalReady);
+               // LiveLobbyGameManager.Instance.readyButton.onClick.AddListener(SetLocalReady);
 
             // cameraCtrl.myfollow = transform;
              }
-    }
+         }
 
         private void FixedUpdate()
         {
@@ -175,44 +174,7 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
         //playerData.isTeam1 = isTeam1;
 
          }
-    public void SetLocalReady()
-       {
-
-          if (isReady)
-               isReady = false;
-          else
-               isReady = true;
-
-        CallReadyRPC(isReady);
-       }
-          public void CallReadyRPC(bool isReady)
-          {
-              if (isReady)
-
-                  photonView.RPC("AddReadyRPC", RpcTarget.All);
-
-             else
-                 photonView.RPC("RetractReadyRPC", RpcTarget.All);
-
-
-
-          }
-          [PunRPC]
-           public void AddReadyRPC()
-           {
-              LiveLobbyGameManager.Instance.readyCount++;
-              LiveLobbyGameManager.Instance.debugText.text = "Players Ready: " + LiveLobbyGameManager.Instance.readyCount;
-              LiveLobbyGameManager.Instance.JoinGameRoom();
-           }
-          [PunRPC]
-           public void RetractReadyRPC()
-
-           {
-               LiveLobbyGameManager.Instance.readyCount--;
-               LiveLobbyGameManager.Instance.debugText.text = "Players Ready: " + LiveLobbyGameManager.Instance.readyCount;
-               LiveLobbyGameManager.Instance.JoinGameRoom();
-
-           }
+  
         private void OnMove(InputAction.CallbackContext context)
           {
             dir = context.ReadValue<Vector2>();
