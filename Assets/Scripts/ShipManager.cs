@@ -70,22 +70,24 @@ public class ShipManager : MonoBehaviourPun
     {
         ChangeShipHeight();
         ChangeShipZRotation();
-    }
-    public void TakeDamage(float damage)
-    {
-        photonView.RPC("TakeDamageRPC", RpcTarget.All);
-
-    }//NOT IN USE
-    [PunRPC]
-    public void TakeDamageRPC(float damage, int _shipID)//take damage in game from here instead of through the slider
-    {// NOT IN USE
-        CurDamageLevel += damage;
-
-        OnTakeDamage?.Invoke();
 
         if (CurDamageLevel == maxDamageLevel)
             Lose();
     }
+    //public void TakeDamage(float damage)
+    //{
+    //    photonView.RPC("TakeDamageRPC", RpcTarget.All);
+
+    //}//NOT IN USE
+    //[PunRPC]
+    //public void TakeDamageRPC(float damage, int _shipID)//take damage in game from here instead of through the slider
+    //{// NOT IN USE
+    //    CurDamageLevel += damage;
+
+    //    OnTakeDamage?.Invoke();
+
+
+    //}
     void ChangeShipHeight()
     {
 
