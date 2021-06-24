@@ -12,7 +12,10 @@ public class HoleController : MonoBehaviour
     [SerializeField, FoldoutGroup("Events")]
     private UnityEvent OnFix;
 
+    public HolesManager manager { get; set; }
     private Vector3 _startPos;
+    
+
 
     private void Awake()
     {
@@ -27,8 +30,10 @@ public class HoleController : MonoBehaviour
     }
     public void Fix()
     {
-        gameObject.SetActive(false);
-
+        manager.FixedHole(this);
+    }
+    public void FixRPC()
+    {
         OnFix?.Invoke();
     }
 #if UNITY_EDITOR

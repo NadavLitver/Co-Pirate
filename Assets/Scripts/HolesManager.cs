@@ -8,6 +8,10 @@ public class HolesManager : MonoBehaviourPun
     public ShipManager myShip;
 
 
+    private void Awake()
+    {
+        Array.ForEach(holes, (x) => x.manager = this);
+    }
     public void NewHole()
     {
         photonView.RPC("NewHoleRPC", RpcTarget.All);
@@ -31,6 +35,25 @@ public class HolesManager : MonoBehaviourPun
 
     }
 
+    public void FixedHole(HoleController hole)
+    {
+        int index = Array.FindIndex(holes, (x) => x == hole);
+
+        if (index != -1)
+            photonView.RPC("FixedHoleRPC", RpcTarget.All, index);
+    }
+    [PunRPC]
+    private void FixedHoleRPC(int index)
+    {
+        var hole = holes[index];
+        hole.Fix();
+
+        myShip.CurHoleAmountActive--;
+
+        hole.gameObject.SetActive(false);
+
+        hole.FixRPC();
+    }
     private void OnTriggerEnter(Collider other)
     {
         Ball ball = other.GetComponent<Ball>();

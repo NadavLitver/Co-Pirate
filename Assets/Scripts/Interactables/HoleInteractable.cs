@@ -16,19 +16,16 @@ public class HoleInteractable : BaseInteractable
     private UnityEvent OnStartInteraction;
     [SerializeField, FoldoutGroup("Events", order: 99)]
     private UnityEvent OnEndInteraction;
-    [SerializeField, FoldoutGroup("Events", order: 99)]
-    private UnityEvent OnFixed;
+    
     #endregion
     public event Action<float> OnFixProgress;
     private float _fixStartTime = Mathf.Infinity;
     private bool _interacting;
-    private ShipManager myShip;
 
     public override event Action InteractFinished;
 
     private void Awake()
     {
-        myShip = GetComponentInParent<ShipManager>();
         if (_holeCtrl == null)
             _holeCtrl = GetComponent<HoleController>();
     }
@@ -58,11 +55,7 @@ public class HoleInteractable : BaseInteractable
     private void Fixed()
     {
         _holeCtrl.Fix();
-        myShip.CurHoleAmountActive--;
         InteractFinished?.Invoke();
-        OnFixed?.Invoke();
-
-        Destroy(gameObject);
     }
 
     public override void OnInteract_Start(PlayerController ctrl)
