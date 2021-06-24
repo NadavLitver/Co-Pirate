@@ -22,7 +22,7 @@ public class HoleInteractable : BaseInteractable
     private float _fixStartTime = Mathf.Infinity;
     private bool _interacting;
 
-    public override event Action InteractFinished;
+    public override event Action<IInteractable> InteractFinished;
 
     private void Awake()
     {
@@ -55,7 +55,7 @@ public class HoleInteractable : BaseInteractable
     private void Fixed()
     {
         _holeCtrl.Fix();
-        InteractFinished?.Invoke();
+        InteractFinished?.Invoke(this);
     }
 
     public override void OnInteract_Start(PlayerController ctrl)

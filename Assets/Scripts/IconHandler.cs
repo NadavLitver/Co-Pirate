@@ -22,7 +22,7 @@ public class IconHandler : MonoBehaviour
     private Tween _transitionTween;
     private void Start()
     {
-        _mainCam = PlayerController.localPlayerCtrl.GetComponent<PlayerController>().personalCamera;
+        _mainCam = PlayerController.localPlayerCtrl.GetComponent<PlayerController>().PersonalCamera;
 
         GetComponentInParent<Canvas>().worldCamera = _mainCam;
 
