@@ -449,9 +449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4838762ce546bae4185fcd0bc91fa17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
   _interactionRange: 3
-  maxAcceleration: 0.2
+  maxAcceleration: 0.5
   maxRotationSpeed: 360
   _gravity: 2
   redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
