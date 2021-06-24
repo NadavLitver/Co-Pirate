@@ -17,15 +17,9 @@ public class IconHandler : MonoBehaviour
     [SerializeField, LocalComponent(true)]
     private Image _iconImage;
 
-    private Camera _mainCam;
-
     private Tween _transitionTween;
     private void Start()
     {
-        _mainCam = PlayerController.localPlayerCtrl.GetComponent<PlayerController>().personalCamera;
-
-        GetComponentInParent<Canvas>().worldCamera = _mainCam;
-
         if (_player != null)
             SetIconPosition();
     }
@@ -36,11 +30,7 @@ public class IconHandler : MonoBehaviour
 
     private void SetIconPosition()
     {
-        if (_mainCam != null)
-        {
-            transform.position = _player.transform.position + Vector3.up * _offsetY;
-            transform.LookAt(_mainCam.transform.position, Vector3.up);
-        }
+        transform.position = _player.transform.position + Vector3.up * _offsetY;
     }
     public void SetIcon(Sprite icon)
     {
