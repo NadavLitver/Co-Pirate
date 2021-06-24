@@ -422,10 +422,10 @@ MonoBehaviour:
   curDamageLevel: 0
   maxDamageLevel: 100
   _team: 0
-  sinkDepth: -0.5
+  sinkDepth: -1
   CurHoleAmountActive: 0
-  DPSPerHole: 0.1
-  maxRotation: -5
+  DPSPerHole: 0.2
+  maxRotation: -15
   maxDegrees: 99999
   center: {fileID: 5709931838462282169}
   OnTakeDamage:
@@ -603,6 +603,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _startDelay: 10
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2643072918476816152
 GameObject:
   m_ObjectHideFlags: 0
