@@ -233,6 +233,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 curInteractable.OnUnbecomingTarget(this);
 
             curInteractableHit = newInteractableHit;
+            curInteractable = curInteractableHit.interactable;
 
             if (curInteractable != null)
                 curInteractable.OnBecomingTarget(this);
