@@ -544,7 +544,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  personalCamera: {fileID: 0}
+  OnNewCamera:
+    m_PersistentCalls:
+      m_Calls: []
   isTeam1: 0
 --- !u!114 &2431008677872619691
 MonoBehaviour:
