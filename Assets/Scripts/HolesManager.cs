@@ -46,7 +46,6 @@ public class HolesManager : MonoBehaviourPun
     private void FixedHoleRPC(int index)
     {
         var hole = holes[index];
-        hole.Fix();
 
         myShip.CurHoleAmountActive--;
 
