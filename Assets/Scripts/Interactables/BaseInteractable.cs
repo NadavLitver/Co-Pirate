@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public abstract class BaseInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private Sprite _icon;
+
+    public virtual event Action InteractFinished;
 
     public Sprite Icon => _icon;
 
@@ -16,7 +19,7 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
         this.Unsubscribe();
     }
     public abstract void OnInteract_Start(PlayerController ctrl);
-    public virtual void OnInteract_End(PlayerController ctrl) { }
+    public virtual void OnInteract_End(PlayerController ctrl) { InteractFinished?.Invoke(); }
     public virtual void OnBecomingTarget(PlayerController ctrl) { }
     public virtual void OnUnbecomingTarget(PlayerController ctrl) { }
     public virtual bool InteractableCondition(PlayerController ctrl) => true;

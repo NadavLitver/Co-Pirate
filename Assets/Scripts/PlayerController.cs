@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
@@ -51,8 +52,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
     Material Body;
 
     [FoldoutGroup("Refrences")]
-    [SerializeField, LocalComponent(true, true)]
+    [SerializeField]
     private IconHandler _iconHandler;
+
+    [FoldoutGroup("Refrences")]
+    [SerializeField]
+    private Image _holeFixProgressBar;
     #endregion
 
     #region Events
@@ -116,6 +121,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             InputManager.controls.Gameplay.Move.performed += OnMove;
             InputManager.controls.Gameplay.Move.canceled += (x) => dir = Vector3.zero;
             InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
+            InputManager.controls.Gameplay.Interact.canceled += OnInteractPreformed;
             characterController = GetComponent<CharacterController>();
 
 
@@ -180,22 +186,60 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (curInteractableHit.interactable != null && curInteractableHit.distance <= _interactionRange)
         {
             curInteractableHit.interactable.OnInteract_Start(this);
+
+            curInteractableHit.interactable.InteractFinished += CheckForInteractables;
+        }
+    }
+    void OnInteractCanceled(InputAction.CallbackContext context)
+    {
+        if (curInteractableHit.interactable != null && curInteractableHit.distance <= _interactionRange)
+        {
+            curInteractableHit.interactable.OnInteract_End(this);
             CheckForInteractables();
+
+            curInteractableHit.interactable.InteractFinished -= CheckForInteractables;
         }
     }
     public void ChangeCurInteratable(InteractableHit newInteractableHit)
     {
-        if (curInteractableHit.interactable != newInteractableHit.interactable)
+        var newInteractable = newInteractableHit.interactable;
+        var curInteractable = curInteractableHit.interactable;
+
+        if (curInteractable != newInteractable)
         {
-            if (curInteractableHit.interactable != null)
-                curInteractableHit.interactable.OnUnbecomingTarget(this);
+            if (_holeFixProgressBar != null)
+            {
+                if (curInteractable != null && curInteractable is HoleInteractable _hole)
+                {
+                    _hole.gameObject.SetActive(false);
+                    _hole.OnFixProgress -= UpdateFixProgressBar;
+                }
+
+
+                if (newInteractable != null && newInteractable is HoleInteractable _newHole)
+                {
+                    _holeFixProgressBar.gameObject.SetActive(true);
+                    _newHole.OnFixProgress += UpdateFixProgressBar;
+                }
+
+                void UpdateFixProgressBar(float progress)
+                {
+                    if (_holeFixProgressBar != null && isActiveAndEnabled)
+                        _holeFixProgressBar.fillAmount = progress;
+                }
+            }
+
+            if (curInteractable != null)
+                curInteractable.OnUnbecomingTarget(this);
 
             curInteractableHit = newInteractableHit;
 
-            if (curInteractableHit.interactable != null)
-                curInteractableHit.interactable.OnBecomingTarget(this);
+            if (curInteractable != null)
+                curInteractable.OnBecomingTarget(this);
 
-            Sprite icon = (curInteractableHit.interactable == null ? null : curInteractableHit.interactable.Icon);
+            Sprite icon = (curInteractable == null ? null : curInteractable.Icon);
+
+
 
             _iconHandler.SetIcon(icon);
         }

@@ -169,6 +169,7 @@ MonoBehaviour:
   Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
   Body: {fileID: 2100000, guid: be60fc1c3a73a494e8d5c0eed521ad8b, type: 2}
   _iconHandler: {fileID: 4165575631123321390}
+  _holeFixProgressBar: {fileID: 5276470833375585953}
   OnTeam1:
     m_PersistentCalls:
       m_Calls:
@@ -625,7 +626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3266946293576522115
 RectTransform:
   m_ObjectHideFlags: 0
