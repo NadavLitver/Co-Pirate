@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Sirenix.OdinInspector;
 using Photon.Pun;
+using Sirenix.OdinInspector;
+using UnityEngine;
 using UnityEngine.Events;
 
 [SelectionBase]
@@ -29,16 +27,17 @@ public class CannonController : MonoBehaviourPun
     public void SHOOT()
     {
         var forwardDirection = Vector3.ProjectOnPlane(_barrelEdge.transform.position - transform.position, Vector3.up);
-        
+
         Debug.DrawLine(_barrelEdge.transform.position, _barrelEdge.transform.position + forwardDirection, Color.red, 5);
-        
-        var rotation =  Quaternion.LookRotation(forwardDirection);
+
+        var rotation = Quaternion.LookRotation(forwardDirection);
 
         var ballObj = PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
 
         var cannonBall = ballObj.GetComponent<Ball>();
 
-        //cannonBall.Init(_ship.Team, _shipMover.shipSpeed);
+        var shipSpeed = _shipMover.Speed;
+        cannonBall.Init(_ship.Team, new Vector3(shipSpeed.x, 0, shipSpeed.y));
 
 
         photonView.RPC("ShootRPC", RpcTarget.All);

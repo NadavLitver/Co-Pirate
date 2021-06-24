@@ -15,7 +15,7 @@ public class Ball : MonoBehaviourPun
     [SerializeField]
     private UnityEvent OnHit;
 
-    private float _verticalSpeed;
+    private float _verticalSpeed = 0;
 
     [SerializeField]
     private float damage;
