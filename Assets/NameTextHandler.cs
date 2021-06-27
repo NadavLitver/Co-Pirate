@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Sirenix.OdinInspector;
+
 public class NameTextHandler : MonoBehaviour
 {
     private Camera _mainCam;
@@ -11,18 +13,34 @@ public class NameTextHandler : MonoBehaviour
     private float _offsetY;
     [SerializeField]
     private GameObject _player;
+    [ReadOnly]
+    public TextMeshProUGUI nameText;
     private void Start()
     {
+        string name = PhotonNetwork.NickName;
+        nameText = GetComponent<TextMeshProUGUI>();
         _mainCam = PlayerController.localPlayerCtrl.GetComponent<PlayerController>().PersonalCamera ??
             PlayerLobbyController.localPlayerCtrl.GetComponent<PlayerLobbyController>().personalCamera;
 
         GetComponentInParent<Canvas>().worldCamera = _mainCam;
-
-        this.GetComponent<TextMeshProUGUI>().text = PhotonNetwork.NickName;
+      
 
         if (_player != null)
+        {
+            if (_player.GetComponent<PlayerController>() != null)
+            {
+                _player.GetComponent<PlayerController>().CallSetNameRPC();
+            }
+            else if (_player.GetComponent<PlayerLobbyController>() != null)
+            {
+                _player.GetComponent<PlayerLobbyController>().CallSetNameRPC();
+            }
             SetIconPosition();
+            
+        }
+       
     }
+   
     private void LateUpdate()
     {
         SetIconPosition();

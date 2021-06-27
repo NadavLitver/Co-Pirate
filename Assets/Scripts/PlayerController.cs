@@ -307,7 +307,17 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (photonView.Owner.GetPlayerNum() == playerNum)
             OnCannonballUse?.Invoke();
     }
+    [PunRPC]
+    void SetNameRPC()
+    {
+        NameTextHandler nameHandler = this.GetComponentInChildren<NameTextHandler>();
+        nameHandler.nameText.text = nameHandler.name;
 
+    }
+    public void CallSetNameRPC()
+    {
+        photonView.RPC("SetNameRPC", RpcTarget.All);
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, _interactionRange);

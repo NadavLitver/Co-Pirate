@@ -175,12 +175,22 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
         {
         //playerData.isTeam1 = isTeam1;
 
-         }
-  
-        private void OnMove(InputAction.CallbackContext context)
-          {
+        }
+    [PunRPC]
+    void SetNameRPC()
+    {
+        NameTextHandler nameHandler = this.GetComponentInChildren<NameTextHandler>();
+        nameHandler.nameText.text = nameHandler.name;
+
+    }
+    public void CallSetNameRPC()
+    {
+        photonView.RPC("SetNameRPC", RpcTarget.All);
+    }
+    private void OnMove(InputAction.CallbackContext context)
+    {
             dir = context.ReadValue<Vector2>();
-          }
+    }
      
       
     
