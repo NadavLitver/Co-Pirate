@@ -229,40 +229,19 @@ public class PlayerController : MonoBehaviourPunCallbacks
     }
     public void ChangeCurInteratable(InteractableHit newInteractableHit)
     {
-        var newInteractable = newInteractableHit.interactable;
         var curInteractable = curInteractableHit.interactable;
+
+        var newInteractable = newInteractableHit.interactable;
 
         if (curInteractable != newInteractable)
         {
             if (_holeFixProgressBar != null)
             {
                 if (curInteractable != null && curInteractable is HoleInteractable _hole)
-                {
                     FinishedFixing(_hole);
-                }
-
 
                 if (newInteractable != null && newInteractable is HoleInteractable _newHole)
-                {
-                    _holeFixProgressBar.gameObject.SetActive(true);
-                    _newHole.OnFixProgress += UpdateFixProgressBar;
-                    _newHole.InteractFinished += FinishedFixing;
-                }
-
-                void FinishedFixing(IInteractable interactable)
-                {
-                    var hole = (HoleInteractable)interactable;
-
-                    hole.OnFixProgress -= UpdateFixProgressBar;
-                    hole.InteractFinished -= FinishedFixing;
-                    hole.gameObject.SetActive(false);
-
-                }
-                void UpdateFixProgressBar(float progress)
-                {
-                    if (_holeFixProgressBar != null && isActiveAndEnabled)
-                        _holeFixProgressBar.fillAmount = progress;
-                }
+                    StartFixing(_newHole);
             }
 
             if (curInteractable != null)
@@ -279,6 +258,30 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
             _iconHandler.SetIcon(icon);
+
+
+            //Anonymous methods
+            void FinishedFixing(IInteractable interactable)
+            {
+                var hole = (HoleInteractable)interactable;
+
+                hole.OnFixProgress -= UpdateFixProgressBar;
+                hole.InteractFinished -= FinishedFixing;
+                hole.gameObject.SetActive(false);
+
+            }
+
+            void StartFixing(HoleInteractable _newHole)
+            {
+                _holeFixProgressBar.gameObject.SetActive(true);
+                _newHole.OnFixProgress += UpdateFixProgressBar;
+                _newHole.InteractFinished += FinishedFixing;
+            }
+            void UpdateFixProgressBar(float progress)
+            {
+                if (_holeFixProgressBar != null && isActiveAndEnabled)
+                    _holeFixProgressBar.fillAmount = progress;
+            }
         }
     }
     public void SetCurInteractableNull()

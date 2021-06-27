@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 [SelectionBase]
@@ -11,12 +12,6 @@ public class HolesManager : MonoBehaviourPun
     private void Awake()
     {
         Array.ForEach(holes, (x) => x.manager = this);
-    }
-    public void NewHole()
-    {
-        photonView.RPC("NewHoleRPC", RpcTarget.All);
-        Debug.Log("calling rpc");
-
     }
     [PunRPC]
     public void NewHoleRPC()
@@ -62,5 +57,12 @@ public class HolesManager : MonoBehaviourPun
             Debug.Log("Team " + (myShip.Team ? 1 : 2) + " took damage!");
             ball.HIT();
         }
+    }
+    [Button, HideInEditorMode]
+    public void NewHole()
+    {
+        photonView.RPC("NewHoleRPC", RpcTarget.All);
+        Debug.Log("calling rpc");
+
     }
 }
