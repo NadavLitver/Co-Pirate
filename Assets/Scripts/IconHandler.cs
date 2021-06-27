@@ -9,8 +9,6 @@ public class IconHandler : MonoBehaviour
     [SerializeField]
     private GameObject _player;
     [SerializeField]
-    private float _offsetY;
-    [SerializeField]
     private float _fadeoutSpeed;
     [SerializeField]
     private float _fadeinSpeed;
@@ -18,20 +16,6 @@ public class IconHandler : MonoBehaviour
     private Image _iconImage;
 
     private Tween _transitionTween;
-    private void Start()
-    {
-        if (_player != null)
-            SetIconPosition();
-    }
-    private void LateUpdate()
-    {
-        SetIconPosition();
-    }
-
-    private void SetIconPosition()
-    {
-        transform.position = _player.transform.position + Vector3.up * _offsetY;
-    }
     public void SetIcon(Sprite icon)
     {
         if (_iconImage != null)
