@@ -8,14 +8,14 @@ public class LookAtCanvasCamera : MonoBehaviour
     private void Awake()
     {
         if (_canvas == null)
-            _canvas = GetComponentInParent<Canvas>();
+            _canvas = GetComponent<Canvas>();
     }
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         var camera = _canvas.worldCamera;
         if (camera != null)
         {
-            transform.LookAt(_canvas.worldCamera.transform.position, Vector3.up);
+            transform.LookAt(camera.transform.position, Vector3.up);
         }
     }
 }

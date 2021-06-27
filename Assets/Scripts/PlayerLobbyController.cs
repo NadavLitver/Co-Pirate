@@ -134,6 +134,7 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
 
 
                personalCamera = Camera.main;
+               GetComponentInChildren<Canvas>().worldCamera = personalCamera;
 
                 personalCamera.gameObject.SetActive(true);
                 var cameraCtrl = personalCamera.GetComponent<CameraController>();
