@@ -164,7 +164,7 @@ MonoBehaviour:
   maxAcceleration: 0.2
   maxRotationSpeed: 360
   _gravity: 2
-  nameHandler: {fileID: 2197934368731970631}
+  nameText: {fileID: 8466817106841277415}
   redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
   blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
   Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
@@ -788,6 +788,7 @@ MonoBehaviour:
   _offsetY: 2.5
   _player: {fileID: 692593654332813151}
   nameText: {fileID: 0}
+  playerName: 
 --- !u!1 &8057547250227646620
 GameObject:
   m_ObjectHideFlags: 0

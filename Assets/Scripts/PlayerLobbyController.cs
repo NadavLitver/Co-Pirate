@@ -2,6 +2,7 @@ using CustomAttributes;
 using Photon.Pun;
 using Photon.Pun.Demo.PunBasics;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -38,11 +39,12 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
 
     #region Refrences
 
-        [FoldoutGroup("Refrences")]
-        [SerializeField]
-        NameTextHandler nameHandler;
 
-        [FoldoutGroup("Refrences")]
+    [FoldoutGroup("Refrences")]
+    [SerializeField]
+    TextMeshProUGUI nameText;
+
+    [FoldoutGroup("Refrences")]
         [SerializeField]
         Material redMat;
 
@@ -109,8 +111,8 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
             var playerNum = photonView.Owner.GetPlayerNum();
             playerData = PlayerInformation.players[playerNum];
             playerData.playerinstance = gameObject;
-            nameHandler.nameText.text = playerData.player.NickName;
-              isTeam1 = photonView.Owner.GetPlayerTeam();
+            nameText.text = playerData.player.NickName;
+            isTeam1 = photonView.Owner.GetPlayerTeam();
             playerName = PhotonNetwork.NickName;
 
             //transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);

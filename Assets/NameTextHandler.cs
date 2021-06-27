@@ -26,7 +26,7 @@ public class NameTextHandler : MonoBehaviour
             PlayerLobbyController.localPlayerCtrl.GetComponent<PlayerLobbyController>().personalCamera;
 
         GetComponentInParent<Canvas>().worldCamera = _mainCam;
-      
+       
 
         if (_player != null)
         {

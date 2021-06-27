@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+using TMPro;
 public class PlayerController : MonoBehaviourPunCallbacks
 {
     public static PlayerController localPlayerCtrl;
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     [FoldoutGroup("Refrences")]
     [SerializeField]
-    NameTextHandler nameHandler;
+    TextMeshProUGUI nameText;
 
     [FoldoutGroup("Refrences")]
     [SerializeField]
@@ -128,8 +128,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         var playerNum = photonView.Owner.GetPlayerNum();
         var playerData = PlayerInformation.players[playerNum];
-        nameHandler.nameText.text = playerData.player.NickName;
         playerData.playerinstance = gameObject;
+        nameText.text = playerData.player.NickName;
         isTeam1 = playerData.isTeam1;
         transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
         myShip = GetComponentInParent<ShipManager>();
