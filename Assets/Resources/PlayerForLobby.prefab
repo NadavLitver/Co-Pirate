@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 1898944106758677141}
   - component: {fileID: 1898944106758677140}
   - component: {fileID: 1898944106758677139}
-  - component: {fileID: 1898944106758677138}
   - component: {fileID: 2431008677872619691}
   - component: {fileID: 1898944106758677137}
   - component: {fileID: 931601332072092439}
@@ -438,118 +437,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1898944106758677138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898944106758677136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4838762ce546bae4185fcd0bc91fa17e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  _interactionRange: 3
-  maxAcceleration: 0.5
-  maxRotationSpeed: 360
-  _gravity: 2
-  nameText: {fileID: 8155642775201243657}
-  redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
-  blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
-  Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
-  Body: {fileID: 2100000, guid: be60fc1c3a73a494e8d5c0eed521ad8b, type: 2}
-  _iconHandler: {fileID: 3029208614968451041}
-  _holeFixProgressBar: {fileID: 0}
-  OnTeam1:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1898944106758677142}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4565350065873868438}
-        m_TargetAssemblyTypeName: MeshWrap, Assembly-CSharp
-        m_MethodName: SetColorToRed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnTeam2:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1898944106758677142}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4565350065873868438}
-        m_TargetAssemblyTypeName: MeshWrap, Assembly-CSharp
-        m_MethodName: SetColorToBlue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCannonballPickup:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 966636019976601148}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnCannonballUse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 966636019976601148}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnNewCamera:
-    m_PersistentCalls:
-      m_Calls: []
-  isTeam1: 0
 --- !u!114 &2431008677872619691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,7 +600,7 @@ MonoBehaviour:
   maxAcceleration: 0.2
   maxRotationSpeed: 360
   _gravity: 2
-  nameText: {fileID: 0}
+  nameText: {fileID: 8155642775201243657}
   redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
   blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
   Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
