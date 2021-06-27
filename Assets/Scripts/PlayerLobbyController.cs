@@ -109,7 +109,8 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
             var playerNum = photonView.Owner.GetPlayerNum();
             playerData = PlayerInformation.players[playerNum];
             playerData.playerinstance = gameObject;
-            isTeam1 = photonView.Owner.GetPlayerTeam();
+            nameHandler.nameText.text = playerData.player.NickName;
+              isTeam1 = photonView.Owner.GetPlayerTeam();
             playerName = PhotonNetwork.NickName;
 
             //transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
@@ -182,7 +183,7 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
 
         }
     [PunRPC]
-    void SetNameRPC(int playerNum)
+   /* void SetNameRPC(int playerNum)
     {
         if (photonView.Owner.GetPlayerNum() == playerNum)
             nameHandler.nameText.text = nameHandler.playerName;
@@ -191,7 +192,7 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
     public void CallSetNameRPC()
     {
         photonView.RPC("SetNameRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
-    }
+    }*/
     private void OnMove(InputAction.CallbackContext context)
     {
             dir = context.ReadValue<Vector2>();

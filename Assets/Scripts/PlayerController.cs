@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         var playerNum = photonView.Owner.GetPlayerNum();
         var playerData = PlayerInformation.players[playerNum];
+        nameHandler.nameText.text = playerData.player.NickName;
         playerData.playerinstance = gameObject;
         isTeam1 = playerData.isTeam1;
         transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
@@ -316,7 +317,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (photonView.Owner.GetPlayerNum() == playerNum)
             OnCannonballUse?.Invoke();
     }
-    [PunRPC]
+   /* [PunRPC]
     void SetNameRPC(int playerNum)
     {
         if (photonView.Owner.GetPlayerNum() == playerNum)
@@ -326,7 +327,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public void CallSetNameRPC()
     {
         photonView.RPC("SetNameRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
-    }
+    }*/
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, _interactionRange);

@@ -30,14 +30,14 @@ public class NameTextHandler : MonoBehaviour
 
         if (_player != null)
         {
-            if (_player.GetComponent<PlayerController>() != null)
+         /*   if (_player.GetComponent<PlayerController>() != null)
             {
                 _player.GetComponent<PlayerController>().CallSetNameRPC();
             }
             else if (_player.GetComponent<PlayerLobbyController>() != null)
             {
                 _player.GetComponent<PlayerLobbyController>().CallSetNameRPC();
-            }
+            }*/
             SetIconPosition();
             
         }
