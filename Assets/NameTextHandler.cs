@@ -15,9 +15,12 @@ public class NameTextHandler : MonoBehaviour
     private GameObject _player;
     [ReadOnly]
     public TextMeshProUGUI nameText;
+
+    [ReadOnly]
+    public string playerName;
     private void Start()
     {
-        string name = PhotonNetwork.NickName;
+        playerName = PhotonNetwork.NickName;
         nameText = GetComponent<TextMeshProUGUI>();
         _mainCam = PlayerController.localPlayerCtrl.GetComponent<PlayerController>().PersonalCamera ??
             PlayerLobbyController.localPlayerCtrl.GetComponent<PlayerLobbyController>().personalCamera;
@@ -29,11 +32,11 @@ public class NameTextHandler : MonoBehaviour
         {
             if (_player.GetComponent<PlayerController>() != null)
             {
-                _player.GetComponent<PlayerController>().CallSetNameRPC(name);
+                _player.GetComponent<PlayerController>().CallSetNameRPC();
             }
             else if (_player.GetComponent<PlayerLobbyController>() != null)
             {
-                _player.GetComponent<PlayerLobbyController>().CallSetNameRPC(name);
+                _player.GetComponent<PlayerLobbyController>().CallSetNameRPC();
             }
             SetIconPosition();
             

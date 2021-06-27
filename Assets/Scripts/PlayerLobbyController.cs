@@ -182,15 +182,15 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
 
         }
     [PunRPC]
-    void SetNameRPC(string name)
+    void SetNameRPC(int playerNum)
     {
-        if (photonView.IsMine)
-            nameHandler.nameText.text = name;
+        if (photonView.Owner.GetPlayerNum() == playerNum)
+            nameHandler.nameText.text = nameHandler.playerName;
 
     }
-    public void CallSetNameRPC(string name)
+    public void CallSetNameRPC()
     {
-        photonView.RPC("SetNameRPC", RpcTarget.All, name);
+        photonView.RPC("SetNameRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
     }
     private void OnMove(InputAction.CallbackContext context)
     {
