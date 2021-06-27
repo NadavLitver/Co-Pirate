@@ -13,8 +13,8 @@ TagManager:
   - UI
   - CannonBall
   - ShipCannonCollision
-  - 
-  - 
+  - OnlyPlayerCollision
+  - Player
   - 
   - 
   - 

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 692593654332813150}
   - component: {fileID: 2245967596827336408}
   - component: {fileID: 3461082690863909446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 692593654332813151}
-  _offsetY: 4
   _fadeoutSpeed: 6
   _fadeinSpeed: 3
   _iconImage: {fileID: 1501616311125407734}
@@ -625,6 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46560b6031d629349b69b119b8411492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvas: {fileID: 0}
 --- !u!135 &8951189300413670343
 SphereCollider:
   m_ObjectHideFlags: 0
