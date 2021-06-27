@@ -200,7 +200,6 @@ GameObject:
   - component: {fileID: 3180772971769139686}
   - component: {fileID: 264571710884332910}
   - component: {fileID: 8358149730253615432}
-  - component: {fileID: 1881316447758278569}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -290,20 +289,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
---- !u!114 &1881316447758278569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097755727745138741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46560b6031d629349b69b119b8411492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _assignCameraToMain: 1
-  _canvas: {fileID: 3180772971769139686}
 --- !u!1 &1898944106758677136
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +697,7 @@ GameObject:
   - component: {fileID: 24778073578299708}
   - component: {fileID: 8155642775201243657}
   - component: {fileID: 6579239328558783927}
+  - component: {fileID: 3359498379905256798}
   m_Layer: 5
   m_Name: NameText
   m_TagString: Untagged
@@ -854,6 +840,20 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 780114052706450555}
     weight: 1
+--- !u!114 &3359498379905256798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4177960633846400276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46560b6031d629349b69b119b8411492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assignCameraToMain: 0
+  _canvas: {fileID: 3180772971769139686}
 --- !u!1 &7457198988931150592
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +961,7 @@ GameObject:
   - component: {fileID: 8540051644167179519}
   - component: {fileID: 7135282048383309273}
   - component: {fileID: 1846027176518660964}
+  - component: {fileID: 6558981280181590729}
   m_Layer: 5
   m_Name: Icon_Background
   m_TagString: Untagged
@@ -1045,6 +1046,20 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 780114052706450555}
     weight: 1
+--- !u!114 &6558981280181590729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042480911524079994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46560b6031d629349b69b119b8411492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assignCameraToMain: 1
+  _canvas: {fileID: 3180772971769139686}
 --- !u!1 &8941010099957194067
 GameObject:
   m_ObjectHideFlags: 0
