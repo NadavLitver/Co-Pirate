@@ -18,6 +18,7 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
         [SerializeField]
         private float speed;
 
+        private string playerName;
         [FoldoutGroup("Settings")]
         [SerializeField]
         private float _interactionRange;
@@ -104,10 +105,11 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
             playerData = PlayerInformation.players[playerNum];
             playerData.playerinstance = gameObject;
             isTeam1 = photonView.Owner.GetPlayerTeam();
-            
+            playerName = PhotonNetwork.NickName;
+
             //transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
 
-            Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
+        Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
             (isTeam1 ? OnTeam1 : OnTeam2)?.Invoke();
 

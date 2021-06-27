@@ -833,7 +833,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &24778073578299708
 CanvasRenderer:
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a76e59bd9c8d9441a08486d1c95e869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _offsetY: 2
+  _offsetY: 3
   _player: {fileID: 1898944106758677136}
 --- !u!1 &7457198988931150592
 GameObject:

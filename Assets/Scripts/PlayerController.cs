@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public static PlayerController localPlayerCtrl;
     #region Serielized
 
+    private ShipManager myShip;
     #region Settings
     [FoldoutGroup("Settings")]
     [SerializeField]
@@ -124,7 +125,16 @@ public class PlayerController : MonoBehaviourPunCallbacks
         playerData.playerinstance = gameObject;
         isTeam1 = playerData.isTeam1;
         transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
+        myShip = GetComponentInParent<ShipManager>();
+        if(isTeam1)
+        {
+            myShip.SetNameOnRedEndingCanvas(PhotonNetwork.NickName);
+        }
+        else
+        {
+            myShip.SetNameOnBlueEndingCanvas(PhotonNetwork.NickName);
 
+        }
         Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
         (isTeam1 ? OnTeam1 : OnTeam2)?.Invoke();
