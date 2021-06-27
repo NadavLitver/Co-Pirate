@@ -319,8 +319,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [PunRPC]
     void SetNameRPC(string name)
     {
-
-        nameHandler.nameText.text = name;
+        if(photonView.IsMine)
+              nameHandler.nameText.text = name;
 
     }
     public void CallSetNameRPC(string name)
