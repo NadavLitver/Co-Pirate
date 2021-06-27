@@ -420,14 +420,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curDamageLevel: 0
+  redTeamEndingText: []
+  blueTeamEndingText: []
   maxDamageLevel: 100
   _team: 0
   sinkDepth: -1
   CurHoleAmountActive: 0
-  DPSPerHole: 0.2
-  maxRotation: -15
+  DPSPerHole: 1
+  maxRotation: -10
   maxDegrees: 99999
   center: {fileID: 5709931838462282169}
+  _syncInterval: 5
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
