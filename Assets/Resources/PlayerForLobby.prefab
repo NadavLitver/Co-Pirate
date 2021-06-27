@@ -455,6 +455,7 @@ MonoBehaviour:
   maxAcceleration: 0.5
   maxRotationSpeed: 360
   _gravity: 2
+  nameHandler: {fileID: 975967287501575024}
   redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
   blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
   Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}
@@ -712,6 +713,7 @@ MonoBehaviour:
   maxAcceleration: 0.2
   maxRotationSpeed: 360
   _gravity: 2
+  nameHandler: {fileID: 0}
   redMat: {fileID: 2100000, guid: ef85039115c81a542b60f0d4f4eba0e2, type: 2}
   blueMat: {fileID: 2100000, guid: fe8ab5d170704c048b3d00e28a520d04, type: 2}
   Hat: {fileID: 2100000, guid: b96299a318a2adb4c8a2a6f10af04887, type: 2}

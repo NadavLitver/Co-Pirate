@@ -29,11 +29,11 @@ public class NameTextHandler : MonoBehaviour
         {
             if (_player.GetComponent<PlayerController>() != null)
             {
-                _player.GetComponent<PlayerController>().CallSetNameRPC();
+                _player.GetComponent<PlayerController>().CallSetNameRPC(name);
             }
             else if (_player.GetComponent<PlayerLobbyController>() != null)
             {
-                _player.GetComponent<PlayerLobbyController>().CallSetNameRPC();
+                _player.GetComponent<PlayerLobbyController>().CallSetNameRPC(name);
             }
             SetIconPosition();
             

@@ -34,9 +34,14 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
         [FoldoutGroup("Settings")]
         [SerializeField]
         private float _gravity;
-        #endregion
+    #endregion
 
-        #region Refrences
+    #region Refrences
+
+        [FoldoutGroup("Refrences")]
+        [SerializeField]
+        NameTextHandler nameHandler;
+
         [FoldoutGroup("Refrences")]
         [SerializeField]
         Material redMat;
@@ -177,15 +182,15 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
 
         }
     [PunRPC]
-    void SetNameRPC()
+    void SetNameRPC(string name)
     {
-        NameTextHandler nameHandler = this.GetComponentInChildren<NameTextHandler>();
-        nameHandler.nameText.text = nameHandler.name;
+
+        nameHandler.nameText.text = name;
 
     }
-    public void CallSetNameRPC()
+    public void CallSetNameRPC(string name)
     {
-        photonView.RPC("SetNameRPC", RpcTarget.All);
+        photonView.RPC("SetNameRPC", RpcTarget.All, name);
     }
     private void OnMove(InputAction.CallbackContext context)
     {
