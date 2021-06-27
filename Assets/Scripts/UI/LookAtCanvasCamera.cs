@@ -3,12 +3,17 @@ using UnityEngine;
 public class LookAtCanvasCamera : MonoBehaviour
 {
     [SerializeField]
+    private bool _assignCameraToMain = false;
+    [SerializeField]
     private Canvas _canvas;
 
     private void Awake()
     {
         if (_canvas == null)
             _canvas = GetComponent<Canvas>();
+
+        if (_assignCameraToMain)
+            _canvas.worldCamera = Camera.main;
     }
     private void LateUpdate()
     {

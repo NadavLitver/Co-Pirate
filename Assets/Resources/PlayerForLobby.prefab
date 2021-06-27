@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46560b6031d629349b69b119b8411492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _assignCameraToMain: 1
   _canvas: {fileID: 3180772971769139686}
 --- !u!1 &1898944106758677136
 GameObject:
@@ -843,8 +844,8 @@ PositionConstraint:
   m_GameObject: {fileID: 4177960633846400276}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 2.5, z: 0}
-  m_TranslationOffset: {x: 0, y: 1.4, z: 0}
+  m_TranslationAtRest: {x: 0, y: 1.4000015, z: 0}
+  m_TranslationOffset: {x: 0, y: 1.4000015, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
