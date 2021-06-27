@@ -67,6 +67,7 @@ namespace Photon.Pun.Demo.PunBasics
 			PhotonNetwork.NickName = value;
 
 			PlayerPrefs.SetString(playerNamePrefKey, value);
+		
 		}
 		
 		#endregion
