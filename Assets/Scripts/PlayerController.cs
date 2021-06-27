@@ -263,6 +263,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             //Anonymous methods
             void FinishedFixing(IInteractable interactable)
             {
+                Debug.Log("Finished fixing");
                 var hole = (HoleInteractable)interactable;
 
                 hole.OnFixProgress -= UpdateFixProgressBar;
@@ -273,6 +274,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             void StartFixing(HoleInteractable _newHole)
             {
+                Debug.Log("Started fixing");
                 _holeFixProgressBar.gameObject.SetActive(true);
                 _newHole.OnFixProgress += UpdateFixProgressBar;
                 _newHole.InteractFinished += FinishedFixing;
