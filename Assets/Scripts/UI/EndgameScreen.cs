@@ -6,18 +6,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EndgameScreen : MonoBehaviour, IOnEventCallback
+public class EndgameScreen : MonoBehaviour
 {
     [SerializeField]
     private UnityEvent<int> OnPlayerReadyEvent;
     [SerializeField]
     private UnityEvent OnAllPlayersReadyEvent;
 
+
+    private PhotonView photonView;
     private const byte PlayerReadyPE = 1;
     private Dictionary<Player, bool> _playersReady = new Dictionary<Player, bool>();
     private int _readyCount = 0;
     private bool _ready = false;
 
+    void Awake()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
     public int ReadyCount
     {
         get => _readyCount;
@@ -34,21 +40,15 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
             {
                 OnAllPlayersReadyEvent?.Invoke();
                 if (PhotonNetwork.IsMasterClient)
-                    GameManager.instance.LoadLobby();
+                    GameManager.instance.LoadLauncher();
             }
         }
     }
 
     void OnEnable()
     {
-        PhotonNetwork.AddCallbackTarget(this);
         foreach (var player in PlayerInformation.players)
             _playersReady.Add(player.player, false);
-    }
-
-    private void OnDisable()
-    {
-        PhotonNetwork.RemoveCallbackTarget(this);
     }
     public void Ready()
     {
@@ -57,24 +57,17 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
 
         Debug.Log("Ready");
 
-        var eventOptions = new RaiseEventOptions();
-        PhotonNetwork.RaiseEvent(PlayerReadyPE, PhotonNetwork.LocalPlayer, eventOptions, SendOptions.SendReliable);
+        photonView.RPC("OnReadyRPC", RpcTarget.All, PhotonNetwork.LocalPlayer);
         _ready = true;
     }
-
-    public void OnEvent(EventData photonEvent)
+    [PunRPC]
+    public void OnReadyRPC(Player player)
     {
-        switch (photonEvent.Code)
+        if (_playersReady[player] == false)
         {
-            case PlayerReadyPE:
-                var player = (Player)photonEvent.CustomData;
-                if (_playersReady[player] == false)
-                {
-                    Debug.Log("player ready "+player.NickName);
-                    _playersReady[player] = true;
-                    ReadyCount++;
-                }
-                break;
+            Debug.Log("player ready " + player.NickName);
+            _playersReady[player] = true;
+            ReadyCount++;
         }
     }
 }

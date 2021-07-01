@@ -11,8 +11,6 @@ public static class PlayerInformation
     public static PlayerData GetPlayerData(this Player player) => Array.Find(players, (X) => X.player == player);
     //public static bool GetPlayerTeam(this Player player) => player.GetPlayerNum() % 2 == 1;
     public static bool GetPlayerTeam(this Player player) => player.GetPlayerData().isTeam1;
-
-
 }
 public class PlayerData
 {
