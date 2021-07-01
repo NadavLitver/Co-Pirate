@@ -1,9 +1,9 @@
 ﻿
 using Photon.Realtime;
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Sirenix.OdinInspector;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -20,15 +20,11 @@ namespace Photon.Pun.Demo.PunBasics
 
         #region Public Fields
 
-        static public GameManager Instance;
+        static public GameManager instance;
 
         #endregion
 
         #region Private Fields
-
-
-
-        private GameObject instance;
 
         public Camera redCamera;
         public Camera blueCamera;
@@ -42,7 +38,7 @@ namespace Photon.Pun.Demo.PunBasics
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
 
-         
+
         [HideInInspector]
         public Player localPlayer;
         [HideInInspector]
@@ -53,12 +49,13 @@ namespace Photon.Pun.Demo.PunBasics
 
         private void Awake()
         {
-            if (Instance == null)
+            if (instance == null)
             {
-                Instance = this;
+                instance = this;
+                DontDestroyOnLoad(instance);
             }
-
-
+            else if (instance != this)
+                Destroy(gameObject);
         }
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase.
@@ -171,7 +168,7 @@ namespace Photon.Pun.Demo.PunBasics
             }
         }
         #endregion
-      
+
         #region Private Methods
         #endregion
     }
@@ -184,5 +181,5 @@ namespace Photon.Pun.Demo.PunBasics
         public bool taken = false;
     }
 
-   
+
 }

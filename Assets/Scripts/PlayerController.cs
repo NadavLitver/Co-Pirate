@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
 
-            PersonalCamera = isTeam1 ? GameManager.Instance.redCamera : GameManager.Instance.blueCamera;
+            PersonalCamera = isTeam1 ? GameManager.instance.redCamera : GameManager.instance.blueCamera;
 
             PersonalCamera.gameObject.SetActive(true);
             var cameraCtrl = PersonalCamera.GetComponent<CameraController>();
