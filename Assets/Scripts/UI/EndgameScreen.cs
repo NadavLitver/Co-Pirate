@@ -55,20 +55,23 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
         if (_ready)
             return;
 
-        var eventOptions = new RaiseEventOptions() { Receivers = ReceiverGroup.All };
+        Debug.Log("Ready");
+
+        var eventOptions = new RaiseEventOptions();
         PhotonNetwork.RaiseEvent(PlayerReadyPE, PhotonNetwork.LocalPlayer, eventOptions, SendOptions.SendReliable);
         _ready = true;
     }
 
     public void OnEvent(EventData photonEvent)
     {
-        Debug.Log("Event recieved");
         switch (photonEvent.Code)
         {
             case PlayerReadyPE:
-                if (_playersReady[(Player)photonEvent.CustomData] == false)
+                var player = (Player)photonEvent.CustomData;
+                if (_playersReady[player] == false)
                 {
-                    _playersReady[(Player)photonEvent.CustomData] = true;
+                    Debug.Log("player ready "+player.NickName);
+                    _playersReady[player] = true;
                     ReadyCount++;
                 }
                 break;
