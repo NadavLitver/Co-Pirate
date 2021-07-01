@@ -51,6 +51,7 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
 
     public void OnEvent(EventData photonEvent)
     {
+        Debug.Log("Event recieved");
         switch (photonEvent.Code)
         {
             case PlayerReadyPE:

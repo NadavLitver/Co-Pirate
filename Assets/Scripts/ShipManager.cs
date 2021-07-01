@@ -73,11 +73,11 @@ public class ShipManager : MonoBehaviourPun
 
         CurDamageLevel += CurHoleAmountActive * DPSPerHole * Time.deltaTime;
 
-         if(PhotonNetwork.IsMasterClient && Time.time > _lastSyncTime + _syncInterval)
-        {
-            photonView.RPC("SyncDamageRPC", RpcTarget.Others, CurDamageLevel);
-            _lastSyncTime = Time.time;
-        }
+        // if(PhotonNetwork.IsMasterClient && Time.time > _lastSyncTime + _syncInterval)
+        //{
+        //    photonView.RPC("SyncDamageRPC", RpcTarget.Others, CurDamageLevel);
+        //    _lastSyncTime = Time.time;
+        //}
 
     }
 
@@ -91,20 +91,6 @@ public class ShipManager : MonoBehaviourPun
         if (CurDamageLevel == maxDamageLevel)
             Lose();
     }
-    //public void TakeDamage(float damage)
-    //{
-    //    photonView.RPC("TakeDamageRPC", RpcTarget.All);
-
-    //}//NOT IN USE
-    //[PunRPC]
-    //public void TakeDamageRPC(float damage, int _shipID)//take damage in game from here instead of through the slider
-    //{// NOT IN USE
-    //    CurDamageLevel += damage;
-
-    //    OnTakeDamage?.Invoke();
-
-
-    //}
     public void SetNameOnRedEndingCanvas(string name)
     {
         for (int i = 0; i < redTeamEndingText.Length; i++)
