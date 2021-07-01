@@ -51,6 +51,8 @@ public class HolesManager : MonoBehaviourPun
     private void OnTriggerEnter(Collider other)
     {
         Ball ball = other.GetComponent<Ball>();
+        if (ball == null)
+            return;
         if (ball.Team != myShip.Team)
         {
             NewHole();

@@ -40,8 +40,14 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
 
     void OnEnable()
     {
+        PhotonNetwork.AddCallbackTarget(this);
         foreach (var player in PlayerInformation.players)
             _playersReady.Add(player.player, false);
+    }
+
+    private void OnDisable()
+    {
+        PhotonNetwork.RemoveCallbackTarget(this);
     }
     public void Ready()
     {

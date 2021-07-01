@@ -25,7 +25,7 @@ namespace Photon.Pun.Demo.PunBasics
 
         #region Public Fields
 
-        static public LiveLobbyGameManager Instance;
+        static public LiveLobbyGameManager instance;
 
         #endregion
 
@@ -60,9 +60,14 @@ namespace Photon.Pun.Demo.PunBasics
 
         private void Awake()
         {
-            if (Instance == null)
+            if (instance == null)
             {
-                Instance = this;
+                instance = this;
+            }
+            else if (instance != this)
+            {
+                Destroy(gameObject);
+                return;
             }
 
             InputManager.controls.Gameplay.Speak.performed += SetLocalReady;
