@@ -1640,14 +1640,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lose_Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2899505469832747207, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2899505470332147612, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
 --- !u!1 &739359985 stripped
@@ -1916,17 +1908,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 964715490}
     m_Modifications:
-    - target: {fileID: 2256399082511023010, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2256399083233706568, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
       propertyPath: m_Name
       value: Win_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256399083233706568, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2256399083233706569, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
       propertyPath: m_Pivot.x
@@ -2837,21 +2821,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 956855416}
     m_Modifications:
-    - target: {fileID: 2256399082511023008, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256399082511023010, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2256399083233706568, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
       propertyPath: m_Name
       value: Win_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256399083233706568, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2256399083233706569, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
       propertyPath: m_Pivot.x
@@ -3044,10 +3016,6 @@ PrefabInstance:
     - target: {fileID: 2899505469832747207, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
       propertyPath: m_Name
       value: Lose_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2899505470332147612, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
-      propertyPath: m_Text
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}

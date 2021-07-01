@@ -10,11 +10,14 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
 {
     [SerializeField]
     private UnityEvent<int> OnPlayerReadyEvent;
+    [SerializeField]
+    private UnityEvent OnAllPlayersReadyEvent;
+
     private const byte PlayerReadyPE = 1;
     private Dictionary<Player, bool> _playersReady = new Dictionary<Player, bool>();
     private int _readyCount = 0;
 
-    public int ReadyCount 
+    public int ReadyCount
     {
         get => _readyCount;
         set
@@ -25,6 +28,13 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
             _readyCount = value;
 
             OnPlayerReadyEvent?.Invoke(_readyCount);
+
+            if (_readyCount >= PhotonNetwork.CountOfPlayers)
+            {
+                OnAllPlayersReadyEvent?.Invoke();
+                if (PhotonNetwork.IsMasterClient)
+                    GameManager.instance.LoadLobby();
+            }
         }
     }
 
