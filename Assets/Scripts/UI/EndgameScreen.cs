@@ -13,17 +13,11 @@ public class EndgameScreen : MonoBehaviour
     [SerializeField]
     private UnityEvent OnAllPlayersReadyEvent;
 
-
-    private PhotonView photonView;
     private const byte PlayerReadyPE = 1;
     private Dictionary<Player, bool> _playersReady = new Dictionary<Player, bool>();
     private int _readyCount = 0;
     private bool _ready = false;
 
-    void Awake()
-    {
-        photonView = GetComponent<PhotonView>();
-    }
     public int ReadyCount
     {
         get => _readyCount;
@@ -40,34 +34,45 @@ public class EndgameScreen : MonoBehaviour
             {
                 OnAllPlayersReadyEvent?.Invoke();
                 if (PhotonNetwork.IsMasterClient)
-                    GameManager.instance.LoadLauncher();
+                    GameManager.instance.LoadLobby();
             }
         }
     }
 
     void OnEnable()
     {
+        PhotonNetwork.NetworkingClient.EventReceived += NetworkingClient_EventReceived;
         foreach (var player in PlayerInformation.players)
             _playersReady.Add(player.player, false);
     }
+    private void OnDisable()
+    {
+        PhotonNetwork.NetworkingClient.EventReceived -= NetworkingClient_EventReceived;
+    }
+    private void NetworkingClient_EventReceived(EventData photonEvent)
+    {
+        switch (photonEvent.Code)
+        {
+            case PlayerReadyPE:
+                var player = (Player)photonEvent.CustomData;
+                if (_playersReady[player] == false)
+                {
+                    Debug.Log("player ready " + player.NickName);
+                    _playersReady[player] = true;
+                    ReadyCount++;
+                }
+                break;
+        }
+    }
+
     public void Ready()
     {
         if (_ready)
             return;
 
-        Debug.Log("Ready");
+        Debug.Log("Ready ");
 
-        photonView.RPC("OnReadyRPC", RpcTarget.All, PhotonNetwork.LocalPlayer);
+        PhotonNetwork.RaiseEvent(PlayerReadyPE, PhotonNetwork.LocalPlayer, RaiseEventOptions.Default, SendOptions.SendReliable);
         _ready = true;
-    }
-    [PunRPC]
-    public void OnReadyRPC(Player player)
-    {
-        if (_playersReady[player] == false)
-        {
-            Debug.Log("player ready " + player.NickName);
-            _playersReady[player] = true;
-            ReadyCount++;
-        }
     }
 }
