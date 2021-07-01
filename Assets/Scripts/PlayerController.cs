@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
 
-            PersonalCamera = isTeam1 ? GameManager.Instance.redCamera : GameManager.Instance.blueCamera;
+            PersonalCamera = isTeam1 ? GameManager.instance.redCamera : GameManager.instance.blueCamera;
 
             PersonalCamera.gameObject.SetActive(true);
             var cameraCtrl = PersonalCamera.GetComponent<CameraController>();
@@ -273,8 +273,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
                 hole.OnFixProgress -= UpdateFixProgressBar;
                 hole.InteractFinished -= FinishedFixing;
-                hole.gameObject.SetActive(false);
-
+                _holeFixProgressBar.gameObject.SetActive(false);
             }
 
             void StartFixing(HoleInteractable _newHole)

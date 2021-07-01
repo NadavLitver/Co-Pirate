@@ -31,14 +31,13 @@ public class ShipMovement : MonoBehaviourPun
     private UnityEvent OnStart;
     #endregion
     #endregion
-    int CenterZ => (maxDistance / 2) * (fasterFirst ? 1 : -1);
-    int CenterX => (maxDistance / 2) * (fasterFirst ? -1 : 1);
-
-    float localStartTime;
-    float LocalTime => Time.time - localStartTime;
-    Vector3 nextPos;
-    AnimationCurve curve;
-    bool _enabled = false;
+    private int CenterZ => (maxDistance / 2) * (fasterFirst ? 1 : -1);
+    private int CenterX => (maxDistance / 2) * (fasterFirst ? -1 : 1);
+    private float localStartTime;
+    private float LocalTime => Time.time - localStartTime;
+    private Vector3 nextPos;
+    private AnimationCurve curve;
+    private bool _enabled = false;
     public bool Enabled
     {
         get => _enabled;
@@ -84,7 +83,13 @@ public class ShipMovement : MonoBehaviourPun
         OnStart?.Invoke();
     }
 
-    private void UpdateNextPos() => nextPos = ToVector3(PositionAtTime(LocalTime + Time.fixedDeltaTime), transform.position.y);
+    private void UpdateNextPos()
+    {
+        if (!Enabled)
+            nextPos = transform.position;
+        else
+            nextPos = ToVector3(PositionAtTime(LocalTime + Time.fixedDeltaTime), transform.position.y);
+    }
 
     private void UpdatePosition() => transform.position = nextPos;
 
