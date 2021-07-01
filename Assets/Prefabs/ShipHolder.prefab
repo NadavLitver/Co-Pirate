@@ -429,7 +429,7 @@ MonoBehaviour:
   CurHoleAmountActive: 0
   DPSPerHole: 0.6
   maxRotation: -13
-  maxDegrees: 99999
+  maxDegrees: Infinity
   center: {fileID: 5709931838462282169}
   _syncInterval: 5
   OnTakeDamage:

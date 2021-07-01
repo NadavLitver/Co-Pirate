@@ -154,7 +154,7 @@ namespace Photon.Pun.Demo.PunBasics
                 return Array.Find(team2SpawnPoints, (x) => x.taken == false);
         }
 
-        public void loadLobby()
+        public void LoadLobby()
         {
             if (PhotonNetwork.IsMasterClient)
             {
@@ -162,7 +162,7 @@ namespace Photon.Pun.Demo.PunBasics
                 Debug.Log("Trying to load Lobby.");
             }
         }
-        public void loadLauncher()
+        public void LoadLauncher()
         {
             if (PhotonNetwork.IsMasterClient)
             {
