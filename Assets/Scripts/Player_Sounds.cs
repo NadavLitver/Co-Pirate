@@ -11,6 +11,7 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
     private AudioClip[] sounds;
     private AudioSource AudioSource;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,5 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
         AudioSource.PlayOneShot(sounds[Randomizer.RandomNum(sounds.Length)]);
 
     }
-
 
 }

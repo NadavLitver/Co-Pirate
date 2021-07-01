@@ -22,5 +22,9 @@ public class Settings_UI : MonoBehaviour
         PlayerPrefs.SetFloat("Volume", _soundLevel);
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 }
