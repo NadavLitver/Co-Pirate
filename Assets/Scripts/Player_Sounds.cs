@@ -9,6 +9,7 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     private AudioClip[] sounds;
+    private AudioClip[] sounds_Interact;
     private AudioSource AudioSource;
 
 
@@ -33,5 +34,21 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
         AudioSource.PlayOneShot(sounds[Randomizer.RandomNum(sounds.Length)]);
 
     }
+
+    public void Player_Sound_Interact(int index)
+    {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("PlaySounds", RpcTarget.All,index);
+        }
+    }
+
+    [PunRPC]
+    void PlaySounds(int index)
+    {
+        AudioSource.PlayOneShot(sounds_Interact[index]);
+
+    }
+
 
 }
