@@ -38,9 +38,6 @@ namespace Photon.Pun.Demo.PunBasics
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
 
-
-        [HideInInspector]
-        public Player localPlayer;
         [HideInInspector]
         public GameObject localPlayerObject;
         #endregion

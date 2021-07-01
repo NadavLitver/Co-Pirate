@@ -16,6 +16,7 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
     private const byte PlayerReadyPE = 1;
     private Dictionary<Player, bool> _playersReady = new Dictionary<Player, bool>();
     private int _readyCount = 0;
+    private bool _ready = false;
 
     public int ReadyCount
     {
@@ -51,8 +52,12 @@ public class EndgameScreen : MonoBehaviour, IOnEventCallback
     }
     public void Ready()
     {
+        if (_ready)
+            return;
+
         var eventOptions = new RaiseEventOptions() { Receivers = ReceiverGroup.All };
-        PhotonNetwork.RaiseEvent(PlayerReadyPE, GameManager.instance.localPlayer, eventOptions, SendOptions.SendReliable);
+        PhotonNetwork.RaiseEvent(PlayerReadyPE, PhotonNetwork.LocalPlayer, eventOptions, SendOptions.SendReliable);
+        _ready = true;
     }
 
     public void OnEvent(EventData photonEvent)
