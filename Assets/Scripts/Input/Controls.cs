@@ -49,6 +49,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Q_interactions"",
+                    ""type"": ""Button"",
+                    ""id"": ""e6b456da-1bb5-47ea-99cd-0e048724eaf2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -139,6 +147,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""ESC - Settings"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ae073b44-4409-4e8e-9261-3ed7ec1d29f9"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Q_interactions"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -178,6 +197,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
         m_Gameplay_Speak = m_Gameplay.FindAction("Speak", throwIfNotFound: true);
         m_Gameplay_ESCSettings = m_Gameplay.FindAction("ESC - Settings", throwIfNotFound: true);
+        m_Gameplay_Q_interactions = m_Gameplay.FindAction("Q_interactions", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Newaction = m_Menu.FindAction("New action", throwIfNotFound: true);
@@ -234,6 +254,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Interact;
     private readonly InputAction m_Gameplay_Speak;
     private readonly InputAction m_Gameplay_ESCSettings;
+    private readonly InputAction m_Gameplay_Q_interactions;
     public struct GameplayActions
     {
         private @Controls m_Wrapper;
@@ -242,6 +263,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputAction @Speak => m_Wrapper.m_Gameplay_Speak;
         public InputAction @ESCSettings => m_Wrapper.m_Gameplay_ESCSettings;
+        public InputAction @Q_interactions => m_Wrapper.m_Gameplay_Q_interactions;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -263,6 +285,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @ESCSettings.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnESCSettings;
                 @ESCSettings.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnESCSettings;
                 @ESCSettings.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnESCSettings;
+                @Q_interactions.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQ_interactions;
+                @Q_interactions.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQ_interactions;
+                @Q_interactions.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQ_interactions;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -279,6 +304,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @ESCSettings.started += instance.OnESCSettings;
                 @ESCSettings.performed += instance.OnESCSettings;
                 @ESCSettings.canceled += instance.OnESCSettings;
+                @Q_interactions.started += instance.OnQ_interactions;
+                @Q_interactions.performed += instance.OnQ_interactions;
+                @Q_interactions.canceled += instance.OnQ_interactions;
             }
         }
     }
@@ -322,6 +350,7 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnSpeak(InputAction.CallbackContext context);
         void OnESCSettings(InputAction.CallbackContext context);
+        void OnQ_interactions(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

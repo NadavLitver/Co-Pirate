@@ -9,8 +9,11 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     private AudioClip[] sounds;
+    [SerializeField]
     private AudioClip[] sounds_Interact;
     private AudioSource AudioSource;
+    [SerializeField]
+    private GameObject Interactions_Canvas;
 
 
     // Start is called before the first frame update
@@ -18,7 +21,30 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
     {
         AudioSource = GetComponent<AudioSource>();
         InputManager.controls.Gameplay.Speak.performed += Player_Speak;
+        InputManager.controls.Gameplay.Q_interactions.started += InteractionsCanvas;
+        InputManager.controls.Gameplay.Q_interactions.canceled += InteractionsCanvasCancle;
     }
+
+    private void InteractionsCanvas(InputAction.CallbackContext obj)
+    {
+            if (!Interactions_Canvas.activeInHierarchy)
+            {
+                Interactions_Canvas.SetActive(true);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+        
+    }
+    private void InteractionsCanvasCancle(InputAction.CallbackContext obj)
+    {
+        if (Interactions_Canvas.activeInHierarchy)
+        {
+            Interactions_Canvas.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
 
     void Player_Speak(InputAction.CallbackContext context)
     {
@@ -35,11 +61,17 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
 
     }
 
+ 
+
     public void Player_Sound_Interact(int index)
     {
         if (photonView.IsMine)
         {
             photonView.RPC("PlaySounds", RpcTarget.All,index);
+            AudioSource.volume = 0.5f + (index/10);
+            Interactions_Canvas.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
@@ -47,7 +79,6 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
     void PlaySounds(int index)
     {
         AudioSource.PlayOneShot(sounds_Interact[index]);
-
     }
 
 

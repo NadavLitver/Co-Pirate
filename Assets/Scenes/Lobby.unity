@@ -478,13 +478,14 @@ MonoBehaviour:
   - Press 'E' to Interact.
   - '''Space Key''  =  "Arrrr"   --  Try it.'
   - Sometimes attack is the best form of defence.
-  - Feeling the need for some CONFETTY, Try the back cannon
+  - Feeling the need for some CONFETTY, Try the back cannon.
   - Remember to have fun.
   - Trying to get off ship is a bad idea... really... dont.
   - While holding a cannon ball, you cant fix holes in the ship.
   - Red PickUp is 'Double Bomb' - you can shoot twice.
   - Green PickUp is 'Insta Fix' - Next fix is instant.
   - Yellow PickUp is 'Super Speed' - Faster for 30 seconds.
+  - Press 'Q' for 'Interaction Circle'.
   text: {fileID: 597524389}
 --- !u!222 &597524391
 CanvasRenderer:
