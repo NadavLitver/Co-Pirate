@@ -10,6 +10,9 @@ namespace Photon.Pun.Demo.PunBasics
         private int _numOfPlayers;
         private void Awake()
         {
+
+            PhotonNetwork.LogLevel = PunLogLevel.ErrorsOnly;
+
             if (PhotonNetwork.IsMasterClient)
             {
                 PlayerInformation.players = new PlayerData[_numOfPlayers];
