@@ -67,7 +67,7 @@ public class HolesManager : MonoBehaviourPun
         {
             int curIndex = Randomizer.RandomNum(holesLeft.Length);
             Debug.Log("HolesLength" + holesLeft.Length + "Current index" + curIndex);
-            photonView.RPC("NewHoleRPC", RpcTarget.All,curIndex);
+            photonView.RPC("NewHoleRPC", RpcTarget.All, holesLeft.Length-1);
             Debug.Log("calling rpc");
         }
      
