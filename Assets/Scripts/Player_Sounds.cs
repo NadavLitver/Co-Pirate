@@ -21,13 +21,14 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
     {
         AudioSource = GetComponent<AudioSource>();
         InputManager.controls.Gameplay.Speak.performed += Player_Speak;
+        
         InputManager.controls.Gameplay.Q_interactions.started += InteractionsCanvas;
         InputManager.controls.Gameplay.Q_interactions.canceled += InteractionsCanvasCancle;
     }
 
     private void InteractionsCanvas(InputAction.CallbackContext obj)
     {
-            if (!Interactions_Canvas.activeInHierarchy)
+            if (photonView.IsMine && !Interactions_Canvas.activeInHierarchy)
             {
                 Interactions_Canvas.SetActive(true);
                 Cursor.visible = true;
@@ -37,7 +38,7 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
     }
     private void InteractionsCanvasCancle(InputAction.CallbackContext obj)
     {
-        if (Interactions_Canvas.activeInHierarchy)
+        if (photonView.IsMine && Interactions_Canvas.activeInHierarchy)
         {
             Interactions_Canvas.SetActive(false);
             Cursor.visible = false;
