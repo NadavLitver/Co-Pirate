@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28932a03d796024f879b1c590513050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TTL: 3
+  TTL: 7
   Speed: 20
   _gravity: -2
   OnHit:
