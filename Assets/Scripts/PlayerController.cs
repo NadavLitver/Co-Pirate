@@ -113,7 +113,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private bool _holdingCannonBall = false;
 
-    public bool HoldingCannonBall => _holdingCannonBall;
+     public bool HoldingCannonBall => _holdingCannonBall ;
+ 
+
 
     #endregion
     private void Awake()
@@ -313,8 +315,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [PunRPC]
     private void UsedCannonballRPC(int playerNum)
     {
-        if (photonView.Owner.GetPlayerNum() == playerNum)           
-             OnCannonballUse?.Invoke();
+        if (photonView.Owner.GetPlayerNum() == playerNum)
+        {
+            _holdingCannonBall = false;
+            OnCannonballUse?.Invoke();
+        }
     }
    /* [PunRPC]
     void SetNameRPC(int playerNum)
