@@ -44,11 +44,13 @@ public class HolesManager : MonoBehaviourPun
     }
     private void OnTriggerEnter(Collider other)
     {
-       
 
         Ball ball = other.GetComponent<Ball>();
         if (ball == null)
             return;
+
+        Debug.Log("Ball entered collision with ship: " + myShip.gameObject.name);
+        
         if (ball.Team != myShip.Team)
         {
             // other.enabled = false;
