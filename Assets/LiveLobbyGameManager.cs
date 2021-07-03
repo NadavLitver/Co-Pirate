@@ -195,7 +195,7 @@ namespace Photon.Pun.Demo.PunBasics
         }
         public SpawnPoint GetSpawnPoint(Player player)
         {
-            if (player.GetPlayerTeam())
+            if (player.GetPlayerTeam() == Team.Blue)
                 return Array.Find(team1SpawnPoints, (x) => x.taken == false);
             else
                 return Array.Find(team2SpawnPoints, (x) => x.taken == false);

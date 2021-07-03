@@ -7,6 +7,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Serialization;
 public class PlayerController : MonoBehaviourPunCallbacks
 {
     public static PlayerController localPlayerCtrl;
@@ -69,9 +70,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     #region Events
     [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
-    private UnityEvent OnTeam1;
+    [FormerlySerializedAs("OnTeam1")]
+    private UnityEvent OnTeamBlue;
     [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
-    private UnityEvent OnTeam2;
+    [FormerlySerializedAs("OnTeam2")]
+    private UnityEvent OnTeamRed;
     [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
     private UnityEvent OnCannonballPickup;
     [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
@@ -106,7 +109,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     CharacterController characterController;
 
     [ReadOnly]
-    public bool isTeam1;
+    public Team team;
     Vector2 dir;
     Vector2 currentVelocity = Vector2.zero;
     Vector2 targetVelocity = Vector2.zero;
@@ -132,10 +135,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
         var playerData = PlayerInformation.players[playerNum];
         playerData.playerinstance = gameObject;
         nameText.text = playerData.player.NickName;
-        isTeam1 = playerData.isTeam1;
+        team = playerData.team;
         transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
         myShip = GetComponentInParent<ShipManager>();
-        if(isTeam1)
+        if(team == Team.Blue)
         {
             myShip.SetNameOnRedEndingCanvas(PhotonNetwork.NickName);
         }
@@ -146,9 +149,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
         Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
-        (isTeam1 ? OnTeam1 : OnTeam2)?.Invoke();
+        (team == Team.Blue ? OnTeamBlue : OnTeamRed)?.Invoke();
 
-        Debug.Log(isTeam1);
+        Debug.Log(team);
 
         if (photonView.IsMine)
         {
@@ -161,7 +164,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
 
-            PersonalCamera = isTeam1 ? GameManager.instance.redCamera : GameManager.instance.blueCamera;
+            PersonalCamera = team == Team.Blue ? GameManager.instance.redCamera : GameManager.instance.blueCamera;
 
             PersonalCamera.gameObject.SetActive(true);
             var cameraCtrl = PersonalCamera.GetComponent<CameraController>();

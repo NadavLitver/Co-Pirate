@@ -10,7 +10,7 @@ public static class PlayerInformation
     public static GameObject GetGameObject(this Player player) => player.GetPlayerData().playerinstance;
     public static PlayerData GetPlayerData(this Player player) => Array.Find(players, (X) => X.player == player);
     //public static bool GetPlayerTeam(this Player player) => player.GetPlayerNum() % 2 == 1;
-    public static bool GetPlayerTeam(this Player player) => player.GetPlayerData().isTeam1;
+    public static Team GetPlayerTeam(this Player player) => player.GetPlayerData().team;
 }
 public class PlayerData
 {
@@ -18,7 +18,7 @@ public class PlayerData
     public int number;
     public GameObject playerinstance;
     public SpawnPoint spawnPoint;
-    public bool isTeam1;
+    public Team team;
 
     public PlayerData(Player player, int number, GameObject playerinstance = null)
     {

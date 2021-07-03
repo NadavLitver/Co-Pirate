@@ -49,13 +49,13 @@ public class HolesManager : MonoBehaviourPun
         if (ball == null)
             return;
 
-        Debug.Log("Ball from team " + (myShip.Team ? 1 : 2) + " entered collision with ship: " + myShip.gameObject.name);
+        Debug.Log("Ball from team " + myShip.Team + " entered collision with ship: " + myShip.gameObject.name);
         
         if (ball.Team != myShip.Team)
         {
             // other.enabled = false;
            
-                Debug.Log("Team " + (myShip.Team ? 1 : 2) + " took damage!");
+                Debug.Log("Team " + myShip.Team + " took damage!");
                 ball.HIT();
             if (PhotonNetwork.IsMasterClient)
                                NewHole();

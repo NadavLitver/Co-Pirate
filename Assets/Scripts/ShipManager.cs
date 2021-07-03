@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+    public enum Team { Red, Blue}
 public class ShipManager : MonoBehaviourPun
 {
     #region Serielized
@@ -29,10 +30,9 @@ public class ShipManager : MonoBehaviourPun
     public Text[] redTeamEndingText;
     public Text[] blueTeamEndingText;
     [SerializeField] float maxDamageLevel = 100;
-    [SerializeField, ValueDropdown("TeamName")]
-    private bool _team;
-    public bool Team => _team;
-    private ValueDropdownList<bool> TeamName => new ValueDropdownList<bool>() { new ValueDropdownItem<bool>("Team 1", true), new ValueDropdownItem<bool>("Team 2", false) };
+    [SerializeField]
+    private Team _team;
+    public Team Team => _team;
     [Tooltip("The distance the ship sinks")]
     [SerializeField] float sinkDepth;
 

@@ -22,11 +22,11 @@ public class Ball : MonoBehaviourPun
     [SerializeField]
     private float damage;
 
-    private bool _team;
-    public bool Team => _team;
+    private Team _team;
+    public Team Team => _team;
 
     Vector3 momentum;
-    public void Init(bool team, Vector3 momentum)
+    public void Init(Team team, Vector3 momentum)
     {
         this.momentum = momentum;
         _team = team;
