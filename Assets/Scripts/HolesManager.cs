@@ -13,18 +13,13 @@ public class HolesManager : MonoBehaviourPun
         Array.ForEach(holes, (x) => x.manager = this);
     }
     [PunRPC]
-    public void NewHoleRPC()
+    public void NewHoleRPC(int curIndex)
     {
-        Debug.Log("enterRPC for new hole");
+          Debug.Log("enterRPC for new hole");
 
-        var holesLeft = Array.FindAll(holes, (x) => !x.gameObject.activeSelf);
-        if (holesLeft.Length != 0)
-        {
-            int curIndex = Randomizer.RandomNum(holesLeft.Length);
-            Debug.Log("HolesLength" + holesLeft.Length + "Current index" + curIndex);
-            holesLeft[curIndex].Init();
+      
+            holes[curIndex].Init();
             myShip.CurHoleAmountActive++;
-        }
 
 
     }
@@ -67,8 +62,15 @@ public class HolesManager : MonoBehaviourPun
     [Button, HideInEditorMode]
     public void NewHole()
     {
-        photonView.RPC("NewHoleRPC", RpcTarget.All);
-        Debug.Log("calling rpc");
+        var holesLeft = Array.FindAll(holes, (x) => !x.gameObject.activeSelf);
+        if (holesLeft.Length != 0)
+        {
+            int curIndex = Randomizer.RandomNum(holesLeft.Length);
+            Debug.Log("HolesLength" + holesLeft.Length + "Current index" + curIndex);
+            photonView.RPC("NewHoleRPC", RpcTarget.All,curIndex);
+            Debug.Log("calling rpc");
+        }
+     
 
     }
 }
