@@ -13,14 +13,14 @@ public class HolesManager : MonoBehaviourPun
         Array.ForEach(holes, (x) => x.manager = this);
     }
     [PunRPC]
-    public void NewHoleRPC(int curIndex)
+    public void NewHoleRPC(int Index)
     {
           Debug.Log("enterRPC for new hole");
 
-      
-            holes[curIndex].Init();
-            myShip.CurHoleAmountActive++;
+    
 
+        holes[Index].Init();
+        myShip.CurHoleAmountActive++;
 
     }
 
@@ -44,7 +44,9 @@ public class HolesManager : MonoBehaviourPun
     }
     private void OnTriggerEnter(Collider other)
     {
-        Ball ball = other.GetComponent<Ball>();
+       
+
+            Ball ball = other.GetComponent<Ball>();
         if (ball == null)
             return;
         if (ball.Team != myShip.Team)
@@ -53,24 +55,30 @@ public class HolesManager : MonoBehaviourPun
            
                 Debug.Log("Team " + (myShip.Team ? 1 : 2) + " took damage!");
                 ball.HIT();
-                NewHole();
+            if (PhotonNetwork.IsMasterClient)
+                               NewHole();
+
             
-        
+
+
+
         }
     }
   
     [Button, HideInEditorMode]
     public void NewHole()
     {
-        var holesLeft = Array.FindAll(holes, (x) => !x.gameObject.activeSelf);
-        if (holesLeft.Length != 0)
-        {
-            int curIndex = Randomizer.RandomNum(holesLeft.Length);
-            Debug.Log("HolesLength" + holesLeft.Length + "Current index" + curIndex);
-            photonView.RPC("NewHoleRPC", RpcTarget.All, holesLeft.Length-1);
-            Debug.Log("calling rpc");
-        }
-     
 
+
+        var holesLeft = Array.FindAll(holes, (x) => !x.gameObject.activeSelf);
+        if (holesLeft.Length == 0)
+            return;
+        int curIndex = Randomizer.RandomNum(holesLeft.Length);
+        Debug.Log("HolesLength" + holesLeft.Length + "Current index" + curIndex);
+        int rpcIndex = Array.FindIndex(holes, (x) => x == holesLeft[curIndex]);
+        photonView.RPC("NewHoleRPC", RpcTarget.All, rpcIndex);
+        Debug.Log("calling rpc");
+        
+    
     }
 }

@@ -17,7 +17,7 @@ public class HoleController : MonoBehaviour
     
 
 
-    private void OnEnable()
+    private void Awake()
     {
         _startPos = transform.position;
     }

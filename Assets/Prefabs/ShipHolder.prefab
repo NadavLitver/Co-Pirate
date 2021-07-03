@@ -25331,7 +25331,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6337312948766561104, guid: 594c8b78dafde1a4a82089cb3955f92c, type: 3}
       propertyPath: m_Name
-      value: Hole_in_Ship (1)
+      value: Hole_in_Ship
       objectReference: {fileID: 0}
     - target: {fileID: 6337312948766561104, guid: 594c8b78dafde1a4a82089cb3955f92c, type: 3}
       propertyPath: m_IsActive
