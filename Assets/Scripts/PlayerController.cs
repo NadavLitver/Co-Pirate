@@ -277,6 +277,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
                 hole.OnFixProgress -= UpdateFixProgressBar;
                 hole.InteractFinished -= FinishedFixing;
+                _holeFixProgressBar.fillAmount = 0;
                 _holeFixProgressBar.gameObject.SetActive(false);
             }
 

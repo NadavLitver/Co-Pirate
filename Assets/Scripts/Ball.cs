@@ -32,7 +32,8 @@ public class Ball : MonoBehaviourPun
     private void InitRPC((Team, Vector3) init)
     {
         _team = init.Item1;
-        this.momentum = init.Item2;
+        momentum = init.Item2;
+        Debug.Log(Team);
         gameObject.SetActive(true);
         StartCoroutine(DestoryDelayRoutine());
     }
@@ -53,8 +54,6 @@ public class Ball : MonoBehaviourPun
     }
     public void Destroy()
     {
-        
-       //
     }
     IEnumerator DestoryDelayRoutine()
     {
