@@ -27,11 +27,12 @@ public class Ball : MonoBehaviourPun
 
     Vector3 momentum;
     public void Init(Team team, Vector3 momentum)
+        => photonView.RPC("InitRPC", RpcTarget.All, (team, momentum));
+    [PunRPC]
+    private void InitRPC((Team, Vector3) init)
     {
-        this.momentum = momentum;
-        _team = team;
-        Debug.Log(Team);
-
+        _team = init.Item1;
+        this.momentum = init.Item2;
         gameObject.SetActive(true);
         StartCoroutine(DestoryDelayRoutine());
     }
