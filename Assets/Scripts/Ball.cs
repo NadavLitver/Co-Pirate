@@ -30,6 +30,7 @@ public class Ball : MonoBehaviourPun
     {
         this.momentum = momentum;
         _team = team;
+        Debug.Log(Team);
 
         gameObject.SetActive(true);
         StartCoroutine(DestoryDelayRoutine());
