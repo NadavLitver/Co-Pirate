@@ -39,7 +39,7 @@ public class CannonController : MonoBehaviourPun
         var shipSpeed = _shipMover.Speed;
         cannonBall.Init(_ship.Team, new Vector3(shipSpeed.x, 0, shipSpeed.y));
 
-
+        Debug.Log("Shot");
         photonView.RPC("ShootRPC", RpcTarget.All);
     }
 

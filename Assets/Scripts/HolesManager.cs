@@ -8,7 +8,6 @@ public class HolesManager : MonoBehaviourPun
     public HoleController[] holes;
     public ShipManager myShip;
 
-
     private void Awake()
     {
         Array.ForEach(holes, (x) => x.manager = this);
@@ -22,7 +21,7 @@ public class HolesManager : MonoBehaviourPun
         if (holesLeft.Length != 0)
         {
             int curIndex = Randomizer.RandomNum(holesLeft.Length);
-            //holes[curIndex].transform.position = new Vector3(holes[curIndex].transform.position.x + Randomizer.NormalizedFloat(), holes[curIndex].transform.position.y, holes[curIndex].transform.position.z + Randomizer.NormalizedFloat());
+            Debug.Log("HolesLength" + holesLeft.Length + "Current index" + curIndex);
             holesLeft[curIndex].Init();
             myShip.CurHoleAmountActive++;
         }
@@ -55,11 +54,16 @@ public class HolesManager : MonoBehaviourPun
             return;
         if (ball.Team != myShip.Team)
         {
-            NewHole();
-            Debug.Log("Team " + (myShip.Team ? 1 : 2) + " took damage!");
-            ball.HIT();
+            // other.enabled = false;
+           
+                Debug.Log("Team " + (myShip.Team ? 1 : 2) + " took damage!");
+                ball.HIT();
+                NewHole();
+            
+        
         }
     }
+  
     [Button, HideInEditorMode]
     public void NewHole()
     {

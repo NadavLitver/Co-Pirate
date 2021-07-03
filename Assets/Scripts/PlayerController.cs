@@ -313,8 +313,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [PunRPC]
     private void UsedCannonballRPC(int playerNum)
     {
-        if (photonView.Owner.GetPlayerNum() == playerNum)
-            OnCannonballUse?.Invoke();
+        if (photonView.Owner.GetPlayerNum() == playerNum)           
+             OnCannonballUse?.Invoke();
     }
    /* [PunRPC]
     void SetNameRPC(int playerNum)

@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 28
       objectReference: {fileID: 0}
+    - target: {fileID: 6337312947118389854, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: m_Name
+      value: Hole_in_Ship
+      objectReference: {fileID: 0}
     - target: {fileID: 7115707708332447428, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
       value: 36

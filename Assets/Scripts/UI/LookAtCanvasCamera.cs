@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class LookAtCanvasCamera : MonoBehaviour
@@ -9,6 +10,8 @@ public class LookAtCanvasCamera : MonoBehaviour
 
     private void Awake()
     {
+       
+        
         if (_canvas == null)
             _canvas = GetComponent<Canvas>();
 
