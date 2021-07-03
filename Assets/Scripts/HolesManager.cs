@@ -49,7 +49,7 @@ public class HolesManager : MonoBehaviourPun
         if (ball == null)
             return;
 
-        Debug.Log("Ball entered collision with ship: " + myShip.gameObject.name);
+        Debug.Log("Ball from team " + (myShip.Team ? 1 : 2) + " entered collision with ship: " + myShip.gameObject.name);
         
         if (ball.Team != myShip.Team)
         {
