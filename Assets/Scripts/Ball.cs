@@ -48,6 +48,7 @@ public class Ball : MonoBehaviourPun
     }
     public void Destroy()
     {
-        Destroy(gameObject);
+        
+              PhotonNetwork.Destroy(gameObject);
     }
 }

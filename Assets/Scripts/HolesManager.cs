@@ -46,7 +46,7 @@ public class HolesManager : MonoBehaviourPun
     {
        
 
-            Ball ball = other.GetComponent<Ball>();
+        Ball ball = other.GetComponent<Ball>();
         if (ball == null)
             return;
         if (ball.Team != myShip.Team)
