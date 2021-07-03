@@ -50,14 +50,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28932a03d796024f879b1c590513050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TTL: 0
   Speed: 20
   _gravity: -2
   OnHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8775017037999053005}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Ball, Assembly-CSharp
-        m_MethodName: Destroy
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

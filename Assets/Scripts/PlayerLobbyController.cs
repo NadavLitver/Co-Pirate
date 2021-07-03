@@ -93,7 +93,8 @@ public class PlayerLobbyController : MonoBehaviourPunCallbacks
          Vector2 dir;
         Vector2 currentVelocity = Vector2.zero;
         Vector2 targetVelocity = Vector2.zero;
-        PlayerData playerData;
+        PlayerData playerData ;
+        public PlayerData PlayerData => playerData;
         private bool _holdingCannonBall = false;
 
         public bool HoldingCannonBall => _holdingCannonBall;

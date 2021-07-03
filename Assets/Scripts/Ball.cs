@@ -8,6 +8,8 @@ using UnityEngine.Events;
 public class Ball : MonoBehaviourPun
 {
     [SerializeField]
+    private float TTL;
+    [SerializeField]
     float Speed;
     [SerializeField, MaxValue(0)]
     private float _gravity;
@@ -30,6 +32,7 @@ public class Ball : MonoBehaviourPun
         _team = team;
 
         gameObject.SetActive(true);
+        StartCoroutine(DestoryDelayRoutine());
     }
 
     // Update is called once per frame
@@ -49,6 +52,12 @@ public class Ball : MonoBehaviourPun
     public void Destroy()
     {
         
-       // PhotonNetwork.Destroy(gameObject);
+       //
+    }
+    IEnumerator DestoryDelayRoutine()
+    {
+        yield return new WaitForSeconds(TTL);
+        PhotonNetwork.Destroy(gameObject);
+
     }
 }

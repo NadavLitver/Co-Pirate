@@ -1,3 +1,4 @@
+using Photon.Pun;
 using Photon.Pun.Demo.PunBasics;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ public class TeamSetter : MonoBehaviour
         {
             PlayerLobbyController lobbyPlayer = other.gameObject.GetComponent<PlayerLobbyController>();
             
-            if (LiveLobbyGameManager.instance.isReady)
+            if (LiveLobbyGameManager.instance.isReady && lobbyPlayer.PlayerData.player == PhotonNetwork.LocalPlayer)
                 return;
 
             if (iSetTeam1)
