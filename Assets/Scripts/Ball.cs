@@ -25,14 +25,14 @@ public class Ball : MonoBehaviourPun
     private Team _team;
     public Team Team => _team;
 
-    Vector3 momentum;
+    Vector3 _momentum;
     public void Init(Team team, Vector3 momentum)
-        => photonView.RPC("InitRPC", RpcTarget.All, (team, momentum));
+        => photonView.RPC("InitRPC", RpcTarget.All, new object[2] { team, momentum });
     [PunRPC]
-    private void InitRPC((Team, Vector3) init)
+    private void InitRPC(Team team, Vector3 momentum)
     {
-        _team = init.Item1;
-        momentum = init.Item2;
+        _team = team;
+        _momentum = momentum;
         Debug.Log(Team);
         gameObject.SetActive(true);
         StartCoroutine(DestoryDelayRoutine());
@@ -41,7 +41,7 @@ public class Ball : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        var moveDir = (transform.forward * Speed + momentum + Vector3.up * _verticalSpeed) * Time.deltaTime;
+        var moveDir = (transform.forward * Speed + _momentum + Vector3.up * _verticalSpeed) * Time.deltaTime;
 
         transform.Translate(moveDir, Space.World);
 
