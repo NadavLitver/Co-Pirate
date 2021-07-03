@@ -26,8 +26,8 @@ namespace Photon.Pun.Demo.PunBasics
 
         #region Private Fields
 
-        public Camera redCamera;
         public Camera blueCamera;
+        public Camera redCamera;
 
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]

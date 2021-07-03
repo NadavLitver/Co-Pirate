@@ -1,13 +1,12 @@
-using CustomAttributes;
 using Photon.Pun;
 using Photon.Pun.Demo.PunBasics;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using TMPro;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviourPunCallbacks
 {
     public static PlayerController localPlayerCtrl;
@@ -88,9 +87,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
     #region State
     [ReadOnly]
     private Camera personalCamera;
-    public Camera PersonalCamera 
-    { 
-        get => personalCamera; 
+    public Camera PersonalCamera
+    {
+        get => personalCamera;
         set
         {
             if (personalCamera == value)
@@ -116,8 +115,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private bool _holdingCannonBall = false;
 
-     public bool HoldingCannonBall => _holdingCannonBall ;
- 
+    public bool HoldingCannonBall => _holdingCannonBall;
+
 
 
     #endregion
@@ -138,7 +137,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         team = playerData.team;
         transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
         myShip = GetComponentInParent<ShipManager>();
-        if(team == Team.Blue)
+        if (team == Team.Blue)
         {
             myShip.SetNameOnRedEndingCanvas(PhotonNetwork.NickName);
         }
@@ -164,7 +163,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
 
-            PersonalCamera = team == Team.Blue ? GameManager.instance.redCamera : GameManager.instance.blueCamera;
+            PersonalCamera = team == Team.Blue ? GameManager.instance.blueCamera : GameManager.instance.redCamera;
 
             PersonalCamera.gameObject.SetActive(true);
             var cameraCtrl = PersonalCamera.GetComponent<CameraController>();
@@ -324,17 +323,17 @@ public class PlayerController : MonoBehaviourPunCallbacks
             OnCannonballUse?.Invoke();
         }
     }
-   /* [PunRPC]
-    void SetNameRPC(int playerNum)
-    {
-        if (photonView.Owner.GetPlayerNum() == playerNum)
-            nameHandler.nameText.text = nameHandler.playerName;
+    /* [PunRPC]
+     void SetNameRPC(int playerNum)
+     {
+         if (photonView.Owner.GetPlayerNum() == playerNum)
+             nameHandler.nameText.text = nameHandler.playerName;
 
-    }
-    public void CallSetNameRPC()
-    {
-        photonView.RPC("SetNameRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
-    }*/
+     }
+     public void CallSetNameRPC()
+     {
+         photonView.RPC("SetNameRPC", RpcTarget.All, photonView.Owner.GetPlayerNum());
+     }*/
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, _interactionRange);
