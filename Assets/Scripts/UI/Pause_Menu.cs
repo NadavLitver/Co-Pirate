@@ -12,7 +12,7 @@ public class Pause_Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InputManager.controls.Gameplay.ESCSettings.performed += EnableCanvas;
+        InputManager.controls.Gameplay.ESCSettings.started += EnableCanvas;
     }
 
 
@@ -33,7 +33,10 @@ public class Pause_Menu : MonoBehaviour
             }
 
     }
- 
 
+    private void OnDisable()
+    {
+        InputManager.controls.Gameplay.ESCSettings.started -= EnableCanvas;
+    }
 
 }
