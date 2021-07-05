@@ -6,15 +6,20 @@ public class SpeedPickup : Pickup
 {
     public float SpeedScaler = 2;
 
-    protected override IEnumerator PickedUp(PlayerController playerReference)
+    protected override void PickedUp(PlayerController playerRef)
     {
-        Debug.Log(playerReference.name);
-        playerReference.speedScalar = SpeedScaler;
-        PickupHandler.isSpeedPickedUp = true;
+        playerRef.SpeedBuff = true;
+        playerRef.speedScalar = SpeedScaler;
         Destroy(gameObject);
-        yield return new WaitForSeconds(15f);
-        PickupHandler.isSpeedPickedUp = false;
-        playerReference.speedScalar = 1;
 
+        StartCoroutine(DisableBuffRoutine(playerRef));
+
+        base.PickedUp(playerRef);
+    }
+    private IEnumerator DisableBuffRoutine(PlayerController playerRef)
+    {
+        yield return new WaitForSeconds(15f);
+        playerRef.SpeedBuff = false;
+        playerRef.speedScalar = 1;
     }
 }

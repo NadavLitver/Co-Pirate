@@ -78,10 +78,10 @@ public class HoleInteractable : BaseInteractable
 
     public override void OnInteract_Start(PlayerController ctrl)
     {
-        if (PickupHandler.isInstantPickedUp)
+        if (ctrl.InstantFixBuff)
         {
             Fixed();
-            PickupHandler.isInstantPickedUp = false;
+            ctrl.InstantFixBuff = false;
             return;
         }
         Interacting = true;

@@ -68,22 +68,104 @@ public class PlayerController : MonoBehaviourPunCallbacks
     #endregion
 
     #region Events
-    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    [SerializeField,TabGroup("Team", GroupID = "Events")]
     [FormerlySerializedAs("OnTeam1")]
     private UnityEvent OnTeamBlue;
-    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    [SerializeField, TabGroup("Team", GroupID = "Events")]
     [FormerlySerializedAs("OnTeam2")]
     private UnityEvent OnTeamRed;
-    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    [SerializeField, TabGroup("Cannon ball", GroupID = "Events")]
     private UnityEvent OnCannonballPickup;
-    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    [SerializeField, TabGroup("Cannon ball", GroupID = "Events")]
     private UnityEvent OnCannonballUse;
-    [SerializeField, FoldoutGroup("Events", 99, Expanded = false)]
+    [SerializeField, TabGroup("Other", GroupID = "Events")]
     private UnityEvent<Camera> OnNewCamera;
+
+    [SerializeField,TabGroup("Speed", GroupID = "Events/Buffs")]
+    private UnityEvent OnSpeed_Enabled;
+    [SerializeField, TabGroup("Speed", GroupID = "Events/Buffs")]
+    private UnityEvent OnSpeed_Disabled;
+    [SerializeField, TabGroup("Instant fix", GroupID = "Events/Buffs")]
+    private UnityEvent OnInstantFix_Enabled;
+    [SerializeField, TabGroup("Instant fix", GroupID = "Events/Buffs")]
+    private UnityEvent OnInstantFix_Disabled;
+    [SerializeField, TabGroup("Double shoot", GroupID = "Events/Buffs")]
+    private UnityEvent OnDoubleShoot_Enabled;
+    [SerializeField, TabGroup("Double shoot", GroupID = "Events/Buffs")]
+    private UnityEvent OnDoubleShoot_Disabled;
     #endregion
 
     #endregion
+    #region Buffs
+    private bool _speedBuff = false;
 
+    private bool _instantFixBuff = false;
+
+    private bool _doubleShootBuff = false;
+
+    public bool SpeedBuff
+    {
+        get => _speedBuff;
+        set
+        {
+            if (_speedBuff == value)
+                return;
+
+            _speedBuff = value;
+
+            if (_speedBuff)
+                photonView.RPC("SpeedEnabledRPC", RpcTarget.All);
+            else
+                photonView.RPC("SpeedDisabledRPC", RpcTarget.All);
+                
+        }
+    }
+    [PunRPC]
+    private void SpeedEnabledRPC() => OnSpeed_Enabled?.Invoke();
+    [PunRPC]
+    private void SpeedDisabledRPC() => OnSpeed_Disabled?.Invoke();
+
+    public bool InstantFixBuff
+    {
+        get => _instantFixBuff;
+        set
+        {
+            if (_instantFixBuff == value)
+                return;
+
+            _instantFixBuff = value;
+
+            if (_instantFixBuff)
+                photonView.RPC("InstantFixEnabledRPC", RpcTarget.All);
+            else
+                photonView.RPC("InstantFixDisabledRPC", RpcTarget.All);
+        }
+    }
+    [PunRPC]
+    private void InstantFixEnabledRPC() => OnInstantFix_Enabled?.Invoke();
+    [PunRPC]
+    private void InstantFixDisabledRPC() => OnInstantFix_Disabled?.Invoke();
+    public bool DoubleShootBuff
+    {
+        get => _doubleShootBuff;
+        set
+        {
+            if (_doubleShootBuff == value)
+                return;
+
+            _doubleShootBuff = value;
+
+            if (_doubleShootBuff)
+                photonView.RPC("DoubleShootEnabledRPC", RpcTarget.All);
+            else
+                photonView.RPC("DoubleShootDisabledRPC", RpcTarget.All);
+        }
+    }
+    [PunRPC]
+    private void DoubleShootEnabledRPC() => OnDoubleShoot_Enabled?.Invoke();
+    [PunRPC]
+    private void DoubleShootDisabledRPC() => OnDoubleShoot_Disabled?.Invoke();
+    #endregion
     #region State
     [ReadOnly]
     private Camera personalCamera;
@@ -127,6 +209,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
             localPlayerCtrl = this;
             GameManager.instance.OnGameStart += CheckForInteractables;
         }
+
+
     }
 
     private void Start()
