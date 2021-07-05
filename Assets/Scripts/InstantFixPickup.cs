@@ -7,6 +7,7 @@ public class InstantFixPickup : Pickup
     protected override IEnumerator PickedUp(PlayerController playerRef)
     {
         PickupHandler.isInstantPickedUp = true;
+        Destroy(gameObject);
         yield return null;
 
     }
