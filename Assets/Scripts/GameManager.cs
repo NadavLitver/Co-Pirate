@@ -2,6 +2,7 @@
 using Photon.Realtime;
 using Sirenix.OdinInspector;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,6 +29,7 @@ namespace Photon.Pun.Demo.PunBasics
 
         public Camera blueCamera;
         public Camera redCamera;
+        public event Action OnGameStart;
 
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]
@@ -40,6 +42,27 @@ namespace Photon.Pun.Demo.PunBasics
 
         [HideInInspector]
         public GameObject localPlayerObject;
+
+        [SerializeField]
+        private float _startDelay = 10;
+        #endregion
+
+        #region State
+        private bool _gameStarted = false;
+        public bool GameStarted
+        {
+            get => _gameStarted;
+            set
+            {
+                if (_gameStarted == value)
+                    return;
+
+                _gameStarted = value;
+
+                if (_gameStarted)
+                    OnGameStart?.Invoke();
+            }
+        }
         #endregion
 
         #region MonoBehaviour CallBacks
@@ -49,11 +72,21 @@ namespace Photon.Pun.Demo.PunBasics
             if (instance == null)
             {
                 instance = this;
-                DontDestroyOnLoad(instance);
             }
             else if (instance != this)
                 Destroy(gameObject);
+
+            if (PhotonNetwork.IsMasterClient)
+                StartCoroutine(StartAfterDelayRoutine(_startDelay));
         }
+        private IEnumerator StartAfterDelayRoutine(float delay)
+        {
+            yield return new WaitForSecondsRealtime(delay);
+
+            photonView.RPC("StartAfterDelayRPC", RpcTarget.All);
+        }
+        [PunRPC]
+        private void StartAfterDelayRPC() => GameStarted = true;
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase.
         /// </summary>

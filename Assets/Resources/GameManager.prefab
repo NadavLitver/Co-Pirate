@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2284339349136606370}
   - component: {fileID: 2284339349136606369}
+  - component: {fileID: 855894334603404814}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ff485eccb96b44383515d0c067934e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redCamera: {fileID: 0}
   blueCamera: {fileID: 0}
+  redCamera: {fileID: 0}
   playerPrefab: {fileID: 692593654332813151, guid: 111c941957003cd4f87e186e903d9c48, type: 3}
   team1SpawnPoints:
   - transform: {fileID: 0}
@@ -57,3 +58,26 @@ MonoBehaviour:
   - transform: {fileID: 0}
     taken: 0
   localPlayerObject: {fileID: 0}
+  _startDelay: 10
+--- !u!114 &855894334603404814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284339349136606371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

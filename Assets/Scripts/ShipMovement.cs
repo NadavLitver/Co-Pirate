@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Pun.Demo.PunBasics;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,8 +24,6 @@ public class ShipMovement : MonoBehaviourPun
     private AnimationCurve _curveFirst;
     [SerializeField]
     private AnimationCurve _curveSecond;
-    [SerializeField]
-    private float _startDelay = 10;
 
     #region Events
     [SerializeField]
@@ -37,31 +36,7 @@ public class ShipMovement : MonoBehaviourPun
     private float NetworkTime => Time.unscaledTime - localStartTime;
     private Vector3 nextPos;
     private AnimationCurve curve;
-    private bool _enabled = false;
-    public bool Enabled
-    {
-        get => _enabled;
-        set
-        {
-            if (_enabled == value)
-                return;
-
-            _enabled = value;
-
-            SetStartPoint();
-
-            void SetStartPoint()
-            {
-                localStartTime = Time.unscaledTime;
-
-                transform.position = ToVector3(PositionAtTime(NetworkTime), transform.position.y);
-
-                UpdateNextPos();
-
-                OnStartMoving?.Invoke();
-            }
-        }
-    }
+    public bool GameStarted => GameManager.instance.GameStarted;
     private void Awake()
     {
         CalculateAnimationCurve();
@@ -70,13 +45,22 @@ public class ShipMovement : MonoBehaviourPun
 
         nextPos = transform.position;
 
-        if (PhotonNetwork.IsMasterClient)
-            StartCoroutine(StartAfterDelayRoutine(_startDelay));
-    }
+        GameManager.instance.OnGameStart += SetStartPoint;
 
+        void SetStartPoint()
+        {
+            localStartTime = Time.unscaledTime;
+
+            transform.position = ToVector3(PositionAtTime(NetworkTime), transform.position.y);
+
+            UpdateNextPos();
+
+            OnStartMoving?.Invoke();
+        }
+    }
     void FixedUpdate()
     {
-        if (Enabled)
+        if (GameStarted)
         {
             UpdatePosition();
 
@@ -85,8 +69,6 @@ public class ShipMovement : MonoBehaviourPun
             UpdateRotation();
         }
     }
-
-
     private void UpdateNextPos()
         => nextPos = ToVector3(PositionAtTime(NetworkTime + Time.fixedUnscaledDeltaTime), transform.position.y);
 
@@ -129,16 +111,5 @@ public class ShipMovement : MonoBehaviourPun
             keyframes[i] = new Keyframe(time, value, inTangent, outTangent);
         }
         curve = new AnimationCurve(keyframes);
-    }
-    private IEnumerator StartAfterDelayRoutine(float delay)
-    {
-        yield return new WaitForSecondsRealtime(delay);
-
-        photonView.RPC("StartAfterDelayRPC", RpcTarget.All);
-    }
-    [PunRPC]
-    private void StartAfterDelayRPC()
-    {
-        Enabled = true;
     }
 }

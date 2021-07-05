@@ -1,3 +1,4 @@
+using Photon.Pun.Demo.PunBasics;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +16,9 @@ public static class InteractablesObserver
     }
     public static InteractableHit GetClosestInteractable(PlayerController ctrl)
     {
+        if (!GameManager.instance.GameStarted)
+            return InteractableHit.Empty;
+
         var pos = ctrl.transform.position;
 
         IInteractable closestInteractable = null;
@@ -60,4 +64,6 @@ public struct InteractableHit
     {
         return base.GetHashCode();
     }
+
+    public static InteractableHit Empty => new InteractableHit(float.MaxValue, null);
 }

@@ -19,12 +19,12 @@ public class HoleController : MonoBehaviour
 
     private void Awake()
     {
-        _startPos = transform.position;
+        _startPos = transform.localPosition;
     }
     public void Init()
     {
         gameObject.SetActive(true);
-        transform.position = _startPos + new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * _randomPosRange * Random.Range(0f, 1f);
+        //transform.position = _startPos + new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * _randomPosRange * Random.Range(0f, 1f);
 
         OnInit?.Invoke();
     }
