@@ -484,7 +484,7 @@ MonoBehaviour:
   - While holding a cannon ball, you cant fix holes in the ship.
   - Red PickUp is 'Double Bomb' - you can shoot twice.
   - Green PickUp is 'Insta Fix' - Next fix is instant.
-  - Yellow PickUp is 'Super Speed' - Faster for 30 seconds.
+  - Yellow PickUp is 'Super Speed' - Faster for 15 seconds.
   - Press 'Q' for 'Interaction Circle'.
   text: {fileID: 597524389}
 --- !u!222 &597524391

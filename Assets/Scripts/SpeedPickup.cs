@@ -12,7 +12,7 @@ public class SpeedPickup : Pickup
         playerReference.speedScalar = SpeedScaler;
         PickupHandler.isSpeedPickedUp = true;
         Destroy(gameObject);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(15f);
         PickupHandler.isSpeedPickedUp = false;
         playerReference.speedScalar = 1;
 
