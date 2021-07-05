@@ -28,13 +28,13 @@ public class ShipMovement : MonoBehaviourPun
 
     #region Events
     [SerializeField]
-    private UnityEvent OnStart;
+    private UnityEvent OnStartMoving;
     #endregion
     #endregion
     private int CenterZ => (maxDistance / 2) * (fasterFirst ? 1 : -1);
     private int CenterX => (maxDistance / 2) * (fasterFirst ? -1 : 1);
     private float localStartTime;
-    private float LocalTime => Time.time - localStartTime;
+    private float NetworkTime => Time.unscaledTime - localStartTime;
     private Vector3 nextPos;
     private AnimationCurve curve;
     private bool _enabled = false;
@@ -53,7 +53,7 @@ public class ShipMovement : MonoBehaviourPun
     }
     private void Awake()
     {
-        SetStartPoint();
+        CalculateAnimationCurve();
 
         if (PhotonNetwork.IsMasterClient)
             StartCoroutine(StartAfterDelayRoutine(_startDelay));
@@ -68,19 +68,19 @@ public class ShipMovement : MonoBehaviourPun
             UpdateNextPos();
 
             UpdateRotation();
+
+            Debug.Log(NetworkTime);
         }
     }
     private void SetStartPoint()
     {
-        localStartTime = Time.time;
+        localStartTime = Time.unscaledTime;
 
-        CalculateAnimationCurve();
-
-        transform.position = ToVector3(PositionAtTime(LocalTime), transform.position.y);
+        transform.position = ToVector3(PositionAtTime(NetworkTime), transform.position.y);
 
         UpdateNextPos();
 
-        OnStart?.Invoke();
+        OnStartMoving?.Invoke();
     }
 
     private void UpdateNextPos()
@@ -88,7 +88,7 @@ public class ShipMovement : MonoBehaviourPun
         if (!Enabled)
             nextPos = transform.position;
         else
-            nextPos = ToVector3(PositionAtTime(LocalTime + Time.fixedDeltaTime), transform.position.y);
+            nextPos = ToVector3(PositionAtTime(NetworkTime + Time.fixedUnscaledDeltaTime), transform.position.y);
     }
 
     private void UpdatePosition() => transform.position = nextPos;
@@ -133,7 +133,7 @@ public class ShipMovement : MonoBehaviourPun
     }
     private IEnumerator StartAfterDelayRoutine(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
 
         photonView.RPC("StartAfterDelayRPC", RpcTarget.All);
     }
