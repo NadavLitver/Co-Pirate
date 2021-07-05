@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     #endregion
 
     #region Events
-    [SerializeField,TabGroup("Team", GroupID = "Events")]
+    [SerializeField, TabGroup("Team", GroupID = "Events")]
     [FormerlySerializedAs("OnTeam1")]
     private UnityEvent OnTeamBlue;
     [SerializeField, TabGroup("Team", GroupID = "Events")]
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [SerializeField, TabGroup("Other", GroupID = "Events")]
     private UnityEvent<Camera> OnNewCamera;
 
-    [SerializeField,TabGroup("Speed", GroupID = "Events/Buffs")]
+    [SerializeField, TabGroup("Speed", GroupID = "Events/Buffs")]
     private UnityEvent OnSpeed_Enabled;
     [SerializeField, TabGroup("Speed", GroupID = "Events/Buffs")]
     private UnityEvent OnSpeed_Disabled;
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 photonView.RPC("SpeedEnabledRPC", RpcTarget.All);
             else
                 photonView.RPC("SpeedDisabledRPC", RpcTarget.All);
-                
+
         }
     }
     [PunRPC]
@@ -318,7 +318,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
             curInteractableHit.interactable.OnInteract_End(this);
             CheckForInteractables();
 
-            curInteractableHit.interactable.InteractFinished -= CheckForInteractables;
+            if (curInteractableHit.interactable != null)
+                curInteractableHit.interactable.InteractFinished -= CheckForInteractables;
         }
     }
     public void ChangeCurInteratable(InteractableHit newInteractableHit)
