@@ -20,10 +20,13 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
     void Start()
     {
         AudioSource = GetComponent<AudioSource>();
-        InputManager.controls.Gameplay.Speak.performed += Player_Speak;
-        
+        if (photonView.IsMine)
+        {
+        InputManager.controls.Gameplay.Speak.started += Player_Speak;
         InputManager.controls.Gameplay.Q_interactions.started += InteractionsCanvas;
         InputManager.controls.Gameplay.Q_interactions.canceled += InteractionsCanvasCancle;
+        }
+        
     }
 
     private void InteractionsCanvas(InputAction.CallbackContext obj)
@@ -82,5 +85,14 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
         AudioSource.PlayOneShot(sounds_Interact[index]);
     }
 
-
+    public override void OnDisable()
+    {
+        if (photonView.IsMine)
+        {
+            InputManager.controls.Gameplay.Speak.started -= Player_Speak;
+            InputManager.controls.Gameplay.Q_interactions.started -= InteractionsCanvas;
+            InputManager.controls.Gameplay.Q_interactions.canceled -= InteractionsCanvasCancle;
+        }
+        base.OnDisable();
+    }
 }
