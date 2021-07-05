@@ -16,15 +16,15 @@ public class HoleInteractable : BaseInteractable
     private UnityEvent OnStartInteraction;
     [SerializeField, FoldoutGroup("Events", order: 99)]
     private UnityEvent OnEndInteraction;
-    
+
     #endregion
     public event Action<float> OnFixProgress;
     private float _fixStartTime = Mathf.Infinity;
     private bool _interacting;
 
-    public bool Interacting 
-    { 
-        get => _interacting; 
+    public bool Interacting
+    {
+        get => _interacting;
         set
         {
             if (_interacting = value)
@@ -84,7 +84,7 @@ public class HoleInteractable : BaseInteractable
             PickupHandler.isInstantPickedUp = false;
             return;
         }
-                Interacting = true;
+        Interacting = true;
 
     }
 }
