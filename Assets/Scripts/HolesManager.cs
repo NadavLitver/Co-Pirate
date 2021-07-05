@@ -17,8 +17,6 @@ public class HolesManager : MonoBehaviourPun
     {
           Debug.Log("enterRPC for new hole");
 
-    
-
         holes[Index].Init();
         myShip.CurHoleAmountActive++;
 
@@ -76,7 +74,7 @@ public class HolesManager : MonoBehaviourPun
         if (holesLeft.Length == 0)
             return;
         int curIndex = Randomizer.RandomNum(holesLeft.Length);
-        Debug.Log("HolesLength" + holesLeft.Length + "Current index" + curIndex);
+        Debug.Log("HolesLength " + holesLeft.Length + ", Current index" + curIndex);
         int rpcIndex = Array.FindIndex(holes, (x) => x == holesLeft[curIndex]);
         photonView.RPC("NewHoleRPC", RpcTarget.All, rpcIndex);
         Debug.Log("calling rpc");
