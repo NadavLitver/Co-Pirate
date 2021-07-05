@@ -86,7 +86,7 @@ namespace Photon.Pun.Demo.PunBasics
             photonView.RPC("StartAfterDelayRPC", RpcTarget.All);
         }
         [PunRPC]
-        private void StartAfterDelayRPC() => _gameStarted = true;
+        private void StartAfterDelayRPC() => GameStarted = true;
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase.
         /// </summary>
