@@ -49,11 +49,26 @@ public class ShipMovement : MonoBehaviourPun
             _enabled = value;
 
             SetStartPoint();
+
+            void SetStartPoint()
+            {
+                localStartTime = Time.unscaledTime;
+
+                transform.position = ToVector3(PositionAtTime(NetworkTime), transform.position.y);
+
+                UpdateNextPos();
+
+                OnStartMoving?.Invoke();
+            }
         }
     }
     private void Awake()
     {
         CalculateAnimationCurve();
+
+        transform.position = ToVector3(PositionAtTime(0), transform.position.y);
+
+        nextPos = transform.position;
 
         if (PhotonNetwork.IsMasterClient)
             StartCoroutine(StartAfterDelayRoutine(_startDelay));
@@ -68,28 +83,12 @@ public class ShipMovement : MonoBehaviourPun
             UpdateNextPos();
 
             UpdateRotation();
-
-            Debug.Log(NetworkTime);
         }
     }
-    private void SetStartPoint()
-    {
-        localStartTime = Time.unscaledTime;
 
-        transform.position = ToVector3(PositionAtTime(NetworkTime), transform.position.y);
-
-        UpdateNextPos();
-
-        OnStartMoving?.Invoke();
-    }
 
     private void UpdateNextPos()
-    {
-        if (!Enabled)
-            nextPos = transform.position;
-        else
-            nextPos = ToVector3(PositionAtTime(NetworkTime + Time.fixedUnscaledDeltaTime), transform.position.y);
-    }
+        => nextPos = ToVector3(PositionAtTime(NetworkTime + Time.fixedUnscaledDeltaTime), transform.position.y);
 
     private void UpdatePosition() => transform.position = nextPos;
 
