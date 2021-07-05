@@ -243,7 +243,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             InputManager.controls.Gameplay.Move.performed += OnMove;
             InputManager.controls.Gameplay.Move.canceled += (x) => dir = Vector3.zero;
             InputManager.controls.Gameplay.Interact.performed += OnInteractPreformed;
-            InputManager.controls.Gameplay.Interact.canceled += OnInteractPreformed;
+            InputManager.controls.Gameplay.Interact.canceled += OnInteractCanceled;
             characterController = GetComponent<CharacterController>();
 
 
