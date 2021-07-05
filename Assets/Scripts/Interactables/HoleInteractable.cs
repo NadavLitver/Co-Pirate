@@ -60,6 +60,12 @@ public class HoleInteractable : BaseInteractable
 
     public override void OnInteract_Start(PlayerController ctrl)
     {
+        if (PickupHandler.isInstantPickedUp)
+        {
+            Fixed();
+            PickupHandler.isInstantPickedUp = false;
+            return;
+        }
         _interacting = true;
         _fixStartTime = Time.time;
     }

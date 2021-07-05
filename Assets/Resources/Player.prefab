@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  speedScalar: 1
   _interactionRange: 3
   maxAcceleration: 0.2
   maxRotationSpeed: 360

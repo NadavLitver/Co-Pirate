@@ -22,9 +22,9 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
         AudioSource = GetComponent<AudioSource>();
         if (photonView.IsMine)
         {
-        InputManager.controls.Gameplay.Speak.started += Player_Speak;
-        InputManager.controls.Gameplay.Q_interactions.started += InteractionsCanvas;
-        InputManager.controls.Gameplay.Q_interactions.canceled += InteractionsCanvasCancle;
+            InputManager.controls.Gameplay.Speak.started += Player_Speak;
+            InputManager.controls.Gameplay.Q_interactions.started += InteractionsCanvas;
+            InputManager.controls.Gameplay.Q_interactions.canceled += InteractionsCanvasCancle;
         }
         
     }

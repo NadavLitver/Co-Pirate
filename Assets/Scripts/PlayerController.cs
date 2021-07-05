@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [FoldoutGroup("Settings")]
     [SerializeField]
     private float speed;
-
+    public float speedScalar;
     [FoldoutGroup("Settings")]
     [SerializeField]
     private float _interactionRange;
@@ -177,7 +177,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         {
             targetVelocity = Vector2.zero;
             if (dir != Vector2.zero)
-                targetVelocity = dir * speed * Time.deltaTime;
+                targetVelocity = dir * speed * speedScalar * Time.deltaTime;
 
             Vector2 acceleration = targetVelocity - currentVelocity;
 
