@@ -72,7 +72,6 @@ namespace Photon.Pun.Demo.PunBasics
             if (instance == null)
             {
                 instance = this;
-                DontDestroyOnLoad(instance);
             }
             else if (instance != this)
                 Destroy(gameObject);

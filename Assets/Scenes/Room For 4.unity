@@ -1405,7 +1405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 855894334603404814, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
       propertyPath: sceneViewId
-      value: 6
+      value: 666
       objectReference: {fileID: 0}
     - target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
       propertyPath: redCamera
