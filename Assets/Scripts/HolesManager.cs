@@ -60,7 +60,7 @@ public class HolesManager : MonoBehaviourPun
         List<(HoleController hole, int index)> _indexedHoles = new List<(HoleController hole, int index)>(holes.Length);
 
         for (int i = 0; i < holes.Length; i++)
-            _indexedHoles[i] = (holes[i], i);
+            _indexedHoles.Add((holes[i], i));
 
         var holesLeft = _indexedHoles.FindAll((x) => !x.hole.gameObject.activeSelf);
         if (holesLeft.Count == 0)
