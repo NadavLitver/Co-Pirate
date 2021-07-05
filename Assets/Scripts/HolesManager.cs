@@ -12,15 +12,7 @@ public class HolesManager : MonoBehaviourPun
     {
         Array.ForEach(holes, (x) => x.manager = this);
     }
-    [PunRPC]
-    public void NewHoleRPC(int Index)
-    {
-          Debug.Log("enterRPC for new hole");
 
-        holes[Index].Init();
-        myShip.CurHoleAmountActive++;
-
-    }
 
     public void FixedHole(HoleController hole)
     {
@@ -48,23 +40,18 @@ public class HolesManager : MonoBehaviourPun
             return;
 
         Debug.Log("Ball from team " + myShip.Team + " entered collision with ship: " + myShip.gameObject.name);
-        
+
         if (ball.Team != myShip.Team)
         {
             // other.enabled = false;
-           
-                Debug.Log("Team " + myShip.Team + " took damage!");
-                ball.HIT();
+
+            Debug.Log("Team " + myShip.Team + " took damage!");
+            ball.HIT();
             if (PhotonNetwork.IsMasterClient)
-                               NewHole();
-
-            
-
-
-
+                NewHole();
         }
     }
-  
+
     [Button, HideInEditorMode]
     public void NewHole()
     {
@@ -78,7 +65,14 @@ public class HolesManager : MonoBehaviourPun
         int rpcIndex = Array.FindIndex(holes, (x) => x == holesLeft[curIndex]);
         photonView.RPC("NewHoleRPC", RpcTarget.All, rpcIndex);
         Debug.Log("calling rpc");
-        
-    
+    }
+    [PunRPC]
+    public void NewHoleRPC(int Index)
+    {
+        Debug.Log("enterRPC for new hole");
+
+        holes[Index].Init();
+        myShip.CurHoleAmountActive++;
+
     }
 }
