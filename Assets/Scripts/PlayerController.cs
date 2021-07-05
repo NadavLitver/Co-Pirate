@@ -125,6 +125,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
             localPlayerCtrl = this;
+            GameManager.instance.OnGameStart += CheckForInteractables;
         }
     }
 
