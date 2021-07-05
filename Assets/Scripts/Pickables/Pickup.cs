@@ -18,6 +18,7 @@ public abstract class Pickup : MonoBehaviour
     protected virtual void PickedUp(PlayerController playerRef)
     {
         OnPickUp?.Invoke();
+        Destroy(gameObject);
     }
 
 }

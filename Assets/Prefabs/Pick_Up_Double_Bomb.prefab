@@ -14548,6 +14548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3736439081544242844}
   - component: {fileID: 3939447949233594402}
+  - component: {fileID: 5533612232507182141}
   m_Layer: 0
   m_Name: Pick_Up_Double_Bomb
   m_TagString: Untagged
@@ -14586,3 +14587,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &5533612232507182141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3736439081544242787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1174da35dd66b4c96b7d2bcc773aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPickUp:
+    m_PersistentCalls:
+      m_Calls: []

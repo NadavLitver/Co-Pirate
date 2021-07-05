@@ -10,9 +10,8 @@ public class SpeedPickup : Pickup
     {
         playerRef.SpeedBuff = true;
         playerRef.speedScalar = SpeedScaler;
-        Destroy(gameObject);
 
-        StartCoroutine(DisableBuffRoutine(playerRef));
+        playerRef.StartCoroutine(DisableBuffRoutine(playerRef));
 
         base.PickedUp(playerRef);
     }

@@ -1,16 +1,13 @@
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class InstantFixPickup : Pickup
+public class DoubleShootPickup : Pickup
 {
     protected override void PickedUp(PlayerController playerRef)
     {
-        playerRef.InstantFixBuff = true;
-
-        Destroy(gameObject);
+        playerRef.DoubleShootBuff = true;
 
         base.PickedUp(playerRef);
     }
-
-
-
 }
