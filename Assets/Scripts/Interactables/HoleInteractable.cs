@@ -27,7 +27,7 @@ public class HoleInteractable : BaseInteractable
         get => _interacting;
         set
         {
-            if (_interacting = value)
+            if (_interacting == value)
                 return;
 
             _interacting = value;
@@ -85,6 +85,5 @@ public class HoleInteractable : BaseInteractable
             return;
         }
         Interacting = true;
-
     }
 }
