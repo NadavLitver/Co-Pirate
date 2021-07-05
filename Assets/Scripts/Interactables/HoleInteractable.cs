@@ -22,6 +22,23 @@ public class HoleInteractable : BaseInteractable
     private float _fixStartTime = Mathf.Infinity;
     private bool _interacting;
 
+    public bool Interacting 
+    { 
+        get => _interacting; 
+        set
+        {
+            if (_interacting = value)
+                return;
+
+            _interacting = value;
+
+            if (_interacting)
+                _fixStartTime = Time.time;
+            else
+                _fixStartTime = Mathf.Infinity;
+        }
+    }
+
     public override event Action<IInteractable> InteractFinished;
 
     private void Awake()
@@ -31,9 +48,9 @@ public class HoleInteractable : BaseInteractable
     }
     private void Update()
     {
-        if (_interacting)
+        if (Interacting)
         {
-            float progress = (Time.time - _fixStartTime) / _fixTime;
+            float progress = Mathf.Max(0, (Time.time - _fixStartTime) / _fixTime);
             OnFixProgress?.Invoke(progress);
 
             if (progress >= 1)
@@ -45,16 +62,17 @@ public class HoleInteractable : BaseInteractable
     public override void OnInteract_End(PlayerController ctrl)
     {
         base.OnInteract_End(ctrl);
-        if (!_interacting)
+        if (!Interacting)
             return;
 
 
-        _interacting = false;
+        Interacting = false;
     }
 
     private void Fixed()
     {
         _holeCtrl.Fix();
+        Interacting = false;
         InteractFinished?.Invoke(this);
     }
 
@@ -66,7 +84,7 @@ public class HoleInteractable : BaseInteractable
             PickupHandler.isInstantPickedUp = false;
             return;
         }
-        _interacting = true;
-        _fixStartTime = Time.time;
+                Interacting = true;
+
     }
 }
