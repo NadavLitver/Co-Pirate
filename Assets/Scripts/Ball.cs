@@ -5,7 +5,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.Events;
 
-public class Ball : MonoBehaviourPun
+public class Ball : MonoBehaviour
 {
     [SerializeField]
     private float TTL;
@@ -27,9 +27,6 @@ public class Ball : MonoBehaviourPun
 
     Vector3 _momentum;
     public void Init(Team team, Vector3 momentum)
-        => photonView.RPC("InitRPC", RpcTarget.All, new object[2] { team, momentum });
-    [PunRPC]
-    private void InitRPC(Team team, Vector3 momentum)
     {
         _team = team;
         _momentum = momentum;
@@ -58,7 +55,7 @@ public class Ball : MonoBehaviourPun
     IEnumerator DestoryDelayRoutine()
     {
         yield return new WaitForSeconds(TTL);
-        PhotonNetwork.Destroy(gameObject);
+        Destroy(gameObject);
 
     }
 }

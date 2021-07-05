@@ -38,23 +38,24 @@ public class CannonController : MonoBehaviourPun
             Debug.DrawLine(_barrelEdge.transform.position, _barrelEdge.transform.position + forwardDirection, Color.red, 5);
 
             var rotation = Quaternion.LookRotation(forwardDirection);
-
-            var ballObj = PhotonNetwork.Instantiate(_cannonBall.name, _barrelEdge.transform.position, rotation);
-
-            var cannonBall = ballObj.GetComponent<Ball>();
-
-            var shipSpeed = _shipMover.Speed;
-            cannonBall.Init(_ship.Team, new Vector3(shipSpeed.x, 0, shipSpeed.y));
+            var position = _barrelEdge.transform.position;
 
             Debug.Log("Shot");
-            photonView.RPC("ShootRPC", RpcTarget.All);
+            photonView.RPC("ShootRPC", RpcTarget.All, new object[] { _barrelEdge.transform.position, rotation });
         }
      
     }
 
     [PunRPC]
-    private void ShootRPC()
+    private void ShootRPC(Vector3 barrelPosition, Quaternion ballRotation)
     {
+        var ballObj = Instantiate(_cannonBall, barrelPosition, ballRotation);
+
+        var cannonBall = ballObj.GetComponent<Ball>();
+
+        var shipSpeed = _shipMover.Speed;
+        cannonBall.Init(_ship.Team, new Vector3(shipSpeed.x, 0, shipSpeed.y));
+
         OnShoot?.Invoke();
     }
     private void Update()
