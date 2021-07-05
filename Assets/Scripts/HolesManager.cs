@@ -1,6 +1,7 @@
 using Photon.Pun;
 using Sirenix.OdinInspector;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 [SelectionBase]
 public class HolesManager : MonoBehaviourPun
@@ -12,10 +13,10 @@ public class HolesManager : MonoBehaviourPun
     {
         Array.ForEach(holes, (x) => x.manager = this);
     }
-
-
     public void FixedHole(HoleController hole)
     {
+        Debug.Log("Fixed hole");
+
         int index = Array.FindIndex(holes, (x) => x == hole);
 
         if (index != -1)
@@ -39,7 +40,7 @@ public class HolesManager : MonoBehaviourPun
         if (ball == null)
             return;
 
-        Debug.Log("Ball from team " + myShip.Team + " entered collision with ship: " + myShip.gameObject.name);
+        Debug.Log("Ball from team " + ball.Team + " entered collision with ship: " + myShip.gameObject.name);
 
         if (ball.Team != myShip.Team)
         {
@@ -56,23 +57,31 @@ public class HolesManager : MonoBehaviourPun
     public void NewHole()
     {
 
+        List<(HoleController hole, int index)> _indexedHoles = new List<(HoleController hole, int index)>(holes.Length);
 
-        var holesLeft = Array.FindAll(holes, (x) => !x.gameObject.activeSelf);
-        if (holesLeft.Length == 0)
+        for (int i = 0; i < holes.Length; i++)
+            _indexedHoles[i] = (holes[i], i);
+
+        var holesLeft = _indexedHoles.FindAll((x) => !x.hole.gameObject.activeSelf);
+        if (holesLeft.Count == 0)
             return;
-        int curIndex = Randomizer.RandomNum(holesLeft.Length);
-        Debug.Log("HolesLength " + holesLeft.Length + ", Current index" + curIndex);
-        int rpcIndex = Array.FindIndex(holes, (x) => x == holesLeft[curIndex]);
-        photonView.RPC("NewHoleRPC", RpcTarget.All, rpcIndex);
+
+        int curIndex = Randomizer.RandomNum(holesLeft.Count);
+
+        Debug.Log("HolesLength " + holesLeft.Count + ", Current index" + curIndex);
+
+        photonView.RPC("NewHoleRPC", RpcTarget.All, holesLeft[curIndex].index);
+
         Debug.Log("calling rpc");
     }
     [PunRPC]
-    public void NewHoleRPC(int Index)
+    public void NewHoleRPC(int index)
     {
         Debug.Log("enterRPC for new hole");
-
-        holes[Index].Init();
-        myShip.CurHoleAmountActive++;
-
+        if (!holes[index].gameObject.activeSelf)
+        {
+            holes[index].Init();
+            myShip.CurHoleAmountActive++;
+        }
     }
 }
