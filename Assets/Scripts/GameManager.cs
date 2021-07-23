@@ -177,6 +177,7 @@ namespace Photon.Pun.Demo.PunBasics
         /// </summary>
         public override void OnLeftRoom()
         {
+            PlayerInformation.Reset();
             SceneManager.LoadScene("Launcher");
         }
         #endregion
