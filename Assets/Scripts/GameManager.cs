@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -16,6 +17,8 @@ namespace Photon.Pun.Demo.PunBasics
     /// Deals with quiting the room and the game
     /// Deals with level loading (outside the in room synchronization)
     /// </summary>
+    ///
+    [DefaultExecutionOrder(-1)]
     public class GameManager : MonoBehaviourPunCallbacks
     {
 
@@ -39,6 +42,7 @@ namespace Photon.Pun.Demo.PunBasics
         SpawnPoint[] team1SpawnPoints;
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
+        [SerializeField] TextMeshProUGUI CountDownText;
 
         [HideInInspector]
         public GameObject localPlayerObject;
@@ -81,9 +85,14 @@ namespace Photon.Pun.Demo.PunBasics
         }
         private IEnumerator StartAfterDelayRoutine(float delay)
         {
-            yield return new WaitForSecondsRealtime(delay);
+            for (int i = 0; i < (int)delay; i++)
+            {
+                yield return new WaitForSecondsRealtime(1);
+                CountDownText.text = "Time Till Game Starts: " + ((int)delay - i - 1);
+            }
 
             photonView.RPC("StartAfterDelayRPC", RpcTarget.All);
+            CountDownText.gameObject.SetActive(false);
         }
         [PunRPC]
         private void StartAfterDelayRPC() => GameStarted = true;
