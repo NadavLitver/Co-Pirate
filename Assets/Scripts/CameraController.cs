@@ -10,6 +10,9 @@ public class CameraController : MonoBehaviour
     [SerializeField, ReadOnly, HideInEditorMode] internal Transform myfollow;
     private void LateUpdate()
     {
+        if (myfollow == null)
+            return;
+
         SetZaxis();
     }
     void SetZaxis()

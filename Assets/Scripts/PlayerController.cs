@@ -216,6 +216,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void Start()
     {
         var playerNum = photonView.Owner.GetPlayerNum();
+        Debug.Log(playerNum);
         var playerData = PlayerInformation.players[playerNum];
         playerData.playerinstance = gameObject;
         nameText.text = playerData.player.NickName;
