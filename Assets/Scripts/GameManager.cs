@@ -42,7 +42,7 @@ namespace Photon.Pun.Demo.PunBasics
         SpawnPoint[] team1SpawnPoints;
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
-        [SerializeField] TextMeshProUGUI CountDownText;
+        [SerializeField] TextMeshProUGUI CountdownText;
 
         [HideInInspector]
         public GameObject localPlayerObject;
@@ -82,17 +82,23 @@ namespace Photon.Pun.Demo.PunBasics
 
             if (PhotonNetwork.IsMasterClient)
                 StartCoroutine(StartAfterDelayRoutine(_startDelay));
+            StartCoroutine(CountdownTextRoutine(_startDelay));
         }
         private IEnumerator StartAfterDelayRoutine(float delay)
+        {
+           
+            yield return new WaitForSeconds(delay);
+            photonView.RPC("StartAfterDelayRPC", RpcTarget.All);
+        }
+        private IEnumerator CountdownTextRoutine(float delay)
         {
             for (int i = 0; i < (int)delay; i++)
             {
                 yield return new WaitForSecondsRealtime(1);
-                CountDownText.text = "Time Till Game Starts: " + ((int)delay - i - 1);
+                CountdownText.text = "Time Till Game Starts: " + ((int)delay - i - 1);
             }
+            CountdownText.gameObject.SetActive(false);
 
-            photonView.RPC("StartAfterDelayRPC", RpcTarget.All);
-            CountDownText.gameObject.SetActive(false);
         }
         [PunRPC]
         private void StartAfterDelayRPC() => GameStarted = true;
