@@ -682,6 +682,7 @@ GameObject:
   - component: {fileID: 6155519679017179499}
   - component: {fileID: 1655768911549170853}
   - component: {fileID: 1575042367936552378}
+  - component: {fileID: 8001511404688657515}
   m_Layer: 5
   m_Name: Win_Canvas
   m_TagString: Untagged
@@ -774,3 +775,15 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &8001511404688657515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256399083233706568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3044b954c9831134fb019ac09f7e8d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
