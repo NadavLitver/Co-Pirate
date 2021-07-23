@@ -1701,6 +1701,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 964715490}
     m_Modifications:
+    - target: {fileID: 2899505469358382172, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 878703225}
+    - target: {fileID: 2899505469358382172, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899505469358382172, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Photon.Pun.Demo.PunBasics.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2899505469832747200, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2200,6 +2212,18 @@ PrefabInstance:
     - target: {fileID: 1575042367936552378, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
       propertyPath: sceneViewId
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256399083186051179, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 878703225}
+    - target: {fileID: 2256399083186051179, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256399083186051179, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Photon.Pun.Demo.PunBasics.GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2256399083233706568, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
       propertyPath: m_Name
@@ -3492,6 +3516,18 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2256399083186051179, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 878703225}
+    - target: {fileID: 2256399083186051179, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256399083186051179, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Photon.Pun.Demo.PunBasics.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2256399083233706568, guid: c139020195c61cd4190adf3c899ea47b, type: 3}
       propertyPath: m_Name
       value: Win_Canvas
@@ -3604,6 +3640,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 956855416}
     m_Modifications:
+    - target: {fileID: 2899505469358382172, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 878703225}
+    - target: {fileID: 2899505469358382172, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899505469358382172, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Photon.Pun.Demo.PunBasics.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2899505469832747200, guid: 3bf7d1509973afd4193955db64f017a8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
