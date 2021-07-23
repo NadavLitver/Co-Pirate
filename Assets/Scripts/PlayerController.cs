@@ -330,6 +330,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         if (curInteractable != newInteractable)
         {
+            if (curInteractable.IsInteracting)
+                curInteractable.OnInteract_End(this);
+
             if (_holeFixProgressBar != null)
             {
                 if (curInteractable != null && curInteractable is HoleInteractable _hole)

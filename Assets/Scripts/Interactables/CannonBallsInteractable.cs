@@ -6,6 +6,8 @@ using System;
 
 public class CannonBallsInteractable : BaseInteractable
 {
+    public override bool IsInteracting => false;
+
     public override bool InteractableCondition(PlayerController ctrl)
     {
         return ctrl != null && !ctrl.HoldingCannonBall;

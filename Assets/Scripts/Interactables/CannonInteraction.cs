@@ -9,6 +9,9 @@ public class CannonInteraction : BaseInteractable
 
     private Pushback _pushBack;
     private bool _onCooldown = false;
+
+    public override bool IsInteracting => false;
+
     public override bool InteractableCondition(PlayerController ctrl) => ctrl != null && ctrl.HoldingCannonBall && !_onCooldown;
     private void Awake()
     {

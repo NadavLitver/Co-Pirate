@@ -425,30 +425,18 @@ MonoBehaviour:
   maxDamageLevel: 100
   _team: 0
   sinkDepth: -1
-  CurHoleAmountActive: 0
   DPSPerHole: 0.6
   maxRotation: -13
   maxDegrees: Infinity
-  center: {fileID: 5709931838462282169}
   _syncInterval: 5
+  CurHoleAmountActive: 0
+  center: {fileID: 5709931838462282169}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
   OnLose:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnWin:
     m_PersistentCalls:
       m_Calls:

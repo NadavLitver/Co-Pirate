@@ -9,6 +9,7 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
     public virtual event Action<IInteractable> InteractFinished;
 
     public Sprite Icon => _icon;
+    public abstract bool IsInteracting { get; }
 
     void OnEnable()
     {

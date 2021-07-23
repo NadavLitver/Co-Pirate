@@ -10,4 +10,5 @@ public interface IInteractable
     Sprite Icon { get; }
     bool InteractableCondition(PlayerController ctrl);
     event Action<IInteractable> InteractFinished;
+    bool IsInteracting { get; }
 }

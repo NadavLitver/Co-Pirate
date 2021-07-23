@@ -21,8 +21,8 @@ public class HoleInteractable : BaseInteractable
     public event Action<float> OnFixProgress;
     private float _fixStartTime = Mathf.Infinity;
     private bool _interacting;
-
-    public bool Interacting
+    public override bool IsInteracting => Interacting;
+    private bool Interacting
     {
         get => _interacting;
         set
@@ -38,7 +38,6 @@ public class HoleInteractable : BaseInteractable
                 _fixStartTime = Mathf.Infinity;
         }
     }
-
     public override event Action<IInteractable> InteractFinished;
 
     private void Awake()
@@ -58,7 +57,16 @@ public class HoleInteractable : BaseInteractable
         }
     }
     public override bool InteractableCondition(PlayerController ctrl) => ctrl != null && !ctrl.HoldingCannonBall;
-
+    public override void OnInteract_Start(PlayerController ctrl)
+    {
+        if (ctrl.InstantFixBuff)
+        {
+            Fixed();
+            ctrl.InstantFixBuff = false;
+            return;
+        }
+        Interacting = true;
+    }
     public override void OnInteract_End(PlayerController ctrl)
     {
         base.OnInteract_End(ctrl);
@@ -74,16 +82,5 @@ public class HoleInteractable : BaseInteractable
         _holeCtrl.Fix();
         Interacting = false;
         InteractFinished?.Invoke(this);
-    }
-
-    public override void OnInteract_Start(PlayerController ctrl)
-    {
-        if (ctrl.InstantFixBuff)
-        {
-            Fixed();
-            ctrl.InstantFixBuff = false;
-            return;
-        }
-        Interacting = true;
     }
 }

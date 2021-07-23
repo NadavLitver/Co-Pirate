@@ -30,25 +30,19 @@ public class ShipManager : MonoBehaviourPun
     public Text[] redTeamEndingText;
     public Text[] blueTeamEndingText;
     [SerializeField] float maxDamageLevel = 100;
-    [SerializeField]
-    private Team _team;
+    [SerializeField] private Team _team;
     public Team Team => _team;
     [Tooltip("The distance the ship sinks")]
     [SerializeField] float sinkDepth;
+    [SerializeField] private float DPSPerHole = 1;
+    [SerializeField] float maxRotation = -4;
+    [SerializeField] private float _syncInterval = 5;
 
     public int CurHoleAmountActive = 0;
-    [SerializeField] private float DPSPerHole = 1;
-
-    [SerializeField] float maxRotation = -4;
-
-    [SerializeField] float maxDegrees = 1;
     public Transform center;
-    [SerializeField]
-    private float _syncInterval = 5;
     #endregion
    
     float startHeight;
-    Quaternion startRotation;
 
     #region Events
     [SerializeField, FoldoutGroup("Events", Order = 99)]
@@ -60,29 +54,16 @@ public class ShipManager : MonoBehaviourPun
 
     #endregion
 
-    private float _lastSyncTime = 0;
 
 
     private void Start()
     {
         startHeight = transform.position.y;
-        startRotation = transform.rotation;
     }
     private void FixedUpdate()
     {
-
         CurDamageLevel += CurHoleAmountActive * DPSPerHole * Time.deltaTime;
-
-        // if(PhotonNetwork.IsMasterClient && Time.time > _lastSyncTime + _syncInterval)
-        //{
-        //    photonView.RPC("SyncDamageRPC", RpcTarget.Others, CurDamageLevel);
-        //    _lastSyncTime = Time.time;
-        //}
-
     }
-
-    [PunRPC]
-    private void SyncDamageRPC(float damage) => CurDamageLevel = damage;
     void UpdateShip()
     {
         ChangeShipHeight();
