@@ -308,7 +308,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
         {
             curInteractableHit.interactable.OnInteract_Start(this);
 
-            curInteractableHit.interactable.InteractFinished += CheckForInteractables;
+            if (curInteractableHit.interactable != null)
+                curInteractableHit.interactable.InteractFinished += CheckForInteractables;
         }
     }
     void OnInteractCanceled(InputAction.CallbackContext context)
