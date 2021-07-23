@@ -6,6 +6,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Events;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -43,6 +44,7 @@ namespace Photon.Pun.Demo.PunBasics
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
         [SerializeField] TextMeshProUGUI CountdownText;
+        public UnityEvent OnCountdownNumChanged;
 
         [HideInInspector]
         public GameObject localPlayerObject;
@@ -79,6 +81,7 @@ namespace Photon.Pun.Demo.PunBasics
             }
             else if (instance != this)
                 Destroy(gameObject);
+          
 
             if (PhotonNetwork.IsMasterClient)
                 StartCoroutine(StartAfterDelayRoutine(_startDelay));
@@ -95,7 +98,8 @@ namespace Photon.Pun.Demo.PunBasics
             for (int i = 0; i < (int)delay; i++)
             {
                 yield return new WaitForSecondsRealtime(1);
-                CountdownText.text = "Time Till Game Starts: " + ((int)delay - i - 1);
+                CountdownText.text = ((int)delay - i - 1).ToString();
+                OnCountdownNumChanged?.Invoke();
             }
             CountdownText.gameObject.SetActive(false);
 
