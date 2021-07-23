@@ -7,6 +7,7 @@ public class Pushback : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private AnimationCurve curve;
 
+    public float Duration => duration;
     Tween tween;
     public void Play()
     {

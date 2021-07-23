@@ -68,7 +68,7 @@ public class ShipManager : MonoBehaviourPun
         startHeight = transform.position.y;
         startRotation = transform.rotation;
     }
-    private void Update()
+    private void FixedUpdate()
     {
 
         CurDamageLevel += CurHoleAmountActive * DPSPerHole * Time.deltaTime;
