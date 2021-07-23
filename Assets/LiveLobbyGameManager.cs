@@ -1,12 +1,12 @@
 
-using System;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using Sirenix.OdinInspector;
 using Photon.Realtime;
-using UnityEngine.UI;
+using Sirenix.OdinInspector;
+using System;
 using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -19,7 +19,7 @@ namespace Photon.Pun.Demo.PunBasics
     /// Deals with level loading (outside the in room synchronization)
     /// </summary>
     /// 
-   
+
     public class LiveLobbyGameManager : MonoBehaviourPunCallbacks
     {
 
@@ -43,7 +43,7 @@ namespace Photon.Pun.Demo.PunBasics
         SpawnPoint[] team1SpawnPoints;
         [SerializeField]
         SpawnPoint[] team2SpawnPoints;
-       
+
         public Button readyButton;
         public TextMeshProUGUI debugText;
 
@@ -55,7 +55,6 @@ namespace Photon.Pun.Demo.PunBasics
         [HideInInspector]
         public GameObject localPlayerObject;
         #endregion
-
         #region MonoBehaviour CallBacks
 
         private void Awake()
@@ -122,7 +121,7 @@ namespace Photon.Pun.Demo.PunBasics
             }
 
         }
-      
+
 
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity on every frame.
@@ -158,30 +157,37 @@ namespace Photon.Pun.Demo.PunBasics
         }
         public void CallReadyRPC(bool isReady)
         {
-            if (isReady)
+            try
+            {
+                if (isReady)
 
-                photonView.RPC("AddReadyRPC", RpcTarget.All);
+                    photonView.RPC("AddReadyRPC", RpcTarget.All);
 
-            else
-                photonView.RPC("RetractReadyRPC", RpcTarget.All);
-
-
+                else
+                    photonView.RPC("RetractReadyRPC", RpcTarget.All);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e.Message);
+            }
 
         }
+
         [PunRPC]
         public void AddReadyRPC()
         {
-           readyCount++;
-           debugText.text = "Players Ready: " + readyCount;
-           JoinGameRoom();
+            readyCount++;
+
+            debugText.text = "Players Ready: " + readyCount;
+            JoinGameRoom();
         }
         [PunRPC]
         public void RetractReadyRPC()
 
         {
-          readyCount--;
-          debugText.text = "Players Ready: " + readyCount;
-          JoinGameRoom();
+            readyCount--;
+            debugText.text = "Players Ready: " + readyCount;
+            JoinGameRoom();
 
         }
         public void LeaveRoom()
@@ -201,7 +207,7 @@ namespace Photon.Pun.Demo.PunBasics
                 return Array.Find(team2SpawnPoints, (x) => x.taken == false);
         }
         #endregion
-       public void JoinGameRoom()
+        public void JoinGameRoom()
         {
             if (PhotonNetwork.IsMasterClient && readyCount == LobbyInfromation._numOfPlayer)
             {
@@ -214,5 +220,5 @@ namespace Photon.Pun.Demo.PunBasics
         #endregion
 
     }
-   
+
 }
