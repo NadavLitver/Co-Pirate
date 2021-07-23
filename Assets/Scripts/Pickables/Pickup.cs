@@ -4,17 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class Pickup : MonoBehaviour
+public abstract class Pickup : BaseInteractable
 {
+    public override bool IsInteracting => false;
     [SerializeField]
     protected UnityEvent OnPickUp;
-    private void OnTriggerEnter(Collider other)
-    {
-        PlayerController playerRef = other.GetComponent<PlayerController>();
-        if (playerRef != null)
-            PickedUp(playerRef);
-    }
-
+    public override void OnInteract_Start(PlayerController ctrl) => PickedUp(ctrl);
     protected virtual void PickedUp(PlayerController playerRef)
     {
         OnPickUp?.Invoke();
