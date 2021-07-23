@@ -14584,6 +14584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1174da35dd66b4c96b7d2bcc773aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _icon: {fileID: 21300000, guid: e49134c2b4071b64885a68d4224faa01, type: 3}
   OnPickUp:
     m_PersistentCalls:
       m_Calls: []
