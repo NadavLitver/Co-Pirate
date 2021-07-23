@@ -30,7 +30,7 @@ public class ShipMovement : MonoBehaviourPun
     private UnityEvent OnStartMoving;
     #endregion
     #endregion
-    private int CenterZ => (maxDistance / 2) * (fasterFirst ? 1 : -1);
+    private int CenterZ => (maxDistance / 2) * (fasterFirst ? 1: -1);
     private int CenterX => (maxDistance / 2) * (fasterFirst ? -1 : 1);
     private float localStartTime;
     private float NetworkTime => Time.unscaledTime - localStartTime;
