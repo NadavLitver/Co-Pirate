@@ -34,8 +34,6 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
             if (photonView.IsMine && !Interactions_Canvas.activeInHierarchy)
             {
                 Interactions_Canvas.SetActive(true);
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
             }
         
     }
@@ -44,8 +42,6 @@ public class Player_Sounds : MonoBehaviourPunCallbacks
         if (photonView.IsMine && Interactions_Canvas.activeInHierarchy)
         {
             Interactions_Canvas.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

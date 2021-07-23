@@ -1,6 +1,3 @@
-using Photon.Pun;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,25 +11,8 @@ public class Pause_Menu : MonoBehaviour
     {
         InputManager.controls.Gameplay.ESCSettings.started += EnableCanvas;
     }
-
-
     void EnableCanvas(InputAction.CallbackContext context)
-    {
-        
-            if (!Setting_canvas.activeInHierarchy)
-            {
-                Setting_canvas.SetActive(true);
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-            }
-           else
-            {
-                Setting_canvas.SetActive(false);
-                //Cursor.visible = false;
-                //Cursor.lockState = CursorLockMode.Locked;
-            }
-
-    }
+                => Setting_canvas.SetActive(!Setting_canvas.activeInHierarchy);
 
     private void OnDisable()
     {
