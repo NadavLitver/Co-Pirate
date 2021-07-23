@@ -238,6 +238,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         Debug.Log(team);
 
+        PersonalCamera = localPlayerCtrl.team == Team.Blue ? GameManager.instance.blueCamera : GameManager.instance.redCamera;
+        PersonalCamera.gameObject.SetActive(true);
+
         if (photonView.IsMine)
         {
             InputManager.controls.Gameplay.Enable();
@@ -249,9 +252,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
 
 
-            PersonalCamera = team == Team.Blue ? GameManager.instance.blueCamera : GameManager.instance.redCamera;
 
-            PersonalCamera.gameObject.SetActive(true);
             var cameraCtrl = PersonalCamera.GetComponent<CameraController>();
             cameraCtrl.myfollow = transform;
         }
