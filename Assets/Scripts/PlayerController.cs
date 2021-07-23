@@ -330,9 +330,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         if (curInteractable != newInteractable)
         {
-            if (curInteractable.IsInteracting)
-                curInteractable.OnInteract_End(this);
-
             if (_holeFixProgressBar != null)
             {
                 if (curInteractable != null && curInteractable is HoleInteractable _hole)
@@ -343,7 +340,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
             }
 
             if (curInteractable != null)
+            {
                 curInteractable.OnUnbecomingTarget(this);
+                if (curInteractable.IsInteracting)
+                    curInteractable.OnInteract_End(this);
+            }
 
             curInteractableHit = newInteractableHit;
             curInteractable = curInteractableHit.interactable;
