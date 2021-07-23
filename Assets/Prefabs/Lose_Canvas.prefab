@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 2899505469832747200}
   - component: {fileID: 4789542344562470901}
   - component: {fileID: 3894834947227062775}
+  - component: {fileID: 3855150758124575172}
   m_Layer: 5
   m_Name: Lose_Canvas
   m_TagString: Untagged
@@ -596,6 +597,18 @@ MonoBehaviour:
   OnAllPlayersReadyEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3855150758124575172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899505469832747207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3044b954c9831134fb019ac09f7e8d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2899505470332147602
 GameObject:
   m_ObjectHideFlags: 0

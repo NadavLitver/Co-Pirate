@@ -943,6 +943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889736967}
   - component: {fileID: 889736968}
+  - component: {fileID: 889736969}
   m_Layer: 0
   m_Name: Launch Manager
   m_TagString: Untagged
@@ -981,6 +982,18 @@ MonoBehaviour:
   maxPlayersPerRoom: 4
   loaderAnime: {fileID: 0}
   _skipLobby: 0
+--- !u!114 &889736969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889736966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3044b954c9831134fb019ac09f7e8d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &950115327
 GameObject:
   m_ObjectHideFlags: 0

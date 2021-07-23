@@ -10370,20 +10370,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &7794672888971314447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6159744921521579951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46560b6031d629349b69b119b8411492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _assignCameraToMain: 0
-  _canvas: {fileID: 4603402240427351081}
 --- !u!1 &6448993263383100956
 GameObject:
   m_ObjectHideFlags: 0
@@ -15795,6 +15781,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2245967596827336408}
+    - target: {fileID: 6874070168867763404, guid: e3ea33dbe9557414b87ef905c72117e5, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 4603402240427351081}
     - target: {fileID: 8811472675415824535, guid: e3ea33dbe9557414b87ef905c72117e5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
