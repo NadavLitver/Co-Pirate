@@ -10,8 +10,6 @@ public class LookAtCanvasCamera : MonoBehaviour
 
     private void Awake()
     {
-       
-        
         if (_canvas == null)
             _canvas = GetComponent<Canvas>();
 

@@ -10537,7 +10537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46560b6031d629349b69b119b8411492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _assignCameraToMain: 1
+  _assignCameraToMain: 0
   _canvas: {fileID: 4603402240427351081}
 --- !u!1 &8057547250227646620
 GameObject:
