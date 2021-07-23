@@ -1538,6 +1538,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1922842904}
     - target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
+      propertyPath: CountdownText
+      value: 
+      objectReference: {fileID: 1922842904}
+    - target: {fileID: 2284339349136606369, guid: 98de62f7fd4f8e34ca0b788867a6ba8c, type: 3}
       propertyPath: team1SpawnPoints.Array.size
       value: 2
       objectReference: {fileID: 0}
