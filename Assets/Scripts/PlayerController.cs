@@ -223,15 +223,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
         team = playerData.team;
         transform.SetParent(playerData.spawnPoint.transform.GetComponentInParent<ShipManager>().transform);
         myShip = GetComponentInParent<ShipManager>();
-        if (team == Team.Blue)
-        {
-            myShip.SetNameOnRedEndingCanvas(PhotonNetwork.NickName);
-        }
-        else
-        {
-            myShip.SetNameOnBlueEndingCanvas(PhotonNetwork.NickName);
+        //if (team == Team.Blue)
+        //{
+        //    myShip.SetNameOnRedEndingCanvas(PhotonNetwork.NickName);
+        //}
+        //else
+        //{
+        //    myShip.SetNameOnBlueEndingCanvas(PhotonNetwork.NickName);
 
-        }
+        //}
         Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
         (team == Team.Blue ? OnTeamBlue : OnTeamRed)?.Invoke();

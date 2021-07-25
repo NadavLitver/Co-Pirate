@@ -27,8 +27,8 @@ public class ShipManager : MonoBehaviourPun
         }
 
     }
-    public Text[] redTeamEndingText;
-    public Text[] blueTeamEndingText;
+    //public Text[] redTeamEndingText;
+    //public Text[] blueTeamEndingText;
     [SerializeField] float maxDamageLevel = 100;
     [SerializeField] private Team _team;
     public Team Team => _team;
@@ -72,20 +72,20 @@ public class ShipManager : MonoBehaviourPun
         if (CurDamageLevel == maxDamageLevel)
             Lose();
     }
-    public void SetNameOnRedEndingCanvas(string name)
-    {
-        for (int i = 0; i < redTeamEndingText.Length; i++)
-        {
-            redTeamEndingText[i].text += " " + name;
-        }
-    }
-    public void SetNameOnBlueEndingCanvas(string name)
-    {
-        for (int i = 0; i < blueTeamEndingText.Length; i++)
-        {
-            blueTeamEndingText[i].text += " " + name;
-        }
-    }
+    //public void SetNameOnRedEndingCanvas(string name)
+    //{
+    //    for (int i = 0; i < redTeamEndingText.Length; i++)
+    //    {
+    //        redTeamEndingText[i].text += " " + name;
+    //    }
+    //}
+    //public void SetNameOnBlueEndingCanvas(string name)
+    //{
+    //    for (int i = 0; i < blueTeamEndingText.Length; i++)
+    //    {
+    //        blueTeamEndingText[i].text += " " + name;
+    //    }
+    //}
     void ChangeShipHeight()
     {
 

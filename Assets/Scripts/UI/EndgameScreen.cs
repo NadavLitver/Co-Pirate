@@ -5,13 +5,19 @@ using Photon.Realtime;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class EndgameScreen : MonoBehaviour
 {
     [SerializeField]
+    private Team _team;
+    [SerializeField]
     private UnityEvent<int> OnPlayerReadyEvent;
     [SerializeField]
     private UnityEvent OnAllPlayersReadyEvent;
+
+    [SerializeField]
+    private Text[] _playerNames;
 
     private const byte PlayerReadyPE = 1;
     private Dictionary<Player, bool> _playersReady = new Dictionary<Player, bool>();
@@ -41,6 +47,17 @@ public class EndgameScreen : MonoBehaviour
 
     void OnEnable()
     {
+        int _textIndex = 0;
+        for (int i = 0; i < PlayerInformation.players.Length; i++)
+        {
+            if (PlayerInformation.players[i].team == _team)
+            {
+                _playerNames[_textIndex].text = PlayerInformation.players[i].player.NickName;
+                _textIndex++;
+            }
+        }
+
+
         PhotonNetwork.NetworkingClient.EventReceived += NetworkingClient_EventReceived;
         foreach (var player in PlayerInformation.players)
             _playersReady.Add(player.player, false);
