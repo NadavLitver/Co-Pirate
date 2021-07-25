@@ -192,7 +192,7 @@ namespace Photon.Pun.Demo.PunBasics
             PhotonNetwork.LeaveRoom();
             yield return new WaitWhile(() => PhotonNetwork.InRoom);
             PlayerInformation.Reset();
-            SceneManager.LoadScene("Launcher");
+            PhotonNetwork.LoadLevel("Launcher");
         }
 
         public void QuitApplication()
