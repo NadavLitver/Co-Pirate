@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ public abstract class Pickup : BaseInteractable
     {
         photonView.RPC("PickedUpRPC", Photon.Pun.RpcTarget.All);
     }
+    [PunRPC]
     protected virtual void PickedUpRPC()
     {
         OnPickUpRemote?.Invoke();
