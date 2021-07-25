@@ -57,8 +57,6 @@ namespace Photon.Pun.Demo.PunBasics
                 LobbyInfromation._numOfPlayer = _numOfPlayers;
                 PhotonNetwork.LoadLevel("LiveLobby");
                 Debug.Log("Trying to load game scene.");
-                PhotonNetwork.CurrentRoom.IsOpen = false;
-                PhotonNetwork.CurrentRoom.IsVisible = false;
             }
         }
     }

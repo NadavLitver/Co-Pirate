@@ -70,6 +70,12 @@ namespace Photon.Pun.Demo.PunBasics
             }
 
             InputManager.controls.Gameplay.Speak.performed += SetLocalReady;
+
+            if (PhotonNetwork.IsMasterClient)
+            {
+                PhotonNetwork.CurrentRoom.IsOpen = false;
+                PhotonNetwork.CurrentRoom.IsVisible = false;
+            }
         }
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase.
