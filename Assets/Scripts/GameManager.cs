@@ -175,19 +175,24 @@ namespace Photon.Pun.Demo.PunBasics
         /// <summary>
         /// Called when the local player left the room. We need to load the launcher scene.
         /// </summary>
-        public override void OnLeftRoom()
-        {
-            PlayerInformation.Reset();
-            PhotonNetwork.CurrentRoom.IsOpen = false;
-            SceneManager.LoadScene("Launcher");
-        }
+        //public override void OnLeftRoom()
+        //{
+
+        //}
         #endregion
 
         #region Public Methods
 
         public void LeaveRoom()
         {
+            StartCoroutine(LeaveRoomRoutine());
+        }
+        public IEnumerator LeaveRoomRoutine()
+        {
             PhotonNetwork.LeaveRoom();
+            yield return new WaitWhile(() => PhotonNetwork.InRoom);
+            PlayerInformation.Reset();
+            SceneManager.LoadScene("Launcher");
         }
 
         public void QuitApplication()
