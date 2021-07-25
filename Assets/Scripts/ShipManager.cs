@@ -62,6 +62,11 @@ public class ShipManager : MonoBehaviourPun
     }
     private void FixedUpdate()
     {
+#if UNITY_EDITOR
+        if (PhotonNetwork.IsMasterClient && Input.GetKeyDown(KeyCode.P))
+            CurDamageLevel = maxDamageLevel;
+        else
+#endif
         CurDamageLevel += CurHoleAmountActive * DPSPerHole * Time.deltaTime;
     }
     void UpdateShip()
