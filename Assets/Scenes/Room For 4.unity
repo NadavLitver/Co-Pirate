@@ -282,6 +282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipHolder_Reds
       objectReference: {fileID: 0}
+    - target: {fileID: 2570733976780246098, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3190511332399713583, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
       value: 34
@@ -293,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 3608421942663554079, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081945149682615768, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5404496610491761599, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_Time
@@ -373,6 +381,10 @@ PrefabInstance:
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584631856706612766, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8712331834815704004, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: speedRangeX.maxScalar
@@ -968,6 +980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipHolder_Blues
       objectReference: {fileID: 0}
+    - target: {fileID: 2570733976780246098, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3190511332399713583, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
       value: 33
@@ -979,6 +995,10 @@ PrefabInstance:
     - target: {fileID: 3608421942663554079, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: sceneViewId
       value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081945149682615768, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5404496610491761599, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_Time
@@ -1047,6 +1067,10 @@ PrefabInstance:
     - target: {fileID: 8478950402477738756, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584631856706612766, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
+      propertyPath: sceneViewId
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8712331834815704004, guid: ee36d9bf9ccf78b4993001b2a8a7624e, type: 3}
       propertyPath: CenterZ

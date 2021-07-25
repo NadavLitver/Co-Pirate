@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
+using Photon.Pun;
 
-public abstract class BaseInteractable : MonoBehaviour, IInteractable
+public abstract class BaseInteractable : MonoBehaviourPun, IInteractable
 {
     [SerializeField]
     private Sprite _icon;

@@ -14548,6 +14548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3736439081544242844}
   - component: {fileID: 8627500000063341793}
+  - component: {fileID: 404043070411944052}
   m_Layer: 0
   m_Name: Pick_Up_Insta_Fix
   m_TagString: Untagged
@@ -14585,6 +14586,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: 9f8bb7dfa0c4f9447b45f24b62f6debf, type: 3}
-  OnPickUp:
+  OnPickupLocal:
     m_PersistentCalls:
       m_Calls: []
+  OnPickUpRemote:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &404043070411944052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3736439081544242787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

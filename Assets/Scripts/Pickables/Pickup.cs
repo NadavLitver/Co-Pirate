@@ -8,12 +8,19 @@ public abstract class Pickup : BaseInteractable
 {
     public override bool IsInteracting => false;
     [SerializeField]
-    protected UnityEvent OnPickUp;
+    protected UnityEvent OnPickupLocal;
+    [SerializeField]
+    protected UnityEvent OnPickUpRemote;
     public override void OnInteract_Start(PlayerController ctrl) => PickedUp(ctrl);
     protected virtual void PickedUp(PlayerController playerRef)
     {
-        OnPickUp?.Invoke();
+        photonView.RPC("PickedUpRPC", Photon.Pun.RpcTarget.All);
+    }
+    protected virtual void PickedUpRPC()
+    {
+        OnPickUpRemote?.Invoke();
         Destroy(gameObject);
+
     }
 
 }
