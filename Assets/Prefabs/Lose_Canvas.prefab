@@ -591,12 +591,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e22a0f5b4e4664ebd735969ac1b33b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _team: 0
   OnPlayerReadyEvent:
     m_PersistentCalls:
       m_Calls: []
   OnAllPlayersReadyEvent:
     m_PersistentCalls:
       m_Calls: []
+  _playerNames: {fileID: 2899505470332147612}
 --- !u!114 &3855150758124575172
 MonoBehaviour:
   m_ObjectHideFlags: 0

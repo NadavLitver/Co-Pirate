@@ -17,7 +17,7 @@ public class EndgameScreen : MonoBehaviour
     private UnityEvent OnAllPlayersReadyEvent;
 
     [SerializeField]
-    private Text[] _playerNames;
+    private Text _playerNames;
 
     private const byte PlayerReadyPE = 1;
     private Dictionary<Player, bool> _playersReady = new Dictionary<Player, bool>();
@@ -47,13 +47,11 @@ public class EndgameScreen : MonoBehaviour
 
     void OnEnable()
     {
-        int _textIndex = 0;
         for (int i = 0; i < PlayerInformation.players.Length; i++)
         {
             if (PlayerInformation.players[i].team == _team)
             {
-                _playerNames[_textIndex].text = PlayerInformation.players[i].player.NickName;
-                _textIndex++;
+                _playerNames.text += " " + PlayerInformation.players[i].player.NickName;
             }
         }
 
