@@ -63,7 +63,7 @@ public class ShipManager : MonoBehaviourPun
     private void FixedUpdate()
     {
 #if UNITY_EDITOR
-        if (PhotonNetwork.IsMasterClient && Input.GetKeyDown(KeyCode.P))
+        if (PhotonNetwork.IsMasterClient && Input.GetKeyDown(KeyCode.P) && Team == PhotonNetwork.LocalPlayer.GetPlayerTeam())
             CurDamageLevel = maxDamageLevel;
         else
 #endif
