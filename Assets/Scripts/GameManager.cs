@@ -178,6 +178,7 @@ namespace Photon.Pun.Demo.PunBasics
         public override void OnLeftRoom()
         {
             PlayerInformation.Reset();
+            PhotonNetwork.CurrentRoom.IsOpen = false;
             SceneManager.LoadScene("Launcher");
         }
         #endregion
