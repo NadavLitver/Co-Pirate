@@ -216,7 +216,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void Start()
     {
         var playerNum = photonView.Owner.GetPlayerNum();
-        Debug.Log(playerNum);
         var playerData = PlayerInformation.players[playerNum];
         playerData.playerinstance = gameObject;
         nameText.text = playerData.player.NickName;
@@ -232,11 +231,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
         //    myShip.SetNameOnBlueEndingCanvas(PhotonNetwork.NickName);
 
         //}
-        Debug.Log("Name: " + photonView.Owner.NickName + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
+        Debug.Log("Name: " + photonView.Owner.NickName + ", Team: " + team.ToString() + ", Player num: " + playerNum + ", Islocal: " + photonView.Owner.IsLocal + ", is master: " + photonView.Owner.IsMasterClient);
 
         (team == Team.Blue ? OnTeamBlue : OnTeamRed)?.Invoke();
-
-        Debug.Log(team);
 
         PersonalCamera = localPlayerCtrl.team == Team.Blue ? GameManager.instance.blueCamera : GameManager.instance.redCamera;
         PersonalCamera.gameObject.SetActive(true);

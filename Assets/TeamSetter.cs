@@ -9,7 +9,6 @@ public class TeamSetter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("EnterTeamSetter");
         if (other.gameObject.layer == playerLayer)
         {
             PlayerLobbyController lobbyPlayer = other.gameObject.GetComponent<PlayerLobbyController>();
